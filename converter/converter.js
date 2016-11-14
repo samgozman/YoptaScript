@@ -73,7 +73,44 @@ var dictonary = [
 			["!", "чобля"],
 			["&&", "ичо"],
 			["||", "иличо"],
-            ["alert", "шухер"]
+            ["alert", "шухер"],
+//          Document methods
+            ["document", "ксива"],
+            ["captureEvents", ""],
+            ["caretPositionFromPoint", ""],
+            ["caretRangeFromPoint", ""],
+            ["createAttribute", ""],
+            ["createAttributeNS", ""],
+            ["reateCDATASection", ""],
+            ["createDocumentFragment", ""],
+            ["createElementNS", ""],
+            ["createEvent", ""],
+            ["createNodeIterator", ""],
+            ["createProcessingInstruction", ""],
+            ["createRange", ""],
+            ["createTextNode", ""],
+            ["createTouch", ""],
+            ["createTreeWalker", ""],
+            ["elementFromPoint", ""],
+            ["elementsFromPoint", ""],
+            ["enableStyleSheetsForSet", ""],
+            ["exitPointerLock", ""],
+            ["getAnimations", ""],
+            ["getElementsByClassName", ""],
+            ["getElementsByTagName", ""],
+            ["getElementsByTagNameNS", ""],
+            ["importNode", ""],
+            ["registerElement", ""],
+            ["releaseCapture", ""],
+            ["mozSetImageElement", ""],
+            ["getElementById", ""],
+            ["querySelector", ""],
+            ["querySelectorAll", ""],
+            ["createExpression", ""],
+            ["createNSResolver", ""],
+            ["evaluate", ""]
+//          Document Extension
+            
 ];
 
 var magicYoptaBtn = document.getElementById('magicYoptaBtn').addEventListener('click', converter, false);
