@@ -108,9 +108,22 @@ var dictonary = [
             ["querySelectorAll", ""],
             ["createExpression", ""],
             ["createNSResolver", ""],
-            ["evaluate", ""]
+            ["evaluate", ""],
 //          Document Extension
-            
+            ["clear", ""],
+            ["close", ""],
+            ["execCommand", ""],
+            ["getElementsByName", ""],
+            ["getSelection", ""],
+            ["hasFocus", ""],
+            ["open", ""],
+            ["queryCommandEnabled", ""],
+            ["queryCommandState", ""],
+            ["queryCommandSupported", ""],
+            ["queryCommandIndeterm", ""],
+            ["queryCommandValue", ""],
+            ["write", ""],
+            ["writeln", ""]
 ];
 
 var magicYoptaBtn = document.getElementById('magicYoptaBtn').addEventListener('click', converter, false);
