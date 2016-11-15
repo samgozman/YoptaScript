@@ -1,4 +1,5 @@
 var dictonary = [
+
 			["break", "харэ"]
 			, ["case", "лещ"]
 			, ["catch", "гоп"]
