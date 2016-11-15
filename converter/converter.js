@@ -271,6 +271,7 @@ var dictonary = [
             , ["onwaiting", ""]
 //            Window properties
             , ["caches", ""]
+            , ["window", "ебало"]
             , ["applicationCache", ""]
             , ["closed", ""]
             , ["Components", ""]
