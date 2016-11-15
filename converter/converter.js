@@ -122,7 +122,7 @@ var dictonary = [
             , ["queryCommandSupported", ""]
             , ["queryCommandIndeterm", ""]
             , ["queryCommandValue", ""]
-            , ["write", "малява"]
+            , ["write(?![a-z\s]+)", "малява"]
             , ["writeln", "малявагоп"]
 //            Document Properties
             , ["async", ""]
