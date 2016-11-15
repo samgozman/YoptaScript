@@ -6,7 +6,7 @@ var dictonary = [
 			, ["debugger", "логопед"]
 			, ["default", "понятие"]
 			, ["delete", "ёбнуть"]
-			, ["do", "крч"]
+			, ["do[^a-z]+", "крч"]
 			, ["else", "иливжопураз"]
 			, ["finally", "тюряжка"]
 			, ["for", "го"]
@@ -71,9 +71,9 @@ var dictonary = [
 //			["}", "йоба"],
 //			["(", "бля"],
 //			[")", "йопт"],
-			, ["!", "чобля"]
-			, ["&&", "ичо"]
-			, ["||", "иличо"]
+			, ["\\!", "чобля"]
+			, ["\\\&\\&", "ичо"]
+			, ["\\|\\|", "иличо"]
 //             Document methods
             , ["document", "ксива"]
             , ["captureEvents", "зафотатьШняги"]
@@ -370,7 +370,9 @@ var magicYoptaBtn = document.getElementById('magicYoptaBtn').addEventListener('c
 var jsOnChange = document.getElementById('jstoyopta').addEventListener('keyup', converter, false);
 String.prototype.replaceAll = function (search, replacement) {
     var target = this;
-    return target.split(search).join(replacement);
+    var re = new RegExp(search, 'g');
+    //console.log(this.replace(re, replacement));
+    return this.replace(re, replacement);
 };
 
 function converter() {
