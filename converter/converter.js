@@ -391,7 +391,7 @@ var dictonary = [
             , ["padStart", ""]
             , ["repeat", ""]
             , ["replace", ""]
-            , ["search", "семкиЕсть"]
+            , ["search", "хипеш"]
             , ["slice", ""]
             , ["split", ""]
             , ["startsWith", ""]
