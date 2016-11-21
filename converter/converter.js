@@ -364,7 +364,7 @@ var dictonary = [
             , ["charCodeAt", "обаЁбаХуйня"]
             , ["codePointAt", "хуйняНутыпоэлОткуда"]
             , ["concat", "заебеньВсе"]
-            , ["includes", "лучшееНетВлагалищаЧемОчкоТоварища"]
+            , ["includes", "лучшеНетВлагалищаЧемОчкоТоварища"]
             , ["endsWith", ""]
             , ["indexOf", ""]
             , ["lastIndexOf", ""]
@@ -510,16 +510,16 @@ var dictonary = [
             , ["upload", ""]
             , ["withCredentials", ""]
 //            XMLHttpRequest methods
-            , ["abort", ""]
-            , ["getResponseHeader", ""]
+            , ["abort", "шкураЗалетела"]
+            , ["getResponseHeader", "дайКепарикПолосатого"]
 //            XMLHttpRequest Inheritance
             , ["XMLHttpRequestEventTarget", ""]
-            , ["EventTarget", ""]
+            , ["EventTarget", "очкоНаПрицеле"]
 //            XMLHttpRequest events
-            , ["loadstart", ""]
-            , ["progress", ""]
-            , ["load", ""]
-            , ["loadend", ""]
+            , ["loadstart", "началТаскатьСемки"]
+            , ["progress", "сколькоСемокДонёс"]
+            , ["load", "нестиСемки"]
+            , ["loadend", "семкиДонёс"]
             , ["readystatechange", ""]
 ];
 
