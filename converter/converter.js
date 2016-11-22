@@ -1,98 +1,531 @@
 //тут был грушан йбать
 var dictonary = [
-			["break", "харэ"],
-			["case", "лещ"],
-			["catch", "гоп"],
-			["continue", "двигай"],
-			["debugger", "логопед"],
-			["default", "понятие"],
-			["delete", "ёбнуть"],
-			["do", "крч"],
-			["else", "иливжопураз"],
-			["finally", "тюряжка"],
-			["for", "го"],
-			["function", "йопта"],
-			["if", "вилкойвглаз"],
-			["in", "в"],
-			["instanceof", "внатуре"],
-			["new", "гы"],
-			["return", "отвечаю"],
-			["switch", "пошерстим"],
-			["this", "тырыпыры"],
-			["throw", "пнх"],
-			["try", "хапнуть"],
-			["typeof", "чезажижан"],
-			["var", "валио"],
-			["void", "куку"],
-			["while", "потрещим"],
-			["with", "хзйопт"],
-			["Abstract", "говнойбать"],
-			["Boolean", "пацан"],
-			["Byte", "семка"],
-			["Char", "эээ"],
-			["Class", "клёво"],
-			["Const", "мусор"],
-			["Double", "двойные"],
-			["Enum", "еээ"],
-			["export", "излабас"],
-			["extends", "батя"],
-			["final", "бачок"],
-			["Float", "плавник"],
-			["goto", "идинах"],
-			["implements", "силикон"],
-			["import", "спиздить"],
-			["Int", "хуйня"],
-			["interface", "хуёво"],
-			["Long", "колонна"],
-			["native", "братан"],
-			["package", "клеёнка"],
-			["private", "мой"],
-			["protected", "подкрыша"],
-			["public", "ебанное"],
-			["Short", "пипин"],
-			["static", "попонятия"],
-			["super", "яга"],
-			["synchronized", "вписон"],
-			["throws", "плюнуть"],
-			["transient", "ахз"],
-			["volatile", "вписос"],
-			["null", "нуллио"],
-			["NaN", "гомункул"],
-			["true", "трулио"],
-			["false", "нетрулио"],
-			[">", "пизже"],
-			["<", "хуёвей"],
-			[">=", "поцик"],
-			["<=", "поц"],
-			["==", "эквалио"],
-			["=", "сука"],
-			[";", " нах"],
-//			["{", "типа"],
-//			["}", "йоба"],
-//			["(", "бля"],
-//			[")", "йопт"],
-			["!", "чобля"],
-			["&&", "ичо"],
-			["||", "иличо"],
-            ["alert", "шухер"]
+
+			["break", "харэ"]
+			, ["case", "лещ"]
+			, ["catch", "гоп"]
+			, ["continue", "двигай"]
+			, ["debugger", "логопед"]
+			, ["default", "понятие"]
+			, ["delete", "ёбнуть"]
+			, ["do(?![a-z]+)", "крч"]
+			, ["else", "иливжопураз"]
+			, ["finally", "тюряжка"]
+			, ["for", "го"]
+			, ["function", "йопта"]
+			, ["if", "вилкойвглаз"]
+			, ["in(?![a-zA-Z]+)", "в"]
+			, ["instanceof", "внатуре"]
+			, ["new(?![a-zA-Z]+)", "гы"]
+			, ["return", "отвечаю"]
+			, ["switch", "пошерстим"]
+			, ["this", "тырыпыры"]
+			, ["throw", "пнх"]
+			, ["try", "хапнуть"]
+			, ["typeof", "чезажижан"]
+			, ["var", "валио"]
+			, ["void", "куку"]
+			, ["while", "потрещим"]
+			, ["with", "хзйопт"]
+			, ["Abstract", "говнойбать"]
+			, ["Boolean", "пацан"]
+			, ["Byte", "семка"]
+			, ["Char", "эээ"]
+			, ["Class", "клёво"]
+			, ["Const", "братан"]
+			, ["Double", "двойные"]
+			, ["Enum", "еээ"]
+			, ["export", "излабас"]
+			, ["extends", "батя"]
+			, ["final", "бачок"]
+			, ["Float", "плавник"]
+			, ["goto", "идинах"]
+			, ["implements", "силикон"]
+			, ["import", "спиздить"]
+			, ["Int", "хуйня"]
+			, ["interface", "хуёво"]
+			, ["Long", "колонна"]
+			, ["native", "чорт"]
+			, ["package", "клеёнка"]
+			, ["private", "мой"]
+			, ["protected", "подкрыша"]
+			, ["public", "ебанное"]
+			, ["Short", "пипин"]
+			, ["static", "попонятия"]
+			, ["super", "яга"]
+			, ["synchronized", "вписон"]
+			, ["throws", "плюнуть"]
+			, ["transient", "ахз"]
+			, ["volatile", "вписос"]
+			, ["null", "нуллио"]
+			, ["NaN", "нихуя"]
+			, ["true", "трулио"]
+			, ["false", "нетрулио"]
+//            Операторы сравнения и логические операторы
+			, [">", "пизже"]
+			, ["<", "хуёвей"]
+			, [">=", "поцик"]
+			, ["<=", "поц"]
+			, ["==", "эквалио"]
+			, ["=", "сука"]
+			, [";", " нах"]
+			, ["\\!", "чобля"]
+			, ["\\\&\\&", "ичо"]
+			, ["\\|\\|", "иличо"]
+//             Document methods
+            , ["document", "ксива"]
+            , ["captureEvents", "зафотатьШняги"]
+            , ["createAttribute", "намутитьЯжку"]
+            , ["createDocumentFragment", "намутитьКусокМалявы"]
+            , ["createEvent", "намутитьШнягу"]
+            , ["createNodeIterator", "намутитьГовнодыратор"]
+            , ["createRange", "намутитьОпапа"]
+            , ["createTextNode", "намутитьМалявуГовнодскую"]
+            , ["createTouch", "намутитьЛеща"]
+            , ["createTreeWalker", "намутитьБуратино"]
+            , ["elementFromPoint", "терпилаИзПараши"]
+            , ["elementsFromPoint", "терпилыИзПараши"]
+            , ["enableStyleSheetsForSet", "намутитьСтруйкуДляХабара"]
+            , ["getAnimations", "вычислитьДвижуху"]
+            , ["getElementsByClassName", "вычислитьТерпилПоКлассу"]
+            , ["getElementsByTagName", "вычислитьТерпилПоТегу"]
+            , ["importNode", "влабазУзел"]
+            , ["registerElement", "зашитьДело"]
+            , ["releaseCapture", "зафотатьХуякХуяк"]
+            , ["getElementById", "вычислитьЛохаПоНомеру"]
+            , ["querySelector", "хулиВыёбываешься"]
+            , ["querySelectorAll", "хулиТутВсеВыёбываются"]
+            , ["createExpression", "намутитьБазар"]
+            , ["evaluate", "заценить"]
+            , ["clear(?![a-zA-Z]+)", "урыть"]
+            , ["close", "завали"]
+            , ["execCommand", "идиРаботайБля"]
+            , ["getElementsByName", "вычислитьТерпилПоИмени"]
+            , ["getSelection", "сестьНаДваСтула"]
+            , ["hasFocus", "имеетЧеткость"]
+            , ["open", "отрыть"]
+            , ["queryCommandEnabled", "хулиЧикаДоступная"]
+            , ["queryCommandState", "хулиЧикаОтдыхает"]
+            , ["queryCommandSupported", "хулиЧикаБезАйфона"]
+            , ["queryCommandIndeterm", "хулиЧикаОйВсё"]
+            , ["queryCommandValue", "хулиЧикаВалио"]
+            , ["write(?![a-z]+)", "малява"]
+            , ["writeln", "малявагоп"]
+//            Document Properties
+            , ["async", "ассо"]
+            , ["characterSet", "слышТыЧоЁба"]
+            , ["charset", "слышЁба"]
+            , ["contentType", "ухтыжёптыжТипчик"]
+            , ["doctype", "типКсивы"]
+            , ["documentElement", "ксиваТерпилы"]
+            , ["documentURI", "ксиваНаХате"]
+            , ["domConfig", "чоткоДерзко"]
+            , ["hidden", "кроить"]
+            , ["inputEncoding", "эйтыэтоПиздиш"]
+            , ["pointerLockElement", "тырколкуНаАнусТерпилы"]
+            , ["scrollingElement", "намазиТерпила"]
+            , ["timeline", "всяЖиза"]
+            , ["visibilityState", "мутныйСюжет"]
+            , ["children", "пездюки"]
+            , ["firstElementChild", "первыйПездюкШняги"]
+            , ["lastElementChild", "последнийПездюкШняги"]
+            , ["childElementCount", "моиШняжныеПездюки"]
+            , ["activeElement", "активнаяШняга"]
+            , ["alinkColor", "петухЗоныКрасиво"]
+            , ["anchors", "якоряЁпт"]
+            , ["bgColor", "охуеннаяЖопа"]
+            , ["body", "висяк"]
+            , ["cookie", "семки"]
+            , ["defaultView", "моргалаВыколю"]
+            , ["designMode", "хуйРисуйМод"]
+            , ["dir", "буратино"]
+            , ["domain", "домойБлядь"]
+            , ["embeds", "мразоты"]
+            , ["forms", "еблища"]
+            , ["head", "залупка"]
+            , ["height", "длинный"]
+            , ["images", "мазни"]
+            , ["lastModified", "когдаПетухомСтал"]
+            , ["linkColor", "зонаКрасиво"]
+            , ["links", "зоны"]
+            , ["location", "райончик"]
+            , ["plugins", "выебоны"]
+            , ["readyState", "газуемБля"]
+            , ["referrer", "корешСтарый"]
+            , ["scripts", "гыебаты"]
+            , ["title", "вася"]
+            , ["URL", "хата"]
+            , ["vlinkColor", "когдаОткинулсяПослеЗоны"]
+            , ["width", "жирный"]
+//            Document event handlers
+            , ["onafterscriptexecute", "послеВыполненияЙопты"]
+            , ["onbeforescriptexecute", "доВыполненияЙопты"]
+            , ["oncopy", "какВсунул"]
+            , ["oncut", "какВысунул"]
+            , ["onpaste", "какВставил"]
+            , ["onselectionchange", "покаДваСтулаМахнуть"]
+            , ["onfullscreenchange", "покаЕбальникПоказал"]
+            , ["onwheel", "какНаХуюВертел"]
+//            Global event handlers
+            , ["onabort", "покаШкураЗалетела"]
+            , ["onblur", "опаНичотка"]
+            , ["onerror", "наПапандос"]
+            , ["onfocus", "опаЧотка"]
+            , ["oncancel", "покаТруханул"]
+            , ["onchange", "опаЧозанахуй"]
+            , ["onclick", "какПырну"]
+            , ["onclose", "ебалоОфф"]
+            , ["oncontextmenu", "какПоЛбуЁбну"]
+            , ["ondblclick", "какПырнуДваждыНахуй"]
+            , ["ondrag", "опаОчкоДёрнул"]
+            , ["ondragend", "покаХарэОчкоДёргать"]
+            , ["ondragenter", "покаДёргалкаНарисовалась"]
+            , ["ondragexit", "анусСебеДёрниПёс"]
+            , ["ondragleave", "покаДергунСлинял"]
+            , ["ondragover", "покаДёрнулПодошла"]
+            , ["ondragstart", "покаДёрнулКмон"]
+            , ["ondrop", "опаМабилкаЁбнулась"]
+            , ["oninput", "покаЭйтыэтоПишибля"]
+            , ["oninvalid", "гыйбатьИнвалидНахуй"]
+            , ["onkeydown", "гыйбатьЛещДаун"]
+            , ["onkeypress", "гыйбатьВмялЛеща"]
+            , ["onkeyup", "гыйбатьЛещАут"]
+            , ["onloadstart", "покаНесуСемки"]
+            , ["onmousedown", "всунулНаРайоне"]
+            , ["onmouseenter", "вошёлНаРайон"]
+            , ["onmouseleave", "съебалсяИзРайона"]
+            , ["onmousemove", "хожуПоРайону"]
+            , ["onmouseout", "покаТырколкаСъебала"]
+            , ["onmouseover", "покаТырколкаПодошла"]
+            , ["onmouseup", "вынулНаРайоне"]
+            , ["onmousewheel", "вертелНаРайоне"]
+            , ["onpause", "покаСтопэ"]
+            , ["onplay", "покаЖиви"]
+            , ["onplaying", "покаЖивой"]
+            , ["onpointerdown", "покаТыркнулДауна"]
+            , ["onpointermove", "покаХожуТырколйПоРайону"]
+            , ["onpointerup", "покаТыркнулАута"]
+            , ["onpointercancel", "покаСтрелаТруханула"]
+            , ["onpointerover", "покаСтрелаПодошла"]
+            , ["onpointerout", "покаСтрелаСъебала"]
+            , ["onpointerenter", "покаСрелкаНарисовалась"]
+            , ["onpointerleave", "покаСтрелаСлиняла"]
+            , ["onprogress", "покаМатаетсяСрок"]
+            , ["onreset", "покаПравим"]
+            , ["onscroll", "покаКолесим"]
+            , ["onseeked", "когдаОбоссал"]
+            , ["onseeking", "когдаОбоссался"]
+            , ["onselect", "опаДваСтула"]
+            , ["onshow", "опаТуса"]
+            , ["onsort", "опаСидор"]
+            , ["onstalled", "опаНефартануло"]
+            , ["onsubmit", "опаХуйВГовне"]
+            , ["onsuspend", "опаПодфартило"]
+            , ["ontimeupdate", "опаНуЭтоКогдаЭто"]
+            , ["onvolumechange", "покаТишеБудь"]
+            , ["ontouchcancel", "покаЛещТруханул"]
+            , ["ontouchend", "покаЛещКончил"]
+            , ["ontouchmove", "опаДвигайОтСюдаЛещ"]
+            , ["ontouchstart", "опаЩаЛещаПоЩамДам"]
+            , ["onwaiting", "покаМотаюСрок"]
+//            Window properties
+            , ["window", "ебало"]
+            , ["closed", "завалено"]
+            , ["console", "красноглазое"]
+            , ["controllers", "мусора"]
+            , ["crypto", "пиздишбля"]
+            , ["devicePixelRatio", "типАйфона"]
+            , ["dialogArguments", "тыэтаТавоэта"]
+            , ["frameElement", "кадрОпущенный"]
+            , ["frames", "кадры"]
+            , ["fullScreen", "воВсёЕбало"]
+            , ["history", "фон"]
+            , ["innerHeight", "внутриДлинный"]
+            , ["innerWidth", "внутриЖирный"]
+            , ["length", "писькомер"]
+            , ["location", "белыйЛебедь"]
+            , ["name", "погоняло"]
+            , ["navigator", "главпетух"]
+            , ["opener", "открывашка"]
+            , ["outerHeight", "вокругДлинные"]
+            , ["outerWidth", "вокругЖирные"]
+            , ["pageXOffset", "статьяПоЭксу"]
+            , ["pageYOffset", "статьяПоУгам"]
+            , ["sessionStorage", "хабрИзОтсидки"]
+            , ["parent", "родаки"]
+            , ["returnValue", "ответитьЗаВалио"]
+            , ["performance", "сестьНахуй"]
+            , ["screen", "всёЕбало"]
+            , ["screenX", "всёЕбалоПоЭксу"]
+            , ["screenY", "всёЕбалоПоУгам"]
+            , ["scrollbars", "колеситьПоПивларькам"]
+            , ["scrollMaxX", "колеситьПоГлавЭксу"]
+            , ["scrollMaxY", "колеситьПоГлавУгам"]
+            , ["scrollX", "колеситьПоЭксу"]
+            , ["scrollY", "колеситьПоУгам"]
+            , ["self", "пельмень"]
+            , ["sidebar", "стенкаЙбать"]
+            , ["top", "КрышаЙбать"]
+//            Window methods
+            , ["addEventListener", "добавитьВертухай"]
+            , ["alert", "шухер"]
+            , ["blur", "размытьЕбало"]
+            , ["cancelIdleCallback", "харэПиздеть"]
+            , ["clearInterval", "отсидетьСизо"]
+            , ["clearTimeout", "отсидетьСрок"]
+            , ["confirm", "канает"]
+            , ["dispatchEvent", "послатьНахуйШнягу"]
+            , ["dump", "мусорка"]
+            , ["find", "сигиЕсть"]
+            , ["focus", "хуёкус"]
+            , ["getAttention", "посвистеть"]
+            , ["getComputedStyle", "нассыМнеВалиоСтруйкой"]
+            , ["matchMedia", "феняНаШару"]
+            , ["maximize", "распидорась"]
+            , ["minimize", "спидорась"]
+            , ["moveBy", "щаТяПодвину"]
+            , ["moveTo", "нахуйЭтоТуда"]
+            , ["openDialog", "побазарить"]
+            , ["postMessage", "намутитьКсиву"]
+            , ["print", "наПечать"]
+            , ["prompt", "поясниЗаБазар"]
+            , ["removeEventListener", "урытьВертухая"]
+            , ["resizeBy", "распидораситьПоХуйне"]
+            , ["resizeTo", "распидораситьОтносительно"]
+            , ["scroll(?![a-zA-Z]+)", "колесить"]
+            , ["scrollBy", "колеситьНа"]
+            , ["scrollByLines", "колеситьНаЛинии"]
+            , ["scrollByPages", "колеситьНаМалявах"]
+            , ["scrollTo", "колеситьНахуйНа"]
+            , ["setInterval", "посетитьСизо"]
+            , ["setResizable", "датьПопидорасить"]
+            , ["setTimeout", "получитьСрок"]
+            , ["sizeToContent", "ухтыжёптыжбляПодгони"]
+            , ["stop", "стопээ"]
+            , ["updateCommands", "новыйАйфонДляЧики"]
+//            Window event handlers
+            , ["ondevicelight", "покаХуйДлинный"]
+            , ["onhashchange", "покаШнягаИзменяет"]
+            , ["oninstall", "покаХуйСтоитКакКолонна"]
+            , ["onload", "опаСемкиНесу"]
+            , ["onoffline", "покаОффнусь"]
+            , ["ononline", "опаТутачки"]
+            , ["onpagehide", "покаКсиваНаМалине"]
+            , ["onpageshow", "опаКсивуПоказал"]
+            , ["onpaint", "опаНарисовался"]
+            , ["onpopstate", "покаИсторияМаляется"]
+            , ["onstorage", "опаХабар"]
+            , ["onunload", "опаСемкиКрутятся"]
+//            Node properties
+            , ["baseURI", "наХатеТип"]
+            , ["baseURIObject", "мразотыНаХатеКрч"]
+            , ["childNodes", "пездюкГовнод"]
+            , ["firstChild", "первыйПездюк"]
+            , ["lastChild", "последнийПездюк"]
+            , ["nextSibling", "следующийПездюк"]
+            , ["nodeName", "погонялоПездюка"]
+            , ["nodeType", "типичныйПездюк"]
+            , ["nodeValue", "валиоПездюка"]
+            , ["ownerDocument", "главныйАвторитет"]
+            , ["parentNode", "братишка"]
+            , ["parentElement", "братишкаЭлемент"]
+            , ["previousSibling", "старыйПездюк"]
+            , ["textContent", "ухтыжёптыжМалява"]
+//            Node methods
+            , ["appendChild", "выебатьМалуюБезГандона"]
+            , ["cloneNode", "клонПездюк"]
+            , ["compareDocumentPosition", "сравниСтатусМалявы"]
+            , ["contains", "яТвойОтецЕбуОвец"]
+            , ["getRootNode", "дайБатеГовнод"]
+            , ["hasChildNodes", "батяИмеетПездюков"]
+            , ["insertBefore", "вставитьПездюкаДо"]
+            , ["isDefaultNamespace", "деткаТыПростоКосмос"]
+            , ["isEqualNode", "эквалиоГовнод"]
+            , ["normalize", "нормальнымБудьНормальноБудет"]
+            , ["removeChild", "уебатьПездюка"]
+            , ["replaceChild", "сделатьАборт"]
+//            String properties
+            , ["prototype", "проточелик"]
+//            String methods
+            , ["fromCharCode", "хуйняИзЁба"]
+            , ["fromCodePoint", "хуйняИзЭтоТуданахНутыпоэл"]
+            , ["raw", "полоса"]
+            , ["charAt", "обаЁба"]
+            , ["charCodeAt", "обаЁбаХуйня"]
+            , ["codePointAt", "хуйняНутыпоэлОткуда"]
+            , ["concat", "заебеньВсе"]
+            , ["includes", "лучшеНетВлагалищаЧемОчкоТоварища"]
+            , ["endsWith", "отЗалупки"]
+            , ["indexOf", "поТюряге"]
+            , ["lastIndexOf", "последняяОтсидка"]
+            , ["localeCompare", "сравнитьГовор"]
+            , ["match", "футбик"]
+            , ["padEnd", "залупныйПадик"]
+            , ["padStart", "начальныйПадик"]
+            , ["repeat", "непоэлПовтори"]
+            , ["replace", "пивасПодмени"]
+            , ["search", "семкиЕсть"]
+            , ["slice", "поделитьСемки"]
+            , ["split", "поделитьЯгу"]
+            , ["startsWith", "начатьЗалупку"]
+            , ["substr", "спиздитьМеждуБукв"]
+            , ["substring", "спиздитьМеждуСтрок"]
+            , ["toLocaleLowerCase", "поРайонуНеКапсом"]
+            , ["toLocaleUpperCase", "поРайонуКапсом"]
+            , ["toLowerCase", "неКапсом"]
+            , ["toString", "поПацански"]
+            , ["toUpperCase", "капсомБля"]
+            , ["trim", "вырезатьОчко"]
+            , ["trimLeft", "вырезатьОчкоСлева"]
+            , ["trimRight", "вырезатьОчкоСправа"]
+            , ["valueOf", "валиоОф"]
+//            String HTML wrapper methods
+            , ["anchor", "якорьЁпт"]
+            , ["big", "большойЁпт"]
+            , ["bold", "жирныйЁпт"]
+            , ["fixed", "ПМС"]
+            , ["fontcolor", "говномПоСтенеКрасиво"]
+            , ["fontsize", "говномПоСтенеСочно"]
+            , ["italics", "понаехавший"]
+            , ["link", "зона"]
+            , ["small", "малорик"]
+            , ["strike", "въебиОчко"]
+//            Canvas properties
+            , ["currentTransform", "этотЕбальник"]
+            , ["direction", "лесТам"]
+            , ["filter", "фильтруй"]
+            , ["font", "говномПоСтене"]
+            , ["fillStyle", "кончитьСтруйкой"]
+            , ["globalAlpha", "главныйАльфач"]
+            , ["imageSmoothingEnabled", "включитьРазмытиеЕбала"]
+            , ["lineCap", "выбратьКонец"]
+            , ["lineDashOffset", "пятнистыйХуй"]
+            , ["lineJoin", "формаШишкана"]
+            , ["lineWidth", "толщинаХуя"]
+            , ["miterLimit", "скрестимСтруйки"]
+            , ["shadowBlur", "наняРазмытьЕбало"]
+            , ["shadowColor", "наняКрасиво"]
+            , ["shadowOffsetX", "наняХатаПоЭксу"]
+            , ["shadowOffsetY", "наняХатаПоУгам"]
+            , ["strokeStyle", "стильнаяСтруйка"]
+            , ["textAlign", "выровнитьБазар"]
+            , ["textBaseline", "поставитьБазар"]
+//            Canvas methods 
+            , ["addHitRegion", "создатьПроблемы"]
+            , ["getContext", "снятьСкальп"]
+            , ["arc", "дугаЙбать"]
+            , ["arcTo", "дугаНа"]
+            , ["bezierCurveTo", "кривоНахуй"]
+            , ["clearHitRegions", "убитьПроблему"]
+            , ["clearRect", "урытьШкаф"]
+            , ["clip", "запретка"]
+            , ["closePath", "тупикНахуй"]
+            , ["createImageData", "намутитьМазнюЙопта"]
+            , ["createLinearGradient", "намутитьЧоткуюМазнюПодливой"]
+            , ["createPattern", "намутитьТипчика"]
+            , ["createRadialGradient", "намутитьПоКругуМазнюПодливой"]
+            , ["ellipse", "очко"]
+            , ["fill", "обкончать"]
+            , ["fillRect", "обкончатьДоску"]
+            , ["fillText", "обкончатьБуквы"]
+            , ["getImageData", "чоТутНамалёвано"]
+            , ["getLineDash", "сококПятен"]
+            , ["isPointInPath", "естьЛиСемкиПоПути"]
+            , ["isPointInStroke", "естьЛиСемкиНаЗоне"]
+            , ["lineTo", "прямоНахуй"]
+            , ["measureText", "вместитьБазар"]
+            , ["moveTo", "щемитьНа"]
+            , ["putImageData", "намалюйЧоТут"]
+            , ["quadraticCurveTo", "криваяЗавелаНахуй"]
+            , ["rect", "доска"]
+            , ["removeHitRegion", "избавитьсяОтПроблемы"]
+            , ["resetTransform", "поправитьЕбальник"]
+            , ["restore", "выздоравливай"]
+            , ["rotate", "вертетьНаХую"]
+            , ["save", "схоронить"]
+            , ["scale", "чотчеНа"]
+            , ["scrollPathIntoView", "колеситьПоДорогеНахуй"]
+            , ["setLineDash", "заебенитьПятнистыйХуй"]
+            , ["setTransform", "перекоситьЕбальник"]
+            , ["stroke", "границаЗоны"]
+            , ["strokeText", "погонялоЗоны"]
+            , ["transform", "перекосить"]
+            , ["translate", "дисюдаПиксел"]
+//            Number properties
+            , ["EPSILON", "ХУЕПСИЛОН"]
+            , ["MAX_SAFE_INTEGER", "ЛУЧШИЙ_ГАНДОН"]
+            , ["MAX_VALUE", "ОХУЕННОЕ_ВАЛИО"]
+            , ["MIN_SAFE_INTEGER", "ХУЁВЫЙ_ГАНДОН"]
+            , ["MIN_VALUE", "ХУЁВОЕ_ВАЛИО"]
+            , ["NEGATIVE_INFINITY", "НИХУЯ_ДОХУЯ"]
+            , ["POSITIVE_INFINITY", "ОХУЕТЬ_ДОХУЯ"]
+//            Number methods
+            , ["isFinite", "оноКонченое"]
+            , ["isInteger", "этоХуйня"]
+            , ["isNaN", "этоНихуя"]
+            , ["isSafeInteger", "этоОхуеннаяХуйня"]
+            , ["parseFloat", "шнырятьПоПлавникам"]
+            , ["parseInt", "шнырятьПоКарманам"]
+            , ["toExponential", "наХуекспоненту"]
+            , ["toFixed", "наПМС"]
+            , ["toLocaleString", "кПацанамНаРайоне"]
+            , ["toPrecision", "кЧоткости"]
+//            Console methods
+            , ["assert", "найтиСтукача"]
+            , ["count", "которыйСрок"]
+            , ["dirxml", "йбатьБуратиноНахуй"]
+            , ["error", "папандос"]
+            , ["group", "банда"]
+            , ["groupCollapsed", "свернутьБанду"]
+            , ["groupEnd", "съебатьсяИзБанды"]
+            , ["info", "инфо"]
+            , ["log", "чмо"]
+            , ["profile", "личка"]
+            , ["profileEnd", "вЛичкуПрописали"]
+            , ["table", "таблом"]
+            , ["time", "срок"]
+            , ["timeEnd", "конецСрока"]
+            , ["timeStamp", "началоСрока"]
+            , ["trace", "складЧмошников"]
+            , ["warn", "тыЭтоНуЭто"]
+//            XMLHttpRequest properties
+            , ["XMLHttpRequest", "запросПоЩам"]
+            , ["onreadystatechange", "опаГотовЙоптЧозанахуй"]
+            , ["readyState", "готовностьЙопт"]
+            , ["timeout", "длительностьСрока"]
+            , ["upload", "заебениь"]
+            , ["withCredentials", "зашкварить"]
+//            XMLHttpRequest methods
+            , ["abort", "шкураЗалетела"]
+            , ["getResponseHeader", "дайКепарикПолосатого"]
+            , ["send", "всёПиздуй"]
+//            XMLHttpRequest Inheritance
+            , ["XMLHttpRequestEventTarget", "запросСоШнягойПоЩам"]
+            , ["EventTarget", "очкоНаПрицеле"]
+//            XMLHttpRequest events
+            , ["loadstart", "началТаскатьСемки"]
+            , ["progress", "сколькоСемокДонёс"]
+            , ["load", "нестиСемки"]
+            , ["loadend", "семкиДонёс"]
+            , ["readystatechange", "готовЙоптЧозанахуй"]
 ];
 
-var magicYoptaBtn = document.getElementById('magicYoptaBtn').addEventListener('click', converter, false);
-var jsOnChange = document.getElementById('jstoyopta').addEventListener('keyup', converter, false );
-
-String.prototype.replaceAll = function(search, replacement) {
+var jsOnChange = document.getElementById('jstoyopta').addEventListener('keyup', converter, false);
+String.prototype.replaceAll = function (search, replacement) {
     var target = this;
-    return target.split(search).join(replacement);
+    var re = new RegExp(search, 'g');
+    //console.log(this.replace(re, replacement));
+    return this.replace(re, replacement);
 };
 
 function converter() {
     var jstoyopta = document.getElementById('jstoyopta').value;
-   // var jsArray = jstoyopta.split (/\n| /);
+    // var jsArray = jstoyopta.split (/\n| /);
+    //    str.match(regexp)
     var i = 0;
     var yoptaNew = jstoyopta;
-    for (i=0; i<dictonary.length; i++){
-       yoptaNew = yoptaNew.replaceAll(dictonary[i][0], dictonary[i][1]);
+    for (i = 0; i < dictonary.length; i++) {
+        yoptaNew = yoptaNew.replaceAll(dictonary[i][0], dictonary[i][1]);
     }
-   
     document.getElementById('yopta').value = yoptaNew;
 }
