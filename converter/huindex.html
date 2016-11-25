@@ -5,12 +5,17 @@
     <meta charset="UTF-8">
     <title>Let us yopt you!</title>
     <style>
-        textarea {
+        textarea, #outputField {
             font-size: 18px;
             font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+            width: 50%;
         }
         strong {
             font-size: 22px;
+        }
+        #outputField {
+            height: 200px;
+            background: #f9f9f9;
         }
     </style>
 </head>
@@ -19,12 +24,15 @@
     <h1>Translate to YoptaScript</h1>
     <hr> <strong>Js</strong>
     <br>
-    <textarea name="jstoyopta" id="jstoyopta" cols="80" rows="10"></textarea>
+    <textarea name="jstoyopta" id="jstoyopta" cols="80" rows="9"></textarea>
     <br> <strong>YoptaScript</strong>
     <br>
-    <textarea name="yopta" id="yopta" cols="80" rows="10"></textarea>
+    <textarea name="yopta" id="yopta" cols="80" rows="9"></textarea>
     <br>
-    <script src="converter.js"></script>
+    <strong>Выполнение кода</strong> <br>
+    <div id="outputField"></div>
+    <script type="text/javascript" charset="utf-8" src="converter.js"></script>
+    <script type="text/javascript" charset="utf-8" src="outputEval.js"></script>
 </body>
 
 </html>
