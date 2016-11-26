@@ -507,6 +507,79 @@ var dictonary = [
             , ["load", "нестиСемки"]
             , ["loadend", "семкиДонёс"]
             , ["readystatechange", "готовЙоптЧозанахуй"]
+//            Arrays properties
+            , ["Array", ""]
+//            Arrays methods 
+            , ["from", ""]
+            , ["isArray", ""]
+            , ["observe", ""]
+            , ["of", ""]
+            , ["copyWithin", ""]
+            , ["entries", ""]
+            , ["every", ""]
+            , ["findIndex", ""]
+            , ["forEach", "пероПодРебро"]
+            , ["join", ""]
+            , ["keys", ""]
+            , ["map", ""]
+            , ["pop", ""]
+            , ["push", ""]
+            , ["reduce", ""]
+            , ["reduceRight", ""]
+            , ["reverse", ""]
+            , ["shift", ""]
+            , ["splice", ""]
+            , ["sort", ""]
+            , ["some", ""]
+            , ["toSource", ""]
+            , ["unshift", ""]
+            , ["values", "валиоси"]
+//            Math properties
+            , ["E", ""]
+            , ["LN10", ""]
+            , ["LN2", ""]
+            , ["LOG10E", ""]
+            , ["LOG2E", ""]
+            , ["PI", ""]
+            , ["SQRT1_2", ""]
+            , ["SQRT2", ""]
+//            Math methods
+            , ["abs", ""]
+            , ["acos", ""]
+            , ["acosh", ""]
+            , ["asin", ""]
+            , ["asinh", ""]
+            , ["atan", ""]
+            , ["atan2", ""]
+            , ["atanh", ""]
+            , ["cbrt", ""]
+            , ["ceil", ""]
+            , ["clz32", ""]
+            , ["cos", ""]
+            , ["cosh", ""]
+            , ["exp", ""]
+            , ["expm1", ""]
+            , ["floor", ""]
+            , ["fround", ""]
+            , ["hypot", ""]
+            , ["imul", ""]
+            , ["log", ""]
+            , ["log10", ""]
+            , ["log1p", ""]
+            , ["log2", ""]
+            , ["max", ""]
+            , ["min", ""]
+            , ["pow", ""]
+            , ["random", ""]
+            , ["round", ""]
+            , ["sign", ""]
+            , ["sin", ""]
+            , ["sinh", ""]
+            , ["sqrt", ""]
+            , ["tan", ""]
+            , ["tanh", ""]
+            , ["trunc", ""]
+//            Date, RegExp
 ];
 
 var jsOnChange = document.getElementById('jstoyopta').addEventListener('keyup', converter, false);
@@ -520,7 +593,7 @@ String.prototype.replaceAll = function (search, replacement) {
 function converter() {
     var jstoyopta = document.getElementById('jstoyopta').value;
     // var jsArray = jstoyopta.split (/\n| /);
-    //    str.match(regexp)
+    // str.match(regexp)
     var i = 0;
     var yoptaNew = jstoyopta;
     for (i = 0; i < dictonary.length; i++) {
