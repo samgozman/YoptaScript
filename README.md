@@ -1,5 +1,6 @@
+[![yoptascript v0.1.2](https://img.shields.io/badge/download-v0.1.2-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/archive/v0.1.2.zip)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/issues)
-[![contributions welcome](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/samgozman/YoptaScript/blob/master/LICENSE.txt)
+[![contributions welcome](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat)](https://github.com/samgozman/YoptaScript/blob/master/LICENSE.txt)
 
 #YoptaScript
 [YoptaScript](http://yopta.space/) это первый в мире скриптовый язык программирования для гопников и реальных пацанов, транслируемый в чистый JavaScript. YoptaScript позволит "чётким пацанам" быстро влиться в ряды программистов и процесс разработки.
