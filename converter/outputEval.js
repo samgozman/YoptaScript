@@ -1,3 +1,8 @@
+/* 
+    *  Скрипт для выполнения кода сразу при его написании. 
+    *  Не использовать на живом сайте (а то гопнуть могут)!
+    *  Только для ознакомления на локальном компьютере.
+*/
 //Выполнение кода
 var input = document.getElementById('jstoyopta');
 var output = document.getElementById('outputField');
