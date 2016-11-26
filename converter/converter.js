@@ -7,22 +7,22 @@ var dictonary = [
 			, ["debugger", "логопед"]
 			, ["default", "понятие"]
 			, ["delete", "ёбнуть"]
-			, ["do(?![a-z]+)", "крч"]
+			, ["do", "крч"]
 			, ["else", "иливжопураз"]
 			, ["finally", "тюряжка"]
 			, ["for", "го"]
 			, ["function", "йопта"]
 			, ["if", "вилкойвглаз"]
-			, ["in(?![a-zA-Z]+)", "в"]
+			, ["in", "в"]
 			, ["instanceof", "внатуре"]
-			, ["new(?![a-zA-Z]+)", "гы"]
+			, ["new", "гыйбать"]
 			, ["return", "отвечаю"]
 			, ["switch", "пошерстим"]
 			, ["this", "тырыпыры"]
 			, ["throw", "пнх"]
 			, ["try", "хапнуть"]
 			, ["typeof", "чезажижан"]
-			, ["var", "валио"]
+			, ["var", "гы"]
 			, ["void", "куку"]
 			, ["while", "потрещим"]
 			, ["with", "хзйопт"]
@@ -96,7 +96,7 @@ var dictonary = [
             , ["querySelectorAll", "хулиТутВсеВыёбываются"]
             , ["createExpression", "намутитьБазар"]
             , ["evaluate", "заценить"]
-            , ["clear(?![a-zA-Z]+)", "урыть"]
+            , ["clear", "урыть"]
             , ["close", "завали"]
             , ["execCommand", "идиРаботайБля"]
             , ["getElementsByName", "вычислитьТерпилПоИмени"]
@@ -156,6 +156,7 @@ var dictonary = [
             , ["URL", "хата"]
             , ["vlinkColor", "когдаОткинулсяПослеЗоны"]
             , ["width", "жирный"]
+            , ["value", "валио"]
 //            Document event handlers
             , ["onafterscriptexecute", "послеВыполненияЙопты"]
             , ["onbeforescriptexecute", "доВыполненияЙопты"]
@@ -291,7 +292,7 @@ var dictonary = [
             , ["removeEventListener", "урытьВертухая"]
             , ["resizeBy", "распидораситьПоХуйне"]
             , ["resizeTo", "распидораситьОтносительно"]
-            , ["scroll(?![a-zA-Z]+)", "колесить"]
+            , ["scroll", "колесить"]
             , ["scrollBy", "колеситьНа"]
             , ["scrollByLines", "колеситьНаЛинии"]
             , ["scrollByPages", "колеситьНаМалявах"]
@@ -597,7 +598,7 @@ function converter() {
     var i = 0;
     var yoptaNew = jstoyopta;
     for (i = 0; i < dictonary.length; i++) {
-        yoptaNew = yoptaNew.replaceAll(dictonary[i][0], dictonary[i][1]);
+        yoptaNew = yoptaNew.replaceAll(dictonary[i][0] + '(?![a-zA-Z]+)', dictonary[i][1]);
     }
     document.getElementById('yopta').value = yoptaNew;
 }
