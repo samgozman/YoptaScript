@@ -540,7 +540,7 @@ var dictonary = [
             , ["LN2", "ГОПОРИФМ2"]
             , ["LOG10E", "СЛОЖНЫЙ_ГОПОРИФМ10"]
             , ["LOG2E", "СЛОЖНЫЙ_ГОПОРИФМ2"]
-            , ["PI", "пиздец"]
+            , ["PI", "ПИЗДЕЦ"]
             , ["SQRT1_2", "сквиртНаПолшишечки"]
             , ["SQRT2", "двойнойСквирт"]
 //            Math methods
@@ -586,18 +586,18 @@ var jsOnChange = document.getElementById('jstoyopta').addEventListener('keyup', 
 String.prototype.replaceAll = function (search, replacement) {
     var target = this;
     var re = new RegExp(search, 'g');
-    //console.log(this.replace(re, replacement));
     return this.replace(re, replacement);
 };
 
 function converter() {
     var jstoyopta = document.getElementById('jstoyopta').value;
-    // var jsArray = jstoyopta.split (/\n| /);
     // str.match(regexp)
     var i = 0;
     var yoptaNew = jstoyopta;
+    
+    //Весь сок тут
     for (i = 0; i < dictonary.length; i++) {
-        yoptaNew = yoptaNew.replaceAll(dictonary[i][0] + '(?![a-zA-Z]+)', dictonary[i][1]);
+        yoptaNew = yoptaNew.replaceAll('\\b' + dictonary[i][0] + '(?![\\w-+*\\/]+)', dictonary[i][1]);
     }
     document.getElementById('yopta').value = yoptaNew;
 }
