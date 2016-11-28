@@ -579,7 +579,20 @@ var dictonary = [
             , ["tan", "гопангенс"]
             , ["tanh", "гопангенсКолпинский"]
             , ["trunc", "верниЧирик"]
-//            Date, RegExp
+//            RegExp properties
+            , ["RegExp", "фильтруйБазар"]
+            , ["input", "тыЭтоПишибля"]
+            , ["flags", "флагМнеВанус"]
+            , ["global", "глобалкаЙопта"]
+            , ["ignoreCase", "игнорщикЕбаный"]
+            , ["multiline", "стулБезПик"]
+            , ["source", "чоТыБляСказал"]
+            , ["sticky", "петухОпущенный"]
+            , ["unicode", "хуйняНахуй"]
+            , ["lastIndex", "доКонцаОтсидки"]
+//            RegExp methods
+            , ["exec", "работайМразь"]
+            , ["test", "ответыБудутЭээ"]
 ];
 
 var jsOnChange = document.getElementById('jstoyopta').addEventListener('keyup', converter, false);
