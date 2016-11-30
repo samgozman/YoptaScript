@@ -1,4 +1,4 @@
-[![yoptascript v0.1.2](https://img.shields.io/badge/download-v0.1.2-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/archive/v0.1.2.zip)
+[![yoptascript v0.1.3](https://img.shields.io/badge/download-v0.1.3-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/archive/v0.1.3.zip)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/issues)
 [![contributions welcome](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat)](https://github.com/samgozman/YoptaScript/blob/master/LICENSE.txt)
 
@@ -102,6 +102,18 @@ YoptaScript
 	
 	ебало.шухер("Привет, йопта") нах
 
+### Работа с Math
+JavaScript
+
+	Math.cos(0 * Math.PI / 180); 
+	Math.floor(300);
+	Math.pow(9); 
+
+YoptaScript
+
+	Гопец.гопосинос(0 * Гопец.ПИЗДЕЦ / 180) нах 
+	Гопец.бабкиГони(300) нах	
+	Гопец.гопень(9) нах 
 ## Планы разработки
 
 * Создание конвертёра из YoptaScript в JS
