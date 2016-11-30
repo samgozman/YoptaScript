@@ -61,16 +61,16 @@ var dictonary = [
 			, ["true", "трулио"]
 			, ["false", "нетрулио"]
 //            Операторы сравнения и логические операторы
-			, [">", "пизже"]
-			, ["<", "хуёвей"]
-			, [">=", "поцик"]
+            , ["==", "эквалио"]
+            , [">=", "поцик"]
 			, ["<=", "поц"]
-			, ["==", "эквалио"]
+            , ["\\&\\&", "ичо"]
+			, ["\\|\\|", "иличо"]
+            , [">", "пизже"]
+			, ["<", "хуёвей"]
 			, ["=", "сука"]
 			, [";", " нах"]
 			, ["\\!", "чобля"]
-			, ["\\\&\\&", "ичо"]
-			, ["\\|\\|", "иличо"]
 //             Document methods
             , ["document", "ксива"]
             , ["captureEvents", "зафотатьШняги"]
@@ -594,7 +594,6 @@ var dictonary = [
             , ["exec", "работайМразь"]
             , ["test", "ответыБудутЭээ"]
 ];
-
 var jsOnChange = document.getElementById('jstoyopta').addEventListener('keyup', converter, false);
 String.prototype.replaceAll = function (search, replacement) {
     var target = this;
@@ -607,10 +606,9 @@ function converter() {
     // str.match(regexp)
     var i = 0;
     var yoptaNew = jstoyopta;
-    
     //Весь сок тут
     for (i = 0; i < dictonary.length; i++) {
-        yoptaNew = yoptaNew.replaceAll('\\b' + dictonary[i][0] + '(?![\\w-+*\\/]+)', dictonary[i][1]);
+        yoptaNew = yoptaNew.replaceAll('\\b' + dictonary[i][0] + '(?![\\w-+*\\/]+)', dictonary[i][1]).replaceAll('\\B' + dictonary[i][0], dictonary[i][1]);
     }
     document.getElementById('yopta').value = yoptaNew;
 }
