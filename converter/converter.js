@@ -62,16 +62,16 @@ var dictonary = [
 			, ["true", "трулио"]
 			, ["false", "нетрулио"]
 //            Операторы сравнения и логические операторы
-			, [">", "пизже"]
-			, ["<", "хуёвей"]
-			, [">=", "поцик"]
+            , ["==", "эквалио"]
+            , [">=", "поцик"]
 			, ["<=", "поц"]
-			, ["==", "эквалио"]
+            , ["\\&\\&", "ичо"]
+			, ["\\|\\|", "иличо"]
+            , [">", "пизже"]
+			, ["<", "хуёвей"]
 			, ["=", "сука"]
 			, [";", " нах"]
 			, ["\\!", "чобля"]
-			, ["\\\&\\&", "ичо"]
-			, ["\\|\\|", "иличо"]
 //             Document methods
             , ["document", "ксива"]
             , ["captureEvents", "зафотатьШняги"]
@@ -541,7 +541,7 @@ var dictonary = [
             , ["LN2", "ГОПОРИФМ2"]
             , ["LOG10E", "СЛОЖНЫЙ_ГОПОРИФМ10"]
             , ["LOG2E", "СЛОЖНЫЙ_ГОПОРИФМ2"]
-            , ["PI", "пиздец"]
+            , ["PI", "ПИЗДЕЦ"]
             , ["SQRT1_2", "сквиртНаПолшишечки"]
             , ["SQRT2", "двойнойСквирт"]
 //            Math methods
@@ -580,25 +580,36 @@ var dictonary = [
             , ["tan", "гопангенс"]
             , ["tanh", "гопангенсКолпинский"]
             , ["trunc", "верниЧирик"]
-//            Date, RegExp
+//            RegExp properties
+            , ["RegExp", "фильтруйБазар"]
+            , ["input", "тыЭтоПишибля"]
+            , ["flags", "флагМнеВанус"]
+            , ["global", "глобалкаЙопта"]
+            , ["ignoreCase", "игнорщикЕбаный"]
+            , ["multiline", "стулБезПик"]
+            , ["source", "чоТыБляСказал"]
+            , ["sticky", "петухОпущенный"]
+            , ["unicode", "хуйняНахуй"]
+            , ["lastIndex", "доКонцаОтсидки"]
+//            RegExp methods
+            , ["exec", "работайМразь"]
+            , ["test", "ответыБудутЭээ"]
 ];
-
 var jsOnChange = document.getElementById('jstoyopta').addEventListener('keyup', converter, false);
 String.prototype.replaceAll = function (search, replacement) {
     var target = this;
     var re = new RegExp(search, 'g');
-    //console.log(this.replace(re, replacement));
     return this.replace(re, replacement);
 };
 
 function converter() {
     var jstoyopta = document.getElementById('jstoyopta').value;
-    // var jsArray = jstoyopta.split (/\n| /);
     // str.match(regexp)
     var i = 0;
     var yoptaNew = jstoyopta;
+    //Весь сок тут
     for (i = 0; i < dictonary.length; i++) {
-        yoptaNew = yoptaNew.replaceAll(dictonary[i][0] + '(?![a-zA-Z]+)', dictonary[i][1]);
+        yoptaNew = yoptaNew.replaceAll('\\b' + dictonary[i][0] + '(?![\\w-+*\\/]+)', dictonary[i][1]).replaceAll('\\B' + dictonary[i][0], dictonary[i][1]);
     }
     document.getElementById('yopta').value = yoptaNew;
 }

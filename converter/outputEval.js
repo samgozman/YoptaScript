@@ -1,8 +1,8 @@
 /* 
-    *  Скрипт для выполнения кода сразу при его написании. 
-    *  Не использовать на живом сайте (а то гопнуть могут)!
-    *  Только для ознакомления на локальном компьютере.
-*/
+ *  Скрипт для выполнения кода сразу при его написании. 
+ *  Не использовать на живом сайте (а то гопнуть могут)!
+ *  Только для ознакомления на локальном компьютере.
+ */
 //Выполнение кода
 var input = document.getElementById('jstoyopta');
 var output = document.getElementById('outputField');
@@ -10,13 +10,13 @@ input.focus();
 
 //Не использовать eval() на сайте! (возможность XSS)
 function evalInput() {
+    'use strict';
     if (input.value != window.lastInput) {
         var theResult, evalSucceeded;
         try {
             theResult = eval(input.value);
             evalSucceeded = true;
-        }
-        catch (e) {
+        } catch (e) {
             output.innerHTML = e;
         }
         if (evalSucceeded) {
