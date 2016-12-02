@@ -609,7 +609,8 @@ function yopt() {
     var yopta = document.querySelector('[language="YoptaScript"]'), i = 0, yoptaText = yopta.textContent;
     
     for (i = 0; i < dictonary.length; i++) {
-        yoptaText = yoptaText.replaceAll('\\b' + dictonary[i][1] + '\\b(?![\\w\-\+\*\\/]+)', dictonary[i][0]).replaceAll('\\B' + dictonary[i][1], dictonary[i][0]);
+        yoptaText = yoptaText.replaceAll('[^а-яА-ЯёЁa-zA-Z0-9]' + dictonary[i][1] + '[^а-яА-ЯёЁa-zA-Z0-9]', dictonary[i][0]);
+        //NOTE: Проблема с вхождениями при втором обходе: .replaceAll('\\B' + dictonary[i][1], dictonary[i][0]);
     }
     
     //удаляем старый скрипт

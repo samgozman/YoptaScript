@@ -608,7 +608,7 @@ function converter() {
     var yoptaNew = jstoyopta;
     //Весь сок тут
     for (i = 0; i < dictonary.length; i++) {
-        yoptaNew = yoptaNew.replaceAll('\\b' + dictonary[i][0] + '(?![\\w-+*\\/]+)', dictonary[i][1]).replaceAll('\\B' + dictonary[i][0], dictonary[i][1]);
+        yoptaNew = yoptaNew.replaceAll('\\b' + dictonary[i][0] + '\\b(?![\\w\-\+\*\\/]+)', dictonary[i][1]).replaceAll('\\B' + dictonary[i][0], dictonary[i][1]);
     }
     document.getElementById('yopta').value = yoptaNew;
 }
