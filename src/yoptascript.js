@@ -2281,7 +2281,8 @@ function yopt() {
         yopta.parentNode.removeChild(yopta);
 
         //создаём обработанный скрипт с блекджеком и шлюхами
-        var js_script = document.createElement("script");
+        var js_script = document.createElement("script"),
+            body = document.getElementsByTagName("BODY")[0];
         js_script.innerHTML = yoptaText;
         body.appendChild(js_script);
     }
