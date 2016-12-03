@@ -1,5 +1,9 @@
-//тут был грушан йбать
 var dictonary = [
+/* Изначально массив элементов у нас не отсортирован.
+ * Сортируем массив для корректной работы алгоритма перевода.
+ * Любые правки по словарю языка сначала пишем сюда!
+ */
+var dictionary = [
 
 			["break", "харэ"]
 			, ["case", "лещ"]
@@ -109,7 +113,7 @@ var dictonary = [
             , ["queryCommandSupported", "хулиЧикаБезАйфона"]
             , ["queryCommandIndeterm", "хулиЧикаОйВсё"]
             , ["queryCommandValue", "хулиЧикаВалио"]
-            , ["write(?![a-z]+)", "малява"]
+            , ["write", "малява"]
             , ["writeln", "малявагоп"]
 //            Document Properties
             , ["async", "ассо"]
@@ -564,7 +568,6 @@ var dictonary = [
             , ["fround", "мелочьТожеГони"]
             , ["hypot", "вКореньЗыришь"]
             , ["imul", "петухПетухаВидитИздалека"]
-            , ["log", "гопорифм"]
             , ["log10", "гопорифмПо10"]
             , ["log1p", "чистыйГопорифмПо1"]
             , ["log2", "гопорифмПо2"]
@@ -595,21 +598,12 @@ var dictonary = [
             , ["exec", "работайМразь"]
             , ["test", "ответыБудутЭээ"]
 ];
-var jsOnChange = document.getElementById('jstoyopta').addEventListener('keyup', converter, false);
-String.prototype.replaceAll = function (search, replacement) {
-    var target = this;
-    var re = new RegExp(search, 'g');
-    return this.replace(re, replacement);
-};
 
-function converter() {
-    var jstoyopta = document.getElementById('jstoyopta').value;
-    // str.match(regexp)
-    var i = 0;
-    var yoptaNew = jstoyopta;
-    //Весь сок тут
-    for (i = 0; i < dictonary.length; i++) {
-        yoptaNew = yoptaNew.replaceAll('\\b' + dictonary[i][0] + '(?![\\w-+*\\/]+)', dictonary[i][1]).replaceAll('\\B' + dictonary[i][0], dictonary[i][1]);
-    }
-    document.getElementById('yopta').value = yoptaNew;
-}
+//Для сортировки по количеству символов
+dictionary.sort(function (a, b) {
+    if (a[1].length < b[1].length) return 1;
+    else if (a[1].length > b[1].length) return -1;
+    else return 0;
+});
+console.log(JSON.stringify(dictionary, null, '\t'));
+//END
