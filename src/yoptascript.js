@@ -1732,10 +1732,6 @@ var dictionary = [
 		"агопинус"
 	],
 	[
-		"log",
-		"гопорифм"
-	],
-	[
 		"debugger",
 		"логопед"
 	],
@@ -2272,7 +2268,7 @@ function yopt() {
     var yopta = document.querySelector('[language="YoptaScript"]'),
         i = 0,
         yoptaText;
-    
+
     if (yopta != null) {
         yoptaText = yopta.textContent;
 
