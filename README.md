@@ -1,4 +1,4 @@
-[![yoptascript v0.2](https://img.shields.io/badge/download-v0.2-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/archive/v0.2.zip)
+[![yoptascript v0.2.1](https://img.shields.io/badge/download-v0.2.1-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/archive/v0.2.1.zip)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/issues)
 [![contributions welcome](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat)](https://github.com/samgozman/YoptaScript/blob/master/LICENSE.txt)
 
