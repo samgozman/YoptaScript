@@ -2271,20 +2271,25 @@ function yopt() {
     //Получаем йопту из скрипта
     var yopta = document.querySelector('[language="YoptaScript"]'),
         i = 0,
+        yoptaText;
+    
+    if (yopta != null) {
         yoptaText = yopta.textContent;
 
-    for (i = 0; i < dictionary.length; i++) {
-        yoptaText = yoptaText.replaceAll(dictionary[i][1], dictionary[i][0]);
-        //NOTE: Проблема с вхождениями при втором обходе: .replaceAll('\\B' + dictonary[i][1], dictonary[i][0]);
+        for (i = 0; i < dictionary.length; i++) {
+            yoptaText = yoptaText.replaceAll(dictionary[i][1], dictionary[i][0]);
+            //NOTE: Проблема с вхождениями при втором обходе: .replaceAll('\\B' + dictonary[i][1], dictonary[i][0]);
+        }
+
+        //удаляем старый скрипт
+        yopta.parentNode.removeChild(yopta);
+
+        //создаём обработанный скрипт с блекджеком и шлюхами
+        var js_script = document.createElement("script");
+        js_script.innerHTML = yoptaText;
+        body.appendChild(js_script);
     }
 
-    //удаляем старый скрипт
-    yopta.parentNode.removeChild(yopta);
-
-    //создаём обработанный скрипт с блекджеком и шлюхами
-    var js_script = document.createElement("script");
-    js_script.innerHTML = yoptaText;
-    body.appendChild(js_script);
 }
 
 yopt();
