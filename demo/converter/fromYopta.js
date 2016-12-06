@@ -35,6 +35,10 @@ var dictionaryFromJs = [
 		"покаДёргалкаНарисовалась"
 	],
 	[
+		"ondragenter",
+		"покаДергалкаНарисовалась"
+	],
+	[
 		"imul",
 		"петухПетухаВидитИздалека"
 	],
@@ -77,6 +81,10 @@ var dictionaryFromJs = [
 	[
 		"querySelectorAll",
 		"хулиТутВсеВыёбываются"
+	],
+	[
+		"querySelectorAll",
+		"хулиТутВсеВыебываются"
 	],
 	[
 		"pointerLockElement",
@@ -127,6 +135,10 @@ var dictionaryFromJs = [
 		"ухтыжёптыжбляПодгони"
 	],
 	[
+		"sizeToContent",
+		"ухтыжептыжбляПодгони"
+	],
+	[
 		"fontcolor",
 		"говномПоСтенеКрасиво"
 	],
@@ -165,6 +177,10 @@ var dictionaryFromJs = [
 	[
 		"ondragend",
 		"покаХарэОчкоДёргать"
+	],
+	[
+		"ondragend",
+		"покаХарэОчкоДергать"
 	],
 	[
 		"oninvalid",
@@ -213,6 +229,10 @@ var dictionaryFromJs = [
 	[
 		"ondrop",
 		"опаМабилкаЁбнулась"
+	],
+	[
+		"ondrop",
+		"опаМабилкаЕбнулась"
 	],
 	[
 		"oninput",
@@ -303,6 +323,10 @@ var dictionaryFromJs = [
 		"покаДёрнулПодошла"
 	],
 	[
+		"ondragover",
+		"покаДернулПодошла"
+	],
+	[
 		"onpointerover",
 		"покаСтрелаПодошла"
 	],
@@ -329,6 +353,10 @@ var dictionaryFromJs = [
 	[
 		"updateCommands",
 		"новыйАйфонДляЧики"
+	],
+	[
+		"onbeforeunload",
+		"покаСемкиКрутятся"
 	],
 	[
 		"onhashchange",
@@ -379,6 +407,10 @@ var dictionaryFromJs = [
 		"сколькоСемокДонёс"
 	],
 	[
+		"progress",
+		"сколькоСемокДонес"
+	],
+	[
 		"LOG2E",
 		"СЛОЖНЫЙ_ГОПОРИФМ2"
 	],
@@ -411,12 +443,20 @@ var dictionaryFromJs = [
 		"хулиВыёбываешься"
 	],
 	[
+		"querySelector",
+		"хулиВыебываешься"
+	],
+	[
 		"queryCommandState",
 		"хулиЧикаОтдыхает"
 	],
 	[
 		"contentType",
 		"ухтыжёптыжТипчик"
+	],
+	[
+		"contentType",
+		"ухтыжептыжТипчик"
 	],
 	[
 		"alinkColor",
@@ -429,6 +469,10 @@ var dictionaryFromJs = [
 	[
 		"ondragexit",
 		"анусСебеДёрниПёс"
+	],
+	[
+		"ondragexit",
+		"анусСебеДерниПес"
 	],
 	[
 		"ondragleave",
@@ -473,6 +517,10 @@ var dictionaryFromJs = [
 	[
 		"textContent",
 		"ухтыжёптыжМалява"
+	],
+	[
+		"textContent",
+		"ухтыжептыжМалява"
 	],
 	[
 		"contains",
@@ -591,6 +639,10 @@ var dictionaryFromJs = [
 		"чоТутНамалёвано"
 	],
 	[
+		"getImageData",
+		"чоТутНамалевано"
+	],
+	[
 		"profileEnd",
 		"вЛичкуПрописали"
 	],
@@ -601,6 +653,10 @@ var dictionaryFromJs = [
 	[
 		"ondragstart",
 		"покаДёрнулКмон"
+	],
+	[
+		"ondragstart",
+		"покаДернулКмон"
 	],
 	[
 		"onkeydown",
@@ -627,8 +683,16 @@ var dictionaryFromJs = [
 		"всёЕбалоПоЭксу"
 	],
 	[
+		"screenX",
+		"всеЕбалоПоЭксу"
+	],
+	[
 		"screenY",
 		"всёЕбалоПоУгам"
+	],
+	[
+		"screenY",
+		"всеЕбалоПоУгам"
 	],
 	[
 		"scrollX",
@@ -755,6 +819,10 @@ var dictionaryFromJs = [
 		"хулиЧикаОйВсё"
 	],
 	[
+		"queryCommandIndeterm",
+		"хулиЧикаОйВсе"
+	],
+	[
 		"queryCommandValue",
 		"хулиЧикаВалио"
 	],
@@ -777,6 +845,10 @@ var dictionaryFromJs = [
 	[
 		"ondrag",
 		"опаОчкоДёрнул"
+	],
+	[
+		"ondrag",
+		"опаОчкоДернул"
 	],
 	[
 		"onkeyup",
@@ -891,6 +963,10 @@ var dictionaryFromJs = [
 		"ХУЁВЫЙ_ГАНДОН"
 	],
 	[
+		"MIN_SAFE_INTEGER",
+		"ХУЕВЫЙ_ГАНДОН"
+	],
+	[
 		"groupCollapsed",
 		"свернутьБанду"
 	],
@@ -955,8 +1031,16 @@ var dictionaryFromJs = [
 		"какПоЛбуЁбну"
 	],
 	[
+		"oncontextmenu",
+		"какПоЛбуЕбну"
+	],
+	[
 		"onmouseenter",
 		"вошёлНаРайон"
+	],
+	[
+		"onmouseenter",
+		"вошелНаРайон"
 	],
 	[
 		"onmousemove",
@@ -1095,6 +1179,10 @@ var dictionaryFromJs = [
 		"ХУЁВОЕ_ВАЛИО"
 	],
 	[
+		"MIN_VALUE",
+		"ХУЕВОЕ_ВАЛИО"
+	],
+	[
 		"POSITIVE_INFINITY",
 		"ОХУЕТЬ_ДОХУЯ"
 	],
@@ -1141,6 +1229,10 @@ var dictionaryFromJs = [
 	[
 		"characterSet",
 		"слышТыЧоЁба"
+	],
+	[
+		"characterSet",
+		"слышТыЧоЕба"
 	],
 	[
 		"documentURI",
@@ -1201,6 +1293,10 @@ var dictionaryFromJs = [
 	[
 		"charCodeAt",
 		"обаЁбаХуйня"
+	],
+	[
+		"charCodeAt",
+		"обаЕбаХуйня"
 	],
 	[
 		"split",
@@ -1299,6 +1395,10 @@ var dictionaryFromJs = [
 		"воВсёЕбало"
 	],
 	[
+		"fullScreen",
+		"воВсеЕбало"
+	],
+	[
 		"opener",
 		"открывашка"
 	],
@@ -1343,6 +1443,10 @@ var dictionaryFromJs = [
 		"хуйняИзЁба"
 	],
 	[
+		"fromCharCode",
+		"хуйняИзЕба"
+	],
+	[
 		"concat",
 		"заебеньВсе"
 	],
@@ -1353,6 +1457,10 @@ var dictionaryFromJs = [
 	[
 		"big",
 		"большойЁпт"
+	],
+	[
+		"big",
+		"большойЕпт"
 	],
 	[
 		"lineWidth",
@@ -1403,6 +1511,10 @@ var dictionaryFromJs = [
 		"семкиДонёс"
 	],
 	[
+		"loadend",
+		"семкиДонес"
+	],
+	[
 		"from",
 		"спиздитьИз"
 	],
@@ -1417,6 +1529,10 @@ var dictionaryFromJs = [
 	[
 		"map",
 		"засратьВсё"
+	],
+	[
+		"map",
+		"засратьВсе"
 	],
 	[
 		"unshift",
@@ -1523,6 +1639,10 @@ var dictionaryFromJs = [
 		"жирныйЁпт"
 	],
 	[
+		"bold",
+		"жирныйЕпт"
+	],
+	[
 		"strike",
 		"въебиОчко"
 	],
@@ -1553,6 +1673,10 @@ var dictionaryFromJs = [
 	[
 		"send",
 		"всёПиздуй"
+	],
+	[
+		"send",
+		"всеПиздуй"
 	],
 	[
 		"join",
@@ -1619,6 +1743,10 @@ var dictionaryFromJs = [
 		"якоряЁпт"
 	],
 	[
+		"anchors",
+		"якоряЕпт"
+	],
+	[
 		"dir",
 		"буратино"
 	],
@@ -1659,6 +1787,10 @@ var dictionaryFromJs = [
 		"всёЕбало"
 	],
 	[
+		"screen",
+		"всеЕбало"
+	],
+	[
 		"self",
 		"пельмень"
 	],
@@ -1697,6 +1829,10 @@ var dictionaryFromJs = [
 	[
 		"anchor",
 		"якорьЁпт"
+	],
+	[
+		"anchor",
+		"якорьЕпт"
 	],
 	[
 		"filter",
@@ -1791,6 +1927,10 @@ var dictionaryFromJs = [
 		"клеёнка"
 	],
 	[
+		"package",
+		"клеенка"
+	],
+	[
 		"public",
 		"ебанное"
 	],
@@ -1805,6 +1945,10 @@ var dictionaryFromJs = [
 	[
 		"charset",
 		"слышЁба"
+	],
+	[
+		"charset",
+		"слышЕба"
 	],
 	[
 		"timeline",
@@ -1887,6 +2031,10 @@ var dictionaryFromJs = [
 		"ёбнуть"
 	],
 	[
+		"delete",
+		"ебнуть"
+	],
+	[
 		"with",
 		"хзйопт"
 	],
@@ -1909,6 +2057,10 @@ var dictionaryFromJs = [
 	[
 		"<",
 		"хуёвей"
+	],
+	[
+		"<",
+		"хуевей"
 	],
 	[
 		"close",
@@ -1951,6 +2103,10 @@ var dictionaryFromJs = [
 		"хуёкус"
 	],
 	[
+		"focus",
+		"хуекус"
+	],
+	[
 		"stop",
 		"стопээ"
 	],
@@ -1961,6 +2117,10 @@ var dictionaryFromJs = [
 	[
 		"charAt",
 		"обаЁба"
+	],
+	[
+		"charAt",
+		"обаЕба"
 	],
 	[
 		"match",
@@ -2019,6 +2179,10 @@ var dictionaryFromJs = [
 		"клёво"
 	],
 	[
+		"Class",
+		"клево"
+	],
+	[
 		"final",
 		"бачок"
 	],
@@ -2033,6 +2197,10 @@ var dictionaryFromJs = [
 	[
 		"interface",
 		"хуёво"
+	],
+	[
+		"interface",
+		"хуево"
 	],
 	[
 		"Short",
