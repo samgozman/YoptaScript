@@ -16,8 +16,8 @@ function converter(lang) {
         var ystojs = document.getElementById('yopta').value,
             i = 0, 
             jsNew = ystojs;
-        for (i = 0; i < dictionary.length; i++) {
-            jsNew = jsNew.replaceAll(dictionary[i][1], dictionary[i][0]);
+        for (i = 0; i < dictionaryFromJs.length; i++) {
+            jsNew = jsNew.replaceAll(dictionaryFromJs[i][1], dictionaryFromJs[i][0]);
         }
         document.getElementById('jstoyopta').value = jsNew;
     }
