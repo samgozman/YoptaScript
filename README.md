@@ -1,4 +1,4 @@
-[![yoptascript v0.2.1](https://img.shields.io/badge/download-v0.2.1-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/archive/v0.2.1.zip)
+[![yoptascript v0.2.2](https://img.shields.io/badge/download-v0.2.2-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/archive/v0.2.2.zip)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/issues)
 [![contributions welcome](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat)](https://github.com/samgozman/YoptaScript/blob/master/LICENSE.txt)
 
@@ -137,6 +137,26 @@ YoptaScript
 	Math.cos(0 * Math.PI / 180); 
 	Math.floor(300);
 	Math.pow(9); 
+	
+### Работа с логическими операторами
+YoptaScript
+
+	result сука a иличо b нах
+	result сука a ичо b нах
+	вилкойвглаз (x пизже 0 иличо y хуёвей 10) {
+  		шухер( 'Ыгыыг' ) нах
+  		a сука нетрулио нах
+	} 
+	
+В переводе на JavaScript
+
+	result = a || b;
+	result = a && b;
+	if (x > 0 || y < 10) {
+  		alert( 'Ыгыыг' );
+  		a = false;
+	}
+	
 
 ## Известные проблемы
 
