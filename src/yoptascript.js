@@ -1,3 +1,5 @@
+(function (w, d) {
+
 /* YoptaScript
  * Массив без лишних экранирований
  * Для перевода из js в ys
@@ -2437,37 +2439,52 @@ var dictionary = [
 	]
 ];
 
-String.prototype.replaceAll = function (search, replacement) {
-    var target = this;
-    var re = new RegExp(search, 'g');
-    return this.replace(re, replacement);
-};
-
-function yopt() {
-    //Получаем йопту из скрипта
-    var yopta = document.querySelectorAll('[language="YoptaScript"]'),
-        i = 0,
-        yoptaText;
-
-    if (yopta != null) {
-    	for (var yoptaScript = 0; yoptaScript < yopta.length; yoptaScript++) {
-            yoptaText = yopta[yoptaScript].textContent;
-
-            for (i = 0; i < dictionary.length; i++) {
-                yoptaText = yoptaText.replaceAll(dictionary[i][1], dictionary[i][0]);
-            }
-
-            //удаляем старый скрипт
-            yopta[yoptaScript].parentNode.removeChild(yopta[yoptaScript]);
-
-            //создаём обработанный скрипт с блекджеком и шлюхами
-            var js_script = document.createElement("script"),
-                body = document.getElementsByTagName("BODY")[0];
-            js_script.innerHTML = yoptaText;
-            body.appendChild(js_script);
-		}
+	function escapeRegExp(str) {
+	    return str.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
     }
 
-};
+    function yoptReplaceAll(str, search, replacement) {
+        var re = new RegExp(escapeRegExp(search), 'g');
+        return str.replace(re, replacement);
+    }
 
-yopt();
+    function compile(yoptaText) {
+        for (var i = 0; i < dictionary.length; i++) {
+            yoptaText = yoptReplaceAll(yoptaText, dictionary[i][1], dictionary[i][0]);
+        }
+
+        return yoptaText;
+    }
+
+    function yoptify(jscode) {
+        for (i = 0; i < dictionary.length; i++) {
+            jscode = yoptReplaceAll(jscode, dictionary[i][0], dictionary[i][1]);
+        }
+
+        return jscode;
+    }
+
+    function yoptaToJs(yopta) {
+
+        //Получаем йопту из скрипта
+        var yoptaText = compile(yopta.textContent);
+
+        //удаляем старый скрипт
+        yopta.parentNode.removeChild(yopta);
+
+        //создаём обработанный скрипт с блекджеком и шлюхами
+        var js_script = d.createElement("script");
+        js_script.innerHTML = yoptaText;
+        document.body.appendChild(js_script);
+    }
+
+    //Получаем йопту из скрипта
+    d.querySelectorAll('[language="YoptaScript"]').forEach(yoptaToJs);
+
+    w.yopt = {
+        dictionary: dictionary,
+        compile: compile,
+        yoptify: yoptify,
+    }
+
+})(window, document);
