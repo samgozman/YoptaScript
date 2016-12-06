@@ -1,3 +1,7 @@
+/* YoptaScript
+ * Массив без лишних экранирований
+ * Для перевода из js в ys
+ */
 var dictionary = [
 	[
 		"includes",
@@ -1728,6 +1732,14 @@ var dictionary = [
 		"нетрулио"
 	],
 	[
+		"++",
+		"плюсуюНа"
+	],
+	[
+		"--",
+		"слилсяНа"
+	],
+	[
 		"evaluate",
 		"заценить"
 	],
@@ -2442,7 +2454,6 @@ function yopt() {
 
         for (i = 0; i < dictionary.length; i++) {
             yoptaText = yoptaText.replaceAll(dictionary[i][1], dictionary[i][0]);
-            //NOTE: Проблема с вхождениями при втором обходе: .replaceAll('\\B' + dictonary[i][1], dictonary[i][0]);
         }
 
         //удаляем старый скрипт
