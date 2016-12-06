@@ -309,6 +309,7 @@ var dictionary = [
             , ["stop", "стопээ"]
             , ["updateCommands", "новыйАйфонДляЧики"]
 //            Window event handlers
+	    , ["onbeforeunload", "покаСемкиКрутятся"]
             , ["ondevicelight", "покаХуйДлинный"]
             , ["onhashchange", "покаШнягаИзменяет"]
             , ["oninstall", "покаХуйСтоитКакКолонна"]
