@@ -7,8 +7,8 @@ function converter(lang) {
         var jstoyopta = document.getElementById('jstoyopta').value,
             i = 0,
             yoptaNew = jstoyopta;
-        for (i = 0; i < dictionary.length; i++) {
-            yoptaNew = yoptaNew.replaceAll(dictionary[i][0], dictionary[i][1]);
+        for (i = 0; i < dictionaryFromJs.length; i++) {
+            yoptaNew = yoptaNew.replaceAll(dictionaryFromJs[i][0], dictionaryFromJs[i][1]);
         }
         document.getElementById('yopta').value = yoptaNew;
     } else {
@@ -16,8 +16,8 @@ function converter(lang) {
         var ystojs = document.getElementById('yopta').value,
             i = 0, 
             jsNew = ystojs;
-        for (i = 0; i < dictionaryFromJs.length; i++) {
-            jsNew = jsNew.replaceAll(dictionaryFromJs[i][1], dictionaryFromJs[i][0]);
+        for (i = 0; i < dictionary.length; i++) {
+            jsNew = jsNew.replaceAll(dictionary[i][1], dictionary[i][0]);
         }
         document.getElementById('jstoyopta').value = jsNew;
     }
