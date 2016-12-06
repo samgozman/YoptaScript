@@ -2433,28 +2433,30 @@ String.prototype.replaceAll = function (search, replacement) {
 
 function yopt() {
     //Получаем йопту из скрипта
-    var yopta = document.querySelector('[language="YoptaScript"]'),
+    var yopta = document.querySelectorAll('[language="YoptaScript"]'),
         i = 0,
         yoptaText;
 
     if (yopta != null) {
-        yoptaText = yopta.textContent;
+    	for (var yoptaScript = 0; yoptaScript < yopta.length; yoptaScript++) {
+            yoptaText = yopta[yoptaScript].textContent;
 
-        for (i = 0; i < dictionary.length; i++) {
-            yoptaText = yoptaText.replaceAll(dictionary[i][1], dictionary[i][0]);
-            //NOTE: Проблема с вхождениями при втором обходе: .replaceAll('\\B' + dictonary[i][1], dictonary[i][0]);
-        }
+            for (i = 0; i < dictionary.length; i++) {
+                yoptaText = yoptaText.replaceAll(dictionary[i][1], dictionary[i][0]);
+                //NOTE: Проблема с вхождениями при втором обходе: .replaceAll('\\B' + dictonary[i][1], dictonary[i][0]);
+            }
 
-        //удаляем старый скрипт
-        yopta.parentNode.removeChild(yopta);
+            //удаляем старый скрипт
+            yopta[yoptaScript].parentNode.removeChild(yopta[yoptaScript]);
 
-        //создаём обработанный скрипт с блекджеком и шлюхами
-        var js_script = document.createElement("script"),
-            body = document.getElementsByTagName("BODY")[0];
-        js_script.innerHTML = yoptaText;
-        body.appendChild(js_script);
+            //создаём обработанный скрипт с блекджеком и шлюхами
+            var js_script = document.createElement("script"),
+                body = document.getElementsByTagName("BODY")[0];
+            js_script.innerHTML = yoptaText;
+            body.appendChild(js_script);
+		}
     }
 
-}
+};
 
 yopt();
