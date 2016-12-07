@@ -1,0 +1,20 @@
+{
+  "name": "yopta-script",
+  "version": "1.0.0",
+  "description": "The scripting programming language for chavs",
+  "main": "./src/yopta_node.js",
+  "bin": {
+    "YoptaScript": "./src/yopta_node.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/samgozman/YoptaScript.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samgozman/YoptaScript/issues"
+  },
+  "homepage": "https://github.com/samgozman/YoptaScript#readme",
+  "preferGlobal": true
+}
