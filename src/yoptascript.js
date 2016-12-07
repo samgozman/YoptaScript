@@ -2453,6 +2453,26 @@ function yopt() {
     	for (var yoptaScript = 0; yoptaScript < yopta.length; yoptaScript++) {
             yoptaText = yopta[yoptaScript].textContent;
 
+            // Если нет текста и при этом нет src, то забиваем и пропускам ...
+            // Это лютый костыль, который берёт скрипт из файла 
+
+            if (!yoptaText.length) {
+
+            	var src = yopta[yoptaScript].getAttribute('srcfile');
+
+            	if (src !== null && src.length) {
+            		var xml = new XMLHttpRequest();
+            		xml.open('GET', src, false);
+            		xml.send(null);
+            		if(xml.status == 200)
+            			yoptaText = xml.responseText;
+            		else
+            			continue;
+            	}
+            	else
+            		continue;
+            }
+
             for (i = 0; i < dictionary.length; i++) {
                 yoptaText = yoptaText.replaceAll(dictionary[i][1], dictionary[i][0]);
             }
