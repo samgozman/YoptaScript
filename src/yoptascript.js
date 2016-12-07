@@ -2458,8 +2458,8 @@ function yopt() {
 
             if (!yoptaText.length) {
 
-            	var src = yopta[yoptaScript].getAttribute('srcfile');
-
+            	var src = yopta[yoptaScript].getAttribute('src');
+                alert(src);
             	if (src !== null && src.length) {
             		var xml = new XMLHttpRequest();
             		xml.open('GET', src, false);
