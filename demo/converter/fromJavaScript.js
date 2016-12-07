@@ -555,6 +555,10 @@ var dictionaryFromJs = [
 		"шухильмеМухильме"
 	],
 	[
+		"'use strict'",
+		"\"дали строгача\""
+	],
+	[
 		"elementFromPoint",
 		"терпилаИзПараши"
 	],
@@ -1287,6 +1291,10 @@ var dictionaryFromJs = [
 		"щаТяПодвину"
 	],
 	[
+		"Promise",
+		"СловоМужика"
+	],
+	[
 		"onoffline",
 		"покаОффнусь"
 	],
@@ -1353,6 +1361,14 @@ var dictionaryFromJs = [
 	[
 		"log2",
 		"гопорифмПо2"
+	],
+	[
+		"exports",
+		"предъявляет"
+	],
+	[
+		"let",
+		"участковый"
 	],
 	[
 		"Abstract",
@@ -1577,6 +1593,10 @@ var dictionaryFromJs = [
 	[
 		"static",
 		"попонятия"
+	],
+	[
+		"\\=\\=",
+		"однахуйня"
 	],
 	[
 		"writeln",
@@ -1879,6 +1899,10 @@ var dictionaryFromJs = [
 		"агопинус"
 	],
 	[
+		"export",
+		"предъявa"
+	],
+	[
 		"debugger",
 		"логопед"
 	],
@@ -1915,10 +1939,6 @@ var dictionaryFromJs = [
 		"двойные"
 	],
 	[
-		"export",
-		"излабас"
-	],
-	[
 		"Float",
 		"плавник"
 	],
@@ -1949,6 +1969,10 @@ var dictionaryFromJs = [
 	[
 		"\\=\\=",
 		"эквалио"
+	],
+	[
+		"\\=\\=\\=",
+		"блябуду"
 	],
 	[
 		"charset",
@@ -2171,6 +2195,14 @@ var dictionaryFromJs = [
 		"сквирт"
 	],
 	[
+		"module",
+		"братва"
+	],
+	[
+		"default",
+		"пахану"
+	],
+	[
 		"function",
 		"йопта"
 	],
@@ -2305,6 +2337,10 @@ var dictionaryFromJs = [
 	[
 		"max",
 		"хуйло"
+	],
+	[
+		"global",
+		"общак"
 	],
 	[
 		"break",
