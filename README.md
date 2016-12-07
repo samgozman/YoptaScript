@@ -1,4 +1,4 @@
-[![yoptascript v0.2.4](https://img.shields.io/badge/download-v0.2.4-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/archive/v0.2.4.zip)
+[![yoptascript v0.2.5](https://img.shields.io/badge/download-v0.2.5-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/archive/v0.2.5.zip)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/issues)
 [![contributions welcome](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat)](https://github.com/samgozman/YoptaScript/blob/master/LICENSE.txt)
 
@@ -56,6 +56,13 @@ YoptaScript содержит **множество нецензурной лек�
 		</script>
 
 Полный пример можно посмотреть в файле [index.html](https://github.com/samgozman/YoptaScript/blob/master/demo/index.html) в директории `demo`. Конвертером из JavaScript в YoptaScript можно воспользоваться открыв файл [index.html](https://github.com/samgozman/YoptaScript/blob/master/demo/converter/index.html) в директории `demo/converter`.
+
+## Проекты на YoptaScript
+### Игра Ping-Pong
+Один из разработчиков языка YoptaScript написал игру Ping-Pong на чистом YoptaScript с использованием canvas!
+
+**[Pong-YoptaScript](https://github.com/grushan/Pong-YoptaScript)**
+
 ## Примеры
 ### Создание переменных, функций и условий
 YoptaScript
