@@ -2464,7 +2464,7 @@ function yopt() {
             		var xml = new XMLHttpRequest();
             		xml.open('GET', src, false);
             		xml.send(null);
-            		if(xml.status == 200)
+            		if(xml.status == 200 || xml.status == 0)
             			yoptaText = xml.responseText;
             		else
             			continue;
