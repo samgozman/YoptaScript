@@ -2440,7 +2440,7 @@ var dictionary = [
 ];
 
 	function escapeRegExp(str) {
-	    return str.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+	    return "\\b" + str.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&') + "\\b";
     }
 
     function yoptReplaceAll(str, search, replacement) {
