@@ -644,6 +644,12 @@ var dictionary = [
 //            RegExp methods
             , ["exec", "работайМразь"]
             , ["test", "ответыБудутЭээ"]
+//            NodeJS/modules support
+            , ["module", "братва"]
+            , ["exports", "предъявляет"]
+            , ["export", "предъявa"]
+            , ["default", "пахану"]
+            , ["global", "общак"]
 ];
 
 //Для сортировки по количеству символов
