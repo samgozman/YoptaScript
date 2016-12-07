@@ -2439,8 +2439,18 @@ var dictionary = [
 	]
 ];
 
-	function escapeRegExp(str) {
-	    return "\\b" + str.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&') + "\\b";
+    function escapeRegExp(str) {
+        var str = str.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+
+        if (/^\w/.test(str)) {
+            str = "\\b" + str;
+        }
+
+        if (/\w$/.test(str)) {
+            str += "\\b";
+        }
+
+        return str;
     }
 
     function yoptReplaceAll(str, search, replacement) {
