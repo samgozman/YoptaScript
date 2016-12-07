@@ -62,7 +62,7 @@ YoptaScript
 
 	гыы gop сука нетрулио нах
 	
-	куку йопта law() {
+	йопта law() {
 		вилкойвглаз(gop эквалио нетрулио) {
 			gop сука трулио нах
 		}  иливжопураз {
@@ -74,7 +74,7 @@ YoptaScript
 
 	var gop = false;
 	
-	void function law() {
+	function law() {
 		if(gop == false) {
 			gop = true;
 		}  else {
