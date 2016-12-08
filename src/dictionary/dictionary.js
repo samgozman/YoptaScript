@@ -338,7 +338,7 @@ var dictionary = [
             , ["sizeToContent", "ухтыжёптыжбляПодгони"]
             , ["sizeToContent", "ухтыжептыжбляПодгони"]
             , ["stop", "стопээ"]
-            , ["Promise", "СловоМужика"]
+            , ["Promise", "СловоПацана"]
             , ["updateCommands", "новыйАйфонДляЧики"]
 //            Window event handlers
             , ["onbeforeunload", "покаСемкиКрутятся"]
