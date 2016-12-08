@@ -1,5 +1,6 @@
 [![yoptascript v0.2.6](https://img.shields.io/badge/download-v0.2.6-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/archive/v0.2.6.zip)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/issues)
+[![gitter yopta chat](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/YoptaScript/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 [![contributions welcome](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat)](https://github.com/samgozman/YoptaScript/blob/master/LICENSE.txt)
 
 #YoptaScript
