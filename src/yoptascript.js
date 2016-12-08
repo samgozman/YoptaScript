@@ -2443,13 +2443,52 @@ String.prototype.replaceAll = function (search, replacement) {
     return this.replace(re, replacement);
 };
 
-var yopt = function yopt(content) {
-	var i;
-	for (i = 0; i < dictionary.length; i++) {
-		content = content.replaceAll(dictionary[i][1], dictionary[i][0]);
+
+function yopt() {
+	//Получаем йопту из скрипта
+	var yopta = document.querySelectorAll('[language="YoptaScript"]'),
+		i = 0,
+		yoptaText;
+
+	if (yopta != null) {
+		for (var yoptaScript = 0; yoptaScript < yopta.length; yoptaScript++) {
+			yoptaText = yopta[yoptaScript].textContent;
+
+			// Если нет текста и при этом нет src, то забиваем и пропускам ...
+			// Это лютый костыль, который берёт скрипт из файла
+
+			if (!yoptaText.length) {
+
+				var src = yopta[yoptaScript].getAttribute('src');
+				alert(src);
+				if (src !== null && src.length) {
+					var xml = new XMLHttpRequest();
+					xml.open('GET', src, false);
+					xml.send(null);
+					if(xml.status == 200 || xml.status == 0)
+						yoptaText = xml.responseText;
+					else
+						continue;
+				}
+				else
+					continue;
+			}
+
+			for (i = 0; i < dictionary.length; i++) {
+				yoptaText = yoptaText.replaceAll(dictionary[i][1], dictionary[i][0]);
+			}
+
+			//удаляем старый скрипт
+			yopta[yoptaScript].parentNode.removeChild(yopta[yoptaScript]);
+
+			//создаём обработанный скрипт с блекджеком и шлюхами
+			var js_script = document.createElement("script"),
+				body = document.getElementsByTagName("BODY")[0];
+			js_script.innerHTML = yoptaText;
+			body.appendChild(js_script);
+		}
 	}
 
-	return content;
-};
+}
 
-module.exports = yopt;
+yopt();

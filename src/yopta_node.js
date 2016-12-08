@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-var yopt = require('./yoptascript');
+var yopt = require('./yopta');
 var fs = require('fs');
 
 var writeLine = function(line) {
