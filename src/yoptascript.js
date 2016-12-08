@@ -2481,8 +2481,14 @@ var dictionary = [
 	]
 ];
 
-	function escapeRegExp(str) {
-	    return str.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+    function escapeRegExp(str) {
+        str = str.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+
+        if (/^\w+$/.test(str)) {
+            str = "\\b" + str + "\\b";
+        }
+
+        return str;
     }
 
     function yoptReplaceAll(str, search, replacement) {
@@ -2491,17 +2497,23 @@ var dictionary = [
     }
 
     function compile(yoptaText) {
-        for (var i = 0; i < dictionary.length; i++) {
-            yoptaText = yoptReplaceAll(yoptaText, dictionary[i][1], dictionary[i][0]);
-        }
+        dictionary.sort(function (a, b) {
+            return b[1].length - a[1].length;
+        }).forEach(function (dictionary) {
+            yoptaText = yoptReplaceAll(yoptaText, dictionary[1], dictionary[0]);
+        });
 
         return yoptaText;
     }
 
     function yoptify(jscode) {
-        for (i = 0; i < dictionary.length; i++) {
-            jscode = yoptReplaceAll(jscode, dictionary[i][0], dictionary[i][1]);
-        }
+        dictionary
+            .sort(function (a, b) {
+                return b[0].length - a[0].length;
+            })
+            .forEach(function (dictionary) {
+                jscode = yoptReplaceAll(jscode, dictionary[0], dictionary[1]);
+            });
 
         return jscode;
     }
