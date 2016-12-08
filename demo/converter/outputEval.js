@@ -1,3 +1,9 @@
+/*!
+ * YoptaScript v0.2.6 (https://yopta.space)
+ * Copyright (c) 2016 Yopta.Space project and Contributors
+ * Licensed under the MIT license
+ */
+
 /* 
  *  Скрипт для выполнения кода сразу при его написании. 
  *  Не использовать на живом сайте (а то гопнуть могут)!

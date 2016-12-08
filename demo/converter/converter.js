@@ -1,3 +1,9 @@
+/*!
+ * YoptaScript v0.2.6 (https://yopta.space)
+ * Copyright (c) 2016 Yopta.Space project and Contributors
+ * Licensed under the MIT license
+ */
+
 document.getElementById('jstoyopta').addEventListener('keyup', function(){converter(true);}, false);
 document.getElementById('yopta').addEventListener('keyup', function(){converter(false);}, false);
 

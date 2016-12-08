@@ -1,3 +1,9 @@
+/*!
+ * YoptaScript v0.2.6 (https://yopta.space)
+ * Copyright (c) 2016 Yopta.Space project and Contributors
+ * Licensed under the MIT license
+ */
+
 /* Изначально массив элементов у нас не отсортирован.
  * Сортируем массив для корректной работы алгоритма перевода.
  * Любые правки по словарю языка сначала пишем сюда!
