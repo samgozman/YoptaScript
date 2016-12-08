@@ -1916,10 +1916,6 @@ var dictionary = [
 		"логопед"
 	],
 	[
-		"default",
-		"понятие"
-	],
-	[
 		"finally",
 		"тюряжка"
 	],
@@ -2510,7 +2506,7 @@ var dictionary = [
 
         //Получаем йопту из скрипта
         var yoptaText = compile(yopta.textContent);
-        
+
         if (!yoptaText.length) {
             //Пошли искать сорцы
             var src = yopta.getAttribute('src');
