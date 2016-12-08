@@ -1,5 +1,6 @@
-[![yoptascript v0.2.3](https://img.shields.io/badge/download-v0.2.3-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/archive/v0.2.3.zip)
+[![yoptascript v0.2.6](https://img.shields.io/badge/download-v0.2.6-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/archive/v0.2.6.zip)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/issues)
+[![gitter yopta chat](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/YoptaScript/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 [![contributions welcome](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat)](https://github.com/samgozman/YoptaScript/blob/master/LICENSE.txt)
 
 #YoptaScript
@@ -56,13 +57,20 @@ YoptaScript содержит **множество нецензурной лек�
 		</script>
 
 Полный пример можно посмотреть в файле [index.html](https://github.com/samgozman/YoptaScript/blob/master/demo/index.html) в директории `demo`. Конвертером из JavaScript в YoptaScript можно воспользоваться открыв файл [index.html](https://github.com/samgozman/YoptaScript/blob/master/demo/converter/index.html) в директории `demo/converter`.
+
+## Проекты на YoptaScript
+### Игра Ping-Pong
+Один из разработчиков языка YoptaScript написал игру Ping-Pong на чистом YoptaScript с использованием canvas!
+
+**[Pong-YoptaScript](https://github.com/grushan/Pong-YoptaScript)**
+
 ## Примеры
 ### Создание переменных, функций и условий
 YoptaScript
 
 	гыы gop сука нетрулио нах
 	
-	куку йопта law() {
+	йопта law() {
 		вилкойвглаз(gop эквалио нетрулио) {
 			gop сука трулио нах
 		}  иливжопураз {
@@ -74,7 +82,7 @@ YoptaScript
 
 	var gop = false;
 	
-	void function law() {
+	function law() {
 		if(gop == false) {
 			gop = true;
 		}  else {
@@ -88,7 +96,7 @@ YoptaScript
 	потрещим(semki чоблясука трулио) {
 		//код
 	}
-	го(i нах i хуёвей 100 нах i сука i + 1) {
+	го(i нах i хуёвей 100 нах i сука i плюсуюНа) {
 		//код
 	}
 	крч {
@@ -100,7 +108,7 @@ YoptaScript
 	while(semki != true) {
 		//код
 	}
-	for(i; i < 100; i = i + 1) {
+	for(i; i < 100; i = i ++) {
 		//код
 	}
 	do {

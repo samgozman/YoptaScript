@@ -1,3 +1,15 @@
+/*!
+ * YoptaScript v0.2.6 (https://yopta.space)
+ * Copyright (c) 2016 Yopta.Space project and Contributors
+ * Licensed under the MIT license
+ */
+
+(function (w, d) {
+
+/* YoptaScript
+ * Массив без лишних экранирований
+ * Для перевода из js в ys
+ */
 var dictionary = [
 	[
 		"includes",
@@ -550,6 +562,10 @@ var dictionary = [
 	[
 		"reverse",
 		"шухильмеМухильме"
+	],
+	[
+		"'use strict'",
+		"\"дали строгача\""
 	],
 	[
 		"elementFromPoint",
@@ -1284,6 +1300,10 @@ var dictionary = [
 		"щаТяПодвину"
 	],
 	[
+		"Promise",
+		"СловоМужика"
+	],
+	[
 		"onoffline",
 		"покаОффнусь"
 	],
@@ -1350,6 +1370,14 @@ var dictionary = [
 	[
 		"log2",
 		"гопорифмПо2"
+	],
+	[
+		"exports",
+		"предъявляет"
+	],
+	[
+		"let",
+		"участковый"
 	],
 	[
 		"Abstract",
@@ -1576,6 +1604,10 @@ var dictionary = [
 		"попонятия"
 	],
 	[
+		"==",
+		"однахуйня"
+	],
+	[
 		"writeln",
 		"малявагоп"
 	],
@@ -1728,6 +1760,14 @@ var dictionary = [
 		"нетрулио"
 	],
 	[
+		"++",
+		"плюсуюНа"
+	],
+	[
+		"--",
+		"слилсяНа"
+	],
+	[
 		"evaluate",
 		"заценить"
 	],
@@ -1868,6 +1908,10 @@ var dictionary = [
 		"агопинус"
 	],
 	[
+		"export",
+		"предъявa"
+	],
+	[
 		"debugger",
 		"логопед"
 	],
@@ -1904,10 +1948,6 @@ var dictionary = [
 		"двойные"
 	],
 	[
-		"export",
-		"излабас"
-	],
-	[
 		"Float",
 		"плавник"
 	],
@@ -1938,6 +1978,10 @@ var dictionary = [
 	[
 		"==",
 		"эквалио"
+	],
+	[
+		"===",
+		"блябуду"
 	],
 	[
 		"charset",
@@ -2160,6 +2204,14 @@ var dictionary = [
 		"сквирт"
 	],
 	[
+		"module",
+		"братва"
+	],
+	[
+		"default",
+		"пахану"
+	],
+	[
 		"function",
 		"йопта"
 	],
@@ -2296,6 +2348,10 @@ var dictionary = [
 		"хуйло"
 	],
 	[
+		"global",
+		"общак"
+	],
+	[
 		"break",
 		"харэ"
 	],
@@ -2425,38 +2481,64 @@ var dictionary = [
 	]
 ];
 
-String.prototype.replaceAll = function (search, replacement) {
-    var target = this;
-    var re = new RegExp(search, 'g');
-    return this.replace(re, replacement);
-};
-
-function yopt() {
-    //Получаем йопту из скрипта
-    var yopta = document.querySelectorAll('[language="YoptaScript"]'),
-        i = 0,
-        yoptaText;
-
-    if (yopta != null) {
-    	for (var yoptaScript = 0; yoptaScript < yopta.length; yoptaScript++) {
-            yoptaText = yopta[yoptaScript].textContent;
-
-            for (i = 0; i < dictionary.length; i++) {
-                yoptaText = yoptaText.replaceAll(dictionary[i][1], dictionary[i][0]);
-                //NOTE: Проблема с вхождениями при втором обходе: .replaceAll('\\B' + dictonary[i][1], dictonary[i][0]);
-            }
-
-            //удаляем старый скрипт
-            yopta[yoptaScript].parentNode.removeChild(yopta[yoptaScript]);
-
-            //создаём обработанный скрипт с блекджеком и шлюхами
-            var js_script = document.createElement("script"),
-                body = document.getElementsByTagName("BODY")[0];
-            js_script.innerHTML = yoptaText;
-            body.appendChild(js_script);
-		}
+	function escapeRegExp(str) {
+	    return str.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
     }
 
-};
+    function yoptReplaceAll(str, search, replacement) {
+        var re = new RegExp(escapeRegExp(search), 'g');
+        return str.replace(re, replacement);
+    }
 
-yopt();
+    function compile(yoptaText) {
+        for (var i = 0; i < dictionary.length; i++) {
+            yoptaText = yoptReplaceAll(yoptaText, dictionary[i][1], dictionary[i][0]);
+        }
+
+        return yoptaText;
+    }
+
+    function yoptify(jscode) {
+        for (i = 0; i < dictionary.length; i++) {
+            jscode = yoptReplaceAll(jscode, dictionary[i][0], dictionary[i][1]);
+        }
+
+        return jscode;
+    }
+
+    function yoptaToJs(yopta) {
+
+        //Получаем йопту из скрипта
+        var yoptaText = compile(yopta.textContent);
+        
+        if (!yoptaText.length) {
+            //Пошли искать сорцы
+            var src = yopta.getAttribute('src');
+            if (src !== null && src.length) {
+                var xml = new XMLHttpRequest();
+                xml.open('GET', src, false);
+                xml.send(null);
+                if(xml.status == 200 || xml.status == 0)
+                    yoptaText = compile(xml.responseText);
+            }
+        }
+
+        //удаляем старый скрипт
+        yopta.parentNode.removeChild(yopta);
+
+        //создаём обработанный скрипт с блекджеком и шлюхами
+        var js_script = d.createElement("script");
+        js_script.innerHTML = yoptaText;
+        document.body.appendChild(js_script);
+    }
+
+    //Получаем йопту из скрипта
+    d.querySelectorAll('[language="YoptaScript"]').forEach(yoptaToJs);
+
+    w.yopt = {
+        dictionary: dictionary,
+        compile: compile,
+        yoptify: yoptify,
+    }
+
+})(window, document);

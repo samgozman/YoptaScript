@@ -1,24 +1,21 @@
+/*!
+ * YoptaScript v0.2.6 (https://yopta.space)
+ * Copyright (c) 2016 Yopta.Space project and Contributors
+ * Licensed under the MIT license
+ */
+
 document.getElementById('jstoyopta').addEventListener('keyup', function(){converter(true);}, false);
 document.getElementById('yopta').addEventListener('keyup', function(){converter(false);}, false);
+
 
 function converter(lang) {
     if(lang) {
         //переводим в йопту
-        var jstoyopta = document.getElementById('jstoyopta').value,
-            i = 0,
-            yoptaNew = jstoyopta;
-        for (i = 0; i < dictionaryFromJs.length; i++) {
-            yoptaNew = yoptaNew.replaceAll(dictionaryFromJs[i][0], dictionaryFromJs[i][1]);
-        }
-        document.getElementById('yopta').value = yoptaNew;
+        var jstoyopta = document.getElementById('jstoyopta').value;
+        document.getElementById('yopta').value = yopt.yoptify(jstoyopta);
     } else {
         //переводим из йопты
-        var ystojs = document.getElementById('yopta').value,
-            i = 0, 
-            jsNew = ystojs;
-        for (i = 0; i < dictionary.length; i++) {
-            jsNew = jsNew.replaceAll(dictionary[i][1], dictionary[i][0]);
-        }
-        document.getElementById('jstoyopta').value = jsNew;
+        var ystojs = document.getElementById('yopta').value;
+        document.getElementById('jstoyopta').value = yopt.compile(ystojs);
     }
 }
