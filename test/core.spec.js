@@ -1,19 +1,10 @@
 const
   chai = require('chai'),
+  cases = require('./compile.cases'),
   yopt = require('../src/core');
 
 
 describe('core', () => {
-  it('can compile to js', () => {
-    let
-      result = yopt.compile('красноглазое.чмо()');
-
-    chai.assert.equal(result, 'console.log()');
-  });
-  it('can decompile from js', () => {
-    let
-      result = yopt.yoptify('console.log()');
-
-    chai.assert.equal(result, 'красноглазое.чмо()');
-  });
+  it('can compile to js', () => cases.map(([js, ys]) => chai.assert.equal(yopt.compile(ys), js)));
+  it('can decompile from js', () => cases.map(([js, ys]) => chai.assert.equal(yopt.yoptify(js), ys)));
 });
