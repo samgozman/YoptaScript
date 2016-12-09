@@ -1,4 +1,4 @@
-[![yoptascript v0.2.6](https://img.shields.io/badge/download-v0.2.6-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/archive/v0.2.6.zip)
+[![yoptascript v0.2.7](https://img.shields.io/badge/download-v0.2.7-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/archive/v0.2.7.zip)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/issues)
 [![gitter yopta chat](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/YoptaScript/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 [![contributions welcome](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat)](https://github.com/samgozman/YoptaScript/blob/master/LICENSE.txt)
@@ -50,6 +50,7 @@ YoptaScript содержит **множество нецензурной лек�
 			</script>
 			<script src="yoptascript.js"></script>
 		</body>
+	Можно так же вынести йоптакод в отдельный файл и подключить через атрибут `src`.
 2.  Начните писать код!
 
 		<script language="YoptaScript">
@@ -166,8 +167,21 @@ YoptaScript
 	}
 	
 
+## Поддержка разных диалектов
+YoptaScript отлично работает с разными локальными диалектами!
+
+Например:
+
+* `трулио` -> `чётко` -> `четко` -> **true**
+* `нетрулио` -> `пиздишь` -> `**false**
+* `эквалио` -> `ровно` -> `однахуйня` -> **==**
+
+И другие
+
+Все методы и свойства, содержащие букву `ё` можно писать без `ё`, используя `е`.
+
 ## Известные проблемы
 
-* Скрипт транслирует всё что между двойных кавычек
+* Скрипт транслирует всё, что между двойных кавычек
 * Пока нет альтернативы для фигурных и квадратных скобок, что усложняет работу
 * Игнорирует комментарии и тоже переводит их содержимое
