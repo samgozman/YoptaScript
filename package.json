@@ -1,8 +1,8 @@
 {
-  "name": "yoptascript",
+  "name": "yopta",
   "version": "0.3.0",
   "description": "",
-  "main": "src/yoptascript.js",
+  "main": "src/core.js",
   "scripts": {
     "build": "gulp build",
     "dist": "gulp build",
