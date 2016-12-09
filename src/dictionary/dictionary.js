@@ -72,7 +72,10 @@ var dictionary = [
 			, ["null", "нуллио"]
 			, ["NaN", "нихуя"]
 			, ["true", "трулио"]
+			, ["true", "чётко"]
+			, ["true", "четко"]
 			, ["false", "нетрулио"]
+			, ["false", "пиздишь"]
 			, ["\'use strict\'", "\"далиСтрогача\""]
 //            Операторы сравнения и логические операторы
             , ["\\=\\=", "эквалио"]
@@ -134,7 +137,6 @@ var dictionary = [
             , ["write", "малява"]
             , ["writeln", "малявагоп"]
 //            Document Properties
-            , ["async", "ассо"]
             , ["characterSet", "слышТыЧоЁба"]
             , ["characterSet", "слышТыЧоЕба"]
             , ["charset", "слышЁба"]
@@ -650,6 +652,17 @@ var dictionary = [
 //            RegExp methods
             , ["exec", "работайМразь"]
             , ["test", "ответыБудутЭээ"]
+//            async/await functions, methods and objects
+            , ["async", "ассо"]
+            , ["await", "сидетьНахуй"]
+            , ["resolveAfter2Seconds", "паруСекНеГомосек"]
+            , ["AsyncFunction", "АссоЙопта"]
+//            Promise methods
+            , ["all", "пацанСделал"]
+            , ["then", "атоэто"]
+            , ["race", "пацанСказал"]
+            , ["reject", "пацанЗабыл"]
+            , ["resolve", "щащаНамутитьКактоНадо"]
 //            NodeJS/modules support
             , ["module", "братва"]
             , ["exports", "предъявляет"]
