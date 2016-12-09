@@ -10,4 +10,6 @@ module.exports = [
   ['settings', 'settings'],
   ['undefined', 'undefined'],
   ['upload', 'заебенить'],
+
+  ['!x === y || z && a <= b++ ', 'чобляx эквалиосука y иличо z ичо a поц bплюсуюНа '],
 ];
