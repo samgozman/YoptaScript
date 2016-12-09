@@ -16,7 +16,6 @@ var dictionary = [
 			, ["continue", "двигай"]
 			, ["debugger", "логопед"]
 			, ["delete", "ёбнуть"]
-			, ["delete", "ебнуть"]
 			, ["do", "крч"]
 			, ["else", "иливжопураз"]
 			, ["finally", "тюряжка"]
