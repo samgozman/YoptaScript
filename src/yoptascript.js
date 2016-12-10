@@ -2628,31 +2628,36 @@
         return str.replace(re, replacement);
     }
 
-    function compile(yoptaText) {
+    function compile(text, lang) {
+        /* text - текст для реплейса
+         * lang - язык текста ('ys' or 'js')
+         */
         var commentsRegExp = /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/g;
-        var currentCommentsArray = (yoptaText.match(commentsRegExp) || []).reverse();
+        var currentCommentsArray = (text.match(commentsRegExp) || []).reverse();
 
-        for (var i = 0; i < dictionary.length; i++) {
-            yoptaText = yoptReplaceAll(yoptaText, dictionary[i][1], dictionary[i][0]);
-        }
+        text = iterateText(text, lang);
 
-        yoptaText = yoptaText.replace(commentsRegExp, function() {
+        text = text.replace(commentsRegExp, function() {
           return currentCommentsArray.pop();
         });
 
-        return yoptaText;
+        return text;
     }
-
-    function yoptify(jscode) {
-        for (i = 0; i < dictionary.length; i++) {
-            jscode = yoptReplaceAll(jscode, dictionary[i][0], dictionary[i][1]);
+    
+    function iterateText (text, lang) {
+        /* text - текст, по которому следует пройтись
+         * lang - язык текста ('ys' or 'js')
+         */
+        lang = (lang == "ys") ? 1 : 0;
+        for (var i = 0; i < dictionary.length; i++) {
+            text = yoptReplaceAll(text, dictionary[i][lang], dictionary[i][+!lang]);
         }
-        return jscode;
+        return text;
     }
 
     function yoptaToJs(yopta) {
         //Получаем йопту из скрипта
-        var yoptaText = compile(yopta.textContent);
+        var yoptaText = compile(yopta.textContent, "ys");
         if (!yoptaText.length) {
             //Пошли искать сорцы
             var src = yopta.getAttribute('src');
@@ -2660,7 +2665,7 @@
                 var xml = new XMLHttpRequest();
                 xml.open('GET', src, false);
                 xml.send(null);
-                if (xml.status == 200 || xml.status == 0) yoptaText = compile(xml.responseText);
+                if (xml.status == 200 || xml.status == 0) yoptaText = compile(xml.responseText, "ys");
             }
         }
         //удаляем старый скрипт
@@ -2675,6 +2680,5 @@
     w.yopt = {
         dictionary: dictionary,
         compile: compile,
-        yoptify: yoptify,
     }
 })(window, document);
