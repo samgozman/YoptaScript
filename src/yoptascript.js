@@ -2629,9 +2629,20 @@
     }
 
     function compile(yoptaText) {
+        var commentsRegExp = /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/g;
+        var currentCommentsArray = yoptaText.match(commentsRegExp);
+
         for (var i = 0; i < dictionary.length; i++) {
             yoptaText = yoptReplaceAll(yoptaText, dictionary[i][1], dictionary[i][0]);
         }
+
+        var iterator = 0;
+        yoptaText = yoptaText.replace(commentsRegExp, function() {
+          var needComment = currentCommentsArray[iterator];
+          iterator++;
+          return needComment;
+        });
+
         return yoptaText;
     }
 
