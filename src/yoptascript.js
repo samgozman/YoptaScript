@@ -2657,15 +2657,15 @@
         // Переводим имена функций с пацанского на латынь
         text = text.replace(
             // Заменяем имя функции в месте её определения
-            /(йопта[\s\t]+)([А-Яа-яЁё0-9_$]+)([\s\t]+)?(\(.?\))/g, 
+			/(йопта[\s\t]+)([А-Яа-яЁё0-9_$]+)([\s\t]+)?(\(.*\))/gi,
             function (match, p1, p2, p3, p4) {
-                  return [p1, translitString(p2), p3, p4].join('');
-            }  
-        ).replace(  
+                return [p1, translitString(p2), p3, p4].join('');
+            }
+        ).replace(
             // Заменяем имя функции в местах её вызова
-            /([А-Яа-яЁё0-9_$]+)([\s\t]+)?(\(.?\))/g, 
+			/([А-Яа-яЁё0-9_$]+)([\s\t]+)?(\(.*\))/gi,
             function (match, p1, p2, p3) {
-                  return [translitString(p1), p2, p3].join('');
+                return [translitString(p1), p2, p3].join('');
             }  
         );
         return text;
