@@ -2632,20 +2632,20 @@
             "щ":"sch","Щ":"Sch","ъ":"'","Ъ":"_","ы":"i","Ы":"I","Ь":"_",
             "ь":"_","э":"e","Э":"E","ю":"yu","Ю":"Yu","Я":"Ya","я":"ya"
         };
-        replaced = "";
+        var replaced = "";
         for (var i = 0; i < str.length; i++) {
-            substring = str.substring(i, i+1);
-            substring = safeYoficateString(substring);  // Делаем строку "Ё"-бта безопасной
-            replaced += translitDict[substring];
+            var substring = str.substring(i, i+1);
+            var substring = safeYoficateString(substring);  // Делаем строку "Ё"-бта безопасной
+            var replaced += translitDict[substring];
         }
         return replaced;
     }
 
     function safeYoficateString(str) {
         // Убираем букву "Ё" в строке
-        upperYoCharCode = 1025;
-        lowerYoCharCode = 1105;
-        substringCharCode = str.charCodeAt(0);
+        var upperYoCharCode = 1025;
+        var lowerYoCharCode = 1105;
+        var substringCharCode = str.charCodeAt(0);
         // "Ё"? "ё"? Оп, и нихуя!
         if (substringCharCode == upperYoCharCode || substringCharCode == lowerYoCharCode) {
             str = "е";
