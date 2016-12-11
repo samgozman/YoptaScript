@@ -2636,7 +2636,7 @@
         for (var i = 0; i < str.length; i++) {
             var substring = str.substring(i, i+1);
             var substring = safeYoficateString(substring);  // Делаем строку "Ё"-бта безопасной
-            var replaced += translitDict[substring];
+            replaced += translitDict[substring];
         }
         return replaced;
     }
@@ -2666,7 +2666,7 @@
             /([А-Яа-яЁё0-9_$]+)([\s\t]+)?(\(.*\))/gi,
             function (match, p1, p2, p3) {
                 return [translitString(p1), p2, p3].join('');
-            }  
+            }
         );
         return text;
     }
@@ -2684,20 +2684,33 @@
         /* text - текст для реплейса
          * lang - язык текста ('ys' or 'js')
          */
-        var commentsRegExp = /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/g;
-        var currentCommentsArray = (text.match(commentsRegExp) || []).reverse();
+        var commentRegExp = /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/g;
+        var tmpToken = 'ys_' + (new Date()).getTime() + '_';
+        var rStringLiterals = {};
+        text = text.replace(/\"(?:\\.|[^\"\\])*\"|\'(?:\\.|[^\'\\])*\'/g, function(val, pos) {
+          var needKey = tmpToken + pos;
+          rStringLiterals[needKey] = val;
+          return needKey;
+        });
+        var commentsArray = text.match(commentRegExp) || [];
 
         text = iterateText(text, lang);
 
-        text = text.replace(commentsRegExp, function() {
-          return currentCommentsArray.pop();
+        // comeback comments
+        text = text.replace(commentRegExp, function() {
+          return commentsArray.shift();
         });
+
+        // comeback strings
+        for (nKey in rStringLiterals) {
+          text = text.replace(nKey, rStringLiterals[nKey]);
+        }
 
         text = yoptTransliterateFunctionsNames(text);
 
         return text;
     }
-    
+
     function iterateText (text, lang) {
         /* text - текст, по которому следует пройтись
          * lang - язык текста ('ys' or 'js')
