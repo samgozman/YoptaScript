@@ -12,10 +12,10 @@ function converter(lang) {
     if(lang) {
         //переводим в йопту
         var jstoyopta = document.getElementById('jstoyopta').value;
-        document.getElementById('yopta').value = yopt.yoptify(jstoyopta);
+        document.getElementById('yopta').value = yopt.compile(jstoyopta, "js");
     } else {
         //переводим из йопты
         var ystojs = document.getElementById('yopta').value;
-        document.getElementById('jstoyopta').value = yopt.compile(ystojs);
+        document.getElementById('jstoyopta').value = yopt.compile(ystojs, "ys");
     }
 }
