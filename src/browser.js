@@ -8,18 +8,18 @@ window.yopt = core;
 
 function yoptaToJs(scriptNode) {
   //Получаем йопту из скрипта
-  let yoptaText = scriptNode.textContent || getTxtFromSrc(scriptNode);
+  var yoptaText = scriptNode.textContent || getTxtFromSrc(scriptNode);
 
   //удаляем старый скрипт
   scriptNode.parentNode.removeChild(scriptNode);
 
   //создаём обработанный скрипт с блекджеком и шлюхами
-  addScriptNode(core.compile(yoptaText));
+  addScriptNode(core.compile(yoptaText, "ys"));
 }
 
 function getTxtFromSrc(node) {
   //Пошли искать сорцы
-  var src = yopta.getAttribute('src');
+  var src = node.getAttribute('src');
   if (src !== null && src.length) {
     var xml = new XMLHttpRequest();
     xml.open('GET', src, false);
@@ -30,7 +30,7 @@ function getTxtFromSrc(node) {
 }
 
 function addScriptNode(content) {
-  let js_script = document.createElement("script");
+  var js_script = document.createElement("script");
   js_script.innerHTML = content;
   document.body.appendChild(js_script);
 }
