@@ -2693,7 +2693,7 @@
           return needKey;
         });
         var commentsArray = text.match(commentRegExp) || [];
-
+      
         text = iterateText(text, lang);
 
         // comeback comments
