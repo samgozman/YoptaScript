@@ -2676,8 +2676,8 @@
     }
 
     function yoptReplaceAll(str, search, replacement) {
-        var re = new RegExp(escapeRegExp(search), 'g');
-        return str.replace(re, replacement);
+        var reText = '(\\s|\\.|\\()(' + escapeRegExp(search).trim() + ')(\\s|\\.|\\(|\\))';
+        return str.replace(new RegExp(reText, 'g'), '$1' + replacement + '$3');
     }
 
     function compile(text, lang) {
