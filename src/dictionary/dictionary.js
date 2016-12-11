@@ -1,3 +1,9 @@
+/*!
+ * YoptaScript v0.2.7 (https://yopta.space)
+ * Copyright (c) 2016 Yopta.Space project and Contributors
+ * Licensed under the MIT license
+ */
+
 /* Изначально массив элементов у нас не отсортирован.
  * Сортируем массив для корректной работы алгоритма перевода.
  * Любые правки по словарю языка сначала пишем сюда!
@@ -9,7 +15,6 @@ var dictionary = [
 			, ["catch", "гоп"]
 			, ["continue", "двигай"]
 			, ["debugger", "логопед"]
-			, ["default", "понятие"]
 			, ["delete", "ёбнуть"]
 			, ["delete", "ебнуть"]
 			, ["do", "крч"]
@@ -18,7 +23,7 @@ var dictionary = [
 			, ["for", "го"]
 			, ["function", "йопта"]
 			, ["if", "вилкойвглаз"]
-			, ["in", "в"]
+			, ["in", "аеслинайду"]
 			, ["instanceof", "внатуре"]
 			, ["new", "гыйбать"]
 			, ["return", "отвечаю"]
@@ -36,12 +41,11 @@ var dictionary = [
 			, ["Boolean", "пацан"]
 			, ["Byte", "семка"]
 			, ["Char", "эээ"]
-			, ["Class", "клёво"]
-			, ["Class", "клево"]
+			, ["class", "клёво"]
+			, ["class", "клево"]
 			, ["Const", "ясенХуй"]
 			, ["Double", "двойные"]
 			, ["Enum", "еээ"]
-			, ["export", "излабас"]
 			, ["extends", "батя"]
 			, ["final", "бачок"]
 			, ["Float", "плавник"]
@@ -65,12 +69,20 @@ var dictionary = [
 			, ["throws", "плюнуть"]
 			, ["transient", "ахз"]
 			, ["volatile", "вписос"]
-			, ["null", "нуллио"]
+            , ["null", "нуллио"]
+			, ["null", "порожняк"]
 			, ["NaN", "нихуя"]
 			, ["true", "трулио"]
+			, ["true", "чётко"]
+			, ["true", "четко"]
 			, ["false", "нетрулио"]
+			, ["false", "пиздишь"]
+			, ["\'use strict\'", "\"далиСтрогача\""]
 //            Операторы сравнения и логические операторы
             , ["\\=\\=", "эквалио"]
+            , ["\\=\\=", "однахуйня"]
+            , ["\\=\\=", "ровно"]
+            , ["\\=\\=\\=", "блябуду"]
             , ["\\>\\=", "поцик"]
 			, ["\\<\\=", "поц"]
             , ["\\&\\&", "ичо"]
@@ -93,6 +105,7 @@ var dictionary = [
             , ["createRange", "намутитьОпапа"]
             , ["createTextNode", "намутитьМалявуГовнодскую"]
             , ["createTouch", "намутитьЛеща"]
+            , ["createElement", "намутитьЛошка"]
             , ["createTreeWalker", "намутитьБуратино"]
             , ["elementFromPoint", "терпилаИзПараши"]
             , ["elementsFromPoint", "терпилыИзПараши"]
@@ -126,7 +139,6 @@ var dictionary = [
             , ["write", "малява"]
             , ["writeln", "малявагоп"]
 //            Document Properties
-            , ["async", "ассо"]
             , ["characterSet", "слышТыЧоЁба"]
             , ["characterSet", "слышТыЧоЕба"]
             , ["charset", "слышЁба"]
@@ -336,7 +348,7 @@ var dictionary = [
             , ["sizeToContent", "ухтыжёптыжбляПодгони"]
             , ["sizeToContent", "ухтыжептыжбляПодгони"]
             , ["stop", "стопээ"]
-	    , ["Promise", "СловоМужика"]
+            , ["Promise", "СловоПацана"]
             , ["updateCommands", "новыйАйфонДляЧики"]
 //            Window event handlers
             , ["onbeforeunload", "покаСемкиКрутятся"]
@@ -635,13 +647,55 @@ var dictionary = [
             , ["global", "глобалкаЙопта"]
             , ["ignoreCase", "игнорщикЕбаный"]
             , ["multiline", "стулБезПик"]
-            , ["source", "чоТыБляСказал"]
+            , ["source", "обоснуй"]
             , ["sticky", "петухОпущенный"]
             , ["unicode", "хуйняНахуй"]
             , ["lastIndex", "доКонцаОтсидки"]
 //            RegExp methods
             , ["exec", "работайМразь"]
             , ["test", "ответыБудутЭээ"]
+//            async/await functions, methods and objects
+            , ["async", "ассо"]
+            , ["await", "сидетьНахуй"]
+            , ["resolveAfter2Seconds", "паруСекНеГомосек"]
+            , ["AsyncFunction", "АссоЙопта"]
+//            Promise methods
+            , ["all", "пацанСделал"]
+            , ["then", "атоэто"]
+            , ["race", "пацанСказал"]
+            , ["reject", "пацанЗабыл"]
+            , ["resolve", "щащаНамутитьКактоНадо"]
+//            Object properties
+            , ["Object", "Петух"]
+            , ["constructor", "стрельнутьБычки"]
+//            Object methods
+            , ["assign", "тащиВсёНаХату"]
+            , ["assign", "тащиВсеНаХату"]
+            , ["create", "намутить"]
+            , ["defineProperties", "ващеЧоткиеЧелики"]
+            , ["defineProperty", "вотЭтоЗаебись"]
+            , ["freeze", "датьЛеща"]
+            , ["getOwnPropertyDescriptor", "вычислиЕблоКрысы"]
+            , ["getOwnPropertyDescriptors", "вычислиСходкуКрыс"]
+            , ["getOwnPropertyNames", "вычислиПогонялаКрыс"]
+            , ["getOwnPropertySymbols", "выучиАлфавитМразь"]
+            , ["getPrototypeOf", "чоЗаПроточелик"]
+            , ["isExtensible", "жратьБудешь"]
+            , ["isFrozen", "далЛеща"]
+            , ["isSealed", "теЧоЕбалоРазбить"]
+            , ["hasOwnProperty", "соСвоейТемой"]
+            , ["isPrototypeOf", "чейПроточелик"]
+            , ["propertyIsEnumerable", "лютаяТема"]
+            , ["unwatch", "съебись"]
+            , ["watch", "смотрюСюда"]
+            , ["seal", "сдохниНахуй"]
+            , ["setPrototypeOf", "замутитьПроточелика"]
+//            NodeJS/modules support
+            , ["module", "братва"]
+            , ["exports", "предъявляет"]
+            , ["export", "предъявa"]
+            , ["default", "пахану"]
+            , ["global", "общак"]
 ];
 
 //Для сортировки по количеству символов

@@ -1,20 +1,38 @@
 {
-  "name": "yopta-script",
-  "version": "1.0.0",
-  "description": "The scripting programming language for chavs",
-  "main": "./src/yopta_node.js",
-  "bin": {
-    "YoptaScript": "./src/yopta_node.js"
+  "name": "yopta",
+  "version": "0.3.0",
+  "description": "",
+  "main": "src/core.js",
+  "scripts": {
+    "build": "gulp build",
+    "dist": "gulp build",
+    "postinstall": "gulp build",
+    "start": "gulp watch",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/samgozman/YoptaScript.git"
+    "url": "git+https://github.com/samgozman/YoptaScript"
   },
+  "keywords": [
+    "transpiler"
+  ],
   "author": "",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/samgozman/YoptaScript/issues"
   },
-  "homepage": "https://github.com/samgozman/YoptaScript#readme",
-  "preferGlobal": true
+  "homepage": "https://yopta.space/",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^2.0.0",
+    "mocha": "^3.2.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
 }

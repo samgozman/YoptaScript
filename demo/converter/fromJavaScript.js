@@ -1,3 +1,9 @@
+/*!
+ * YoptaScript v0.2.7 (https://yopta.space)
+ * Copyright (c) 2016 Yopta.Space project and Contributors
+ * Licensed under the MIT license
+ */
+
 /* Отсортировано
  * Для перевода из js в yopta
  */
@@ -109,6 +115,10 @@ var dictionaryFromJs = [
 	[
 		"onreadystatechange",
 		"опаГотовЙоптЧозанахуй"
+	],
+	[
+		"resolve",
+		"щащаНамутитьКактоНадо"
 	],
 	[
 		"createNodeIterator",
@@ -225,6 +235,14 @@ var dictionaryFromJs = [
 	[
 		"tanh",
 		"гопангенсКолпинский"
+	],
+	[
+		"getOwnPropertyNames",
+		"вычислиПогонялаКрыс"
+	],
+	[
+		"setPrototypeOf",
+		"замутитьПроточелика"
 	],
 	[
 		"ondrop",
@@ -427,6 +445,14 @@ var dictionaryFromJs = [
 		"гопинусКолпинский"
 	],
 	[
+		"getOwnPropertyDescriptors",
+		"вычислиСходкуКрыс"
+	],
+	[
+		"getOwnPropertySymbols",
+		"выучиАлфавитМразь"
+	],
+	[
 		"createTreeWalker",
 		"намутитьБуратино"
 	],
@@ -555,6 +581,22 @@ var dictionaryFromJs = [
 		"шухильмеМухильме"
 	],
 	[
+		"resolveAfter2Seconds",
+		"паруСекНеГомосек"
+	],
+	[
+		"defineProperties",
+		"ващеЧоткиеЧелики"
+	],
+	[
+		"getOwnPropertyDescriptor",
+		"вычислиЕблоКрысы"
+	],
+	[
+		"isSealed",
+		"теЧоЕбалоРазбить"
+	],
+	[
 		"elementFromPoint",
 		"терпилаИзПараши"
 	],
@@ -645,6 +687,14 @@ var dictionaryFromJs = [
 	[
 		"profileEnd",
 		"вЛичкуПрописали"
+	],
+	[
+		"constructor",
+		"стрельнутьБычки"
+	],
+	[
+		"'use strict'",
+		"\"далиСтрогача\""
 	],
 	[
 		"onwheel",
@@ -791,6 +841,10 @@ var dictionaryFromJs = [
 		"ответыБудутЭээ"
 	],
 	[
+		"getPrototypeOf",
+		"чоЗаПроточелик"
+	],
+	[
 		"captureEvents",
 		"зафотатьШняги"
 	],
@@ -801,6 +855,10 @@ var dictionaryFromJs = [
 	[
 		"createRange",
 		"намутитьОпапа"
+	],
+	[
+		"createElement",
+		"намутитьЛошка"
 	],
 	[
 		"createExpression",
@@ -999,8 +1057,20 @@ var dictionaryFromJs = [
 		"глобалкаЙопта"
 	],
 	[
-		"source",
-		"чоТыБляСказал"
+		"assign",
+		"тащиВсёНаХату"
+	],
+	[
+		"assign",
+		"тащиВсеНаХату"
+	],
+	[
+		"defineProperty",
+		"вотЭтоЗаебись"
+	],
+	[
+		"isPrototypeOf",
+		"чейПроточелик"
 	],
 	[
 		"createAttribute",
@@ -1219,6 +1289,10 @@ var dictionaryFromJs = [
 		"работайМразь"
 	],
 	[
+		"hasOwnProperty",
+		"соСвоейТемой"
+	],
+	[
 		"else",
 		"иливжопураз"
 	],
@@ -1287,6 +1361,10 @@ var dictionaryFromJs = [
 		"щаТяПодвину"
 	],
 	[
+		"Promise",
+		"СловоПацана"
+	],
+	[
 		"onoffline",
 		"покаОффнусь"
 	],
@@ -1353,6 +1431,34 @@ var dictionaryFromJs = [
 	[
 		"log2",
 		"гопорифмПо2"
+	],
+	[
+		"await",
+		"сидетьНахуй"
+	],
+	[
+		"all",
+		"пацанСделал"
+	],
+	[
+		"race",
+		"пацанСказал"
+	],
+	[
+		"isExtensible",
+		"жратьБудешь"
+	],
+	[
+		"seal",
+		"сдохниНахуй"
+	],
+	[
+		"exports",
+		"предъявляет"
+	],
+	[
+		"let",
+		"участковый"
 	],
 	[
 		"Abstract",
@@ -1567,6 +1673,14 @@ var dictionaryFromJs = [
 		"хуйняНахуй"
 	],
 	[
+		"reject",
+		"пацанЗабыл"
+	],
+	[
+		"watch",
+		"смотрюСюда"
+	],
+	[
 		"switch",
 		"пошерстим"
 	],
@@ -1577,6 +1691,10 @@ var dictionaryFromJs = [
 	[
 		"static",
 		"попонятия"
+	],
+	[
+		"\\=\\=",
+		"однахуйня"
 	],
 	[
 		"writeln",
@@ -1709,6 +1827,14 @@ var dictionaryFromJs = [
 	[
 		"tan",
 		"гопангенс"
+	],
+	[
+		"AsyncFunction",
+		"АссоЙопта"
+	],
+	[
+		"propertyIsEnumerable",
+		"лютаяТема"
 	],
 	[
 		"this",
@@ -1879,12 +2005,20 @@ var dictionaryFromJs = [
 		"агопинус"
 	],
 	[
-		"debugger",
-		"логопед"
+		"create",
+		"намутить"
 	],
 	[
-		"default",
-		"понятие"
+		"freeze",
+		"датьЛеща"
+	],
+	[
+		"export",
+		"предъявa"
+	],
+	[
+		"debugger",
+		"логопед"
 	],
 	[
 		"finally",
@@ -1915,10 +2049,6 @@ var dictionaryFromJs = [
 		"двойные"
 	],
 	[
-		"export",
-		"излабас"
-	],
-	[
 		"Float",
 		"плавник"
 	],
@@ -1947,8 +2077,16 @@ var dictionaryFromJs = [
 		"плюнуть"
 	],
 	[
+		"false",
+		"пиздишь"
+	],
+	[
 		"\\=\\=",
 		"эквалио"
+	],
+	[
+		"\\=\\=\\=",
+		"блябуду"
 	],
 	[
 		"charset",
@@ -2029,6 +2167,18 @@ var dictionaryFromJs = [
 	[
 		"sin",
 		"гопинус"
+	],
+	[
+		"source",
+		"обоснуй"
+	],
+	[
+		"isFrozen",
+		"далЛеща"
+	],
+	[
+		"unwatch",
+		"съебись"
 	],
 	[
 		"continue",
@@ -2171,6 +2321,18 @@ var dictionaryFromJs = [
 		"сквирт"
 	],
 	[
+		"then",
+		"атоэто"
+	],
+	[
+		"module",
+		"братва"
+	],
+	[
+		"default",
+		"пахану"
+	],
+	[
 		"function",
 		"йопта"
 	],
@@ -2183,11 +2345,11 @@ var dictionaryFromJs = [
 		"семка"
 	],
 	[
-		"Class",
+		"class",
 		"клёво"
 	],
 	[
-		"Class",
+		"class",
 		"клево"
 	],
 	[
@@ -2217,6 +2379,18 @@ var dictionaryFromJs = [
 	[
 		"NaN",
 		"нихуя"
+	],
+	[
+		"true",
+		"чётко"
+	],
+	[
+		"true",
+		"четко"
+	],
+	[
+		"\\=\\=",
+		"ровно"
 	],
 	[
 		"\\>\\=",
@@ -2307,6 +2481,14 @@ var dictionaryFromJs = [
 		"хуйло"
 	],
 	[
+		"Object",
+		"Петух"
+	],
+	[
+		"global",
+		"общак"
+	],
+	[
 		"break",
 		"харэ"
 	],
@@ -2329,10 +2511,6 @@ var dictionaryFromJs = [
 	[
 		"\\;",
 		" нах"
-	],
-	[
-		"async",
-		"ассо"
 	],
 	[
 		"links",
@@ -2365,6 +2543,10 @@ var dictionaryFromJs = [
 	[
 		"random",
 		"шара"
+	],
+	[
+		"async",
+		"ассо"
 	],
 	[
 		"case",
