@@ -1,0 +1,21 @@
+/*!
+ * YoptaScript v0.3 (https://yopta.space)
+ * Copyright (c) 2016 Yopta.Space project and Contributors
+ * Licensed under the MIT license
+ */
+
+ксива.вычислитьЛохаПоНомеру('jstoyopta').добавитьВертухай('keyup', йопта(){converter(четко) нах}, пиздишь) нах
+ксива.вычислитьЛохаПоНомеру('yopta').добавитьВертухай('keyup', йопта(){converter(пиздишь) нах}, пиздишь) нах
+
+
+йопта converter(lang) {
+  вилкойвглаз(lang) {
+    //переводим в йопту
+    гыы jstoyopta сука ксива.вычислитьЛохаПоНомеру('jstoyopta').валио нах
+    ксива.вычислитьЛохаПоНомеру('yopta').валио сука yopt.compile(jstoyopta, "js") нах
+  } иливжопураз {
+    //переводим из йопты
+    гыы ystojs сука ксива.вычислитьЛохаПоНомеру('yopta').валио нах
+    ксива.вычислитьЛохаПоНомеру('jstoyopta').валио сука yopt.compile(ystojs, "ys") нах
+  }
+}
