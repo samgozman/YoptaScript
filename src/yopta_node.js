@@ -6,7 +6,7 @@
  * Licensed under the MIT license
  */
 
-var yopt = require('./compile');
+var yopt = require('./core');
 var fs = require('fs');
 var writeLine = function (line) {
     return process.stdout.write(line + '\n');

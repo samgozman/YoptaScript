@@ -2,13 +2,16 @@
   "name": "yopta",
   "version": "0.3.0",
   "description": "",
-  "main": "src/core.js",
+  "main": "./src/yopta_node.js",
   "scripts": {
     "build": "gulp build",
     "dist": "gulp build",
     "postinstall": "gulp build",
     "start": "gulp watch",
     "test": "mocha"
+  },
+  "bin": {
+    "yopta": "./src/yopta_node.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +20,7 @@
   "keywords": [
     "transpiler"
   ],
-  "author": "",
+  "author": "samgozman",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/samgozman/YoptaScript/issues"
