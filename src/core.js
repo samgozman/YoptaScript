@@ -1,9 +1,7 @@
-const
-  dictionary = require('./dictionary/main');
-
+const dictionary = require('./dictionary/main');
 module.exports = {
-  compile,
-  dictionary,
+    compile, 
+    dictionary,
 };
 
 function escapeRegExp(str) {
@@ -22,32 +20,26 @@ function compile(text, lang) {
     var commentRegExp = /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/g;
     var tmpToken = 'ys_' + (new Date()).getTime() + '_';
     var rStringLiterals = {};
-    text = text.replace(/\"(?:\\.|[^\"\\])*\"|\'(?:\\.|[^\'\\])*\'/g, function(val, pos) {
-      var needKey = tmpToken + pos;
-      rStringLiterals[needKey] = val;
-      return needKey;
+    text = text.replace(/\"(?:\\.|[^\"\\])*\"|\'(?:\\.|[^\'\\])*\'/g, function (val, pos) {
+        var needKey = tmpToken + pos;
+        rStringLiterals[needKey] = val;
+        return needKey;
     });
     var commentsArray = text.match(commentRegExp) || [];
-
     text = iterateText(text, lang);
-
     // comeback comments
-    text = text.replace(commentRegExp, function() {
-      return commentsArray.shift();
+    text = text.replace(commentRegExp, function () {
+        return commentsArray.shift();
     });
-
     // comeback strings
     for (tmpToken in rStringLiterals) {
-      text = text.replace(tmpToken, rStringLiterals[tmpToken]);
+        text = text.replace(tmpToken, rStringLiterals[tmpToken]);
     }
-
     // text = yoptTransliterateFunctionsNames(text);
-
     return text;
 }
 
-
-function iterateText (text, lang) {
+function iterateText(text, lang) {
     /* text - текст, по которому следует пройтись
      * lang - язык текста ('ys' or 'js')
      */
@@ -57,5 +49,3 @@ function iterateText (text, lang) {
     }
     return text;
 }
-
-
