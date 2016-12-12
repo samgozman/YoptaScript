@@ -1,6 +1,6 @@
 const dictionary = require('./dictionary/main');
 module.exports = {
-    compile, 
+    compile,
     dictionary,
 };
 

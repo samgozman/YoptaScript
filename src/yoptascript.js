@@ -2622,19 +2622,19 @@
     function translitString(str) {
         // Переводим строку в латынь по словарю
         var translitDict = {
-            "а":"a","А":"a","Б":"B","б":"b","в":"v","В":"V","Г":"G",
-            "г":"g","д":"d","Д":"D","Е":"E","е":"e","ж":"zh","Ж":"Zh",
-            "з":"z","З":"Z","и":"i","И":"I","й":"i","Й":"I","К":"K",
-            "к":"k","Л":"L","л":"l","м":"m","М":"M","Н":"N","н":"n",
-            "О":"O","о":"o","П":"P","п":"p","Р":"R","р":"r","С":"S",
-            "с":"s","т":"t","Т":"T","У":"U","у":"u","Ф":"F","ф":"f","Х":"H",
-            "х":"h","Ц":"Ts","ц":"ts","ч":"ch","Ч":"Ch","ш":"sh","Ш":"Sh",
-            "щ":"sch","Щ":"Sch","ъ":"'","Ъ":"_","ы":"i","Ы":"I","Ь":"_",
-            "ь":"_","э":"e","Э":"E","ю":"yu","Ю":"Yu","Я":"Ya","я":"ya"
+            "а": "a", "А": "a", "Б": "B", "б": "b", "в": "v", "В": "V", "Г": "G",
+            "г": "g", "д": "d", "Д": "D", "Е": "E", "е": "e", "ж": "zh", "Ж": "Zh",
+            "з": "z", "З": "Z", "и": "i", "И": "I", "й": "i", "Й": "I", "К": "K",
+            "к": "k", "Л": "L", "л": "l", "м": "m", "М": "M", "Н": "N", "н": "n",
+            "О": "O", "о": "o", "П": "P", "п": "p", "Р": "R", "р": "r", "С": "S",
+            "с": "s", "т": "t", "Т": "T", "У": "U", "у": "u", "Ф": "F", "ф": "f", "Х": "H",
+            "х": "h", "Ц": "Ts", "ц": "ts", "ч": "ch", "Ч": "Ch", "ш": "sh", "Ш": "Sh",
+            "щ": "sch", "Щ": "Sch", "ъ": "'", "Ъ": "_", "ы": "i", "Ы": "I", "Ь": "_",
+            "ь": "_", "э": "e", "Э": "E", "ю": "yu", "Ю": "Yu", "Я": "Ya", "я": "ya"
         };
         var replaced = "";
         for (var i = 0; i < str.length; i++) {
-            var substring = str.substring(i, i+1);
+            var substring = str.substring(i, i + 1);
             var substring = safeYoficateString(substring);  // Делаем строку "Ё"-бта безопасной
             replaced += translitDict[substring];
         }
@@ -2687,23 +2687,23 @@
         var commentRegExp = /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/g;
         var tmpToken = 'ys_' + (new Date()).getTime() + '_';
         var rStringLiterals = {};
-        text = text.replace(/\"(?:\\.|[^\"\\])*\"|\'(?:\\.|[^\'\\])*\'/g, function(val, pos) {
-          var needKey = tmpToken + pos;
-          rStringLiterals[needKey] = val;
-          return needKey;
+        text = text.replace(/\"(?:\\.|[^\"\\])*\"|\'(?:\\.|[^\'\\])*\'/g, function (val, pos) {
+            var needKey = tmpToken + pos;
+            rStringLiterals[needKey] = val;
+            return needKey;
         });
         var commentsArray = text.match(commentRegExp) || [];
 
         text = iterateText(text, lang);
 
         // comeback comments
-        text = text.replace(commentRegExp, function() {
-          return commentsArray.shift();
+        text = text.replace(commentRegExp, function () {
+            return commentsArray.shift();
         });
 
         // comeback strings
         for (nKey in rStringLiterals) {
-          text = text.replace(nKey, rStringLiterals[nKey]);
+            text = text.replace(nKey, rStringLiterals[nKey]);
         }
 
         text = yoptTransliterateFunctionsNames(text);
@@ -2711,7 +2711,7 @@
         return text;
     }
 
-    function iterateText (text, lang) {
+    function iterateText(text, lang) {
         /* text - текст, по которому следует пройтись
          * lang - язык текста ('ys' or 'js')
          */
@@ -2742,6 +2742,7 @@
         js_script.innerHTML = yoptaText;
         document.body.appendChild(js_script);
     }
+
     //Получаем йопту из скрипта
     d.querySelectorAll('[language="YoptaScript"]').forEach(yoptaToJs);
     w.yopt = {
