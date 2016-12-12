@@ -59,7 +59,8 @@ function compile(text, lang) {
  * @param to язык текста ('ys' or 'js')
  */
 function iterateText(text, to = 'js') {
-    lang = LANGS[to];
+    let
+      lang = LANGS[to];
 
     dictionary
         .sort((a, b) => {
