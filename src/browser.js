@@ -1,6 +1,5 @@
-var fallback = require("./fallback");
-fallback();
-const core = require('./core');
+const
+  core = require('./core');
 
 //Получаем йопту из скрипта
 document.querySelectorAll('[language="YoptaScript"]').forEach(yoptaToJs);
