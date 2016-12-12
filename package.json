@@ -1,8 +1,8 @@
 {
   "name": "yopta",
   "version": "0.3.0",
-  "description": "",
-  "main": "./src/yopta_node.js",
+  "description": "YoptaScript - язык программирования для гопников и реальных пацанов.",
+  "main": "./src/cli.js",
   "scripts": {
     "build": "gulp build",
     "dist": "gulp build",
@@ -11,14 +11,17 @@
     "test": "mocha"
   },
   "bin": {
-    "yopta": "./src/yopta_node.js"
+    "yopta": "./src/cli.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/samgozman/YoptaScript"
   },
   "keywords": [
-    "transpiler"
+    "transpiler",
+    "yopta",
+    "language",
+    "yoptascript"
   ],
   "author": "samgozman",
   "license": "MIT",
