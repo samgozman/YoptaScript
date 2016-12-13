@@ -1,12 +1,11 @@
 {
   "name": "yopta",
-  "version": "0.3.0-patch4",
+  "version": "0.3.0-patch5",
   "description": "YoptaScript - язык программирования для гопников и реальных пацанов.",
   "main": "./src/core.js",
   "scripts": {
     "build": "gulp build",
     "dist": "gulp build",
-    "preinstall": "npm install check-node-version && check-node-version —node '~4'",
     "postinstall": "gulp build",
     "start": "gulp watch",
     "test": "mocha"
