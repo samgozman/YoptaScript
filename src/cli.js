@@ -14,7 +14,7 @@ let
 
 if (!filepath) {
     console.log('Missing filename argument.');
-    console.log('Usage: YoptaScript filename');
+    console.log('Usage: yopta filename');
     return process.exit();
 }
 
