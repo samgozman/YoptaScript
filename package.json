@@ -1,12 +1,13 @@
 {
   "name": "yopta",
-  "version": "0.3.0-patch1",
+  "version": "0.3.0-patch4",
   "description": "YoptaScript - язык программирования для гопников и реальных пацанов.",
   "main": "./src/core.js",
   "scripts": {
     "build": "gulp build",
     "dist": "gulp build",
-    "postinstall": "npm install & gulp build",
+    "preinstall": "npm install check-node-version && check-node-version —node '~4'",
+    "postinstall": "gulp build",
     "start": "gulp watch",
     "test": "mocha"
   },
@@ -29,7 +30,7 @@
     "url": "https://github.com/samgozman/YoptaScript/issues"
   },
   "homepage": "https://yopta.space/",
-  "devDependencies": {
+  "dependencies": {
     "babel-preset-es2015": "^6.18.0",
     "babelify": "^7.3.0",
     "browserify": "^13.1.1",
