@@ -35,3 +35,4 @@ function evalInput() {
 input.addEventListener('blur', evalInput, false);
 window.repeatTimer = window.setInterval(evalInput, 500);
 evalInput();
+

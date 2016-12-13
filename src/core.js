@@ -1,11 +1,25 @@
-const dictionary = require('./dictionary/main');
+const
+  dictionary = require('./dictionary/main');
+
+const
+  LANGS = {
+    js: 0,
+    ys: 1,
+  };
+
 module.exports = {
-    compile, 
+    compile,
     dictionary,
 };
 
 function escapeRegExp(str) {
-    return str.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+    str = str.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+
+    if (/^\w+$/.test(str)) {
+        str = '\\b' + str + '\\b';
+    }
+
+    return str;
 }
 
 function yoptReplaceAll(str, search, replacement) {
@@ -39,13 +53,22 @@ function compile(text, lang) {
     return text;
 }
 
-function iterateText(text, lang) {
-    /* text - текст, по которому следует пройтись
-     * lang - язык текста ('ys' or 'js')
-     */
-    lang = (lang == "ys") ? 1 : 0;
-    for (var i = 0; i < dictionary.length; i++) {
-        text = yoptReplaceAll(text, dictionary[i][lang], dictionary[i][+!lang]);
-    }
+
+/**
+ * @param text текст, по которому следует пройтись
+ * @param to язык текста ('ys' or 'js')
+ */
+function iterateText(text, to = 'js') {
+    let
+      lang = LANGS[to];
+
+    dictionary
+        .sort((a, b) => {
+            a = a[lang].length;
+            b = b[lang].length;
+            return b - a;
+        })
+        .forEach(pair => text = yoptReplaceAll(text, pair[lang], pair[+!lang]));
+
     return text;
 }
