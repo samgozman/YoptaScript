@@ -2,7 +2,7 @@
   "name": "yopta",
   "version": "0.3.0",
   "description": "YoptaScript - язык программирования для гопников и реальных пацанов.",
-  "main": "./src/cli.js",
+  "main": "./src/core.js",
   "scripts": {
     "build": "gulp build",
     "dist": "gulp build",
@@ -35,6 +35,8 @@
     "browserify": "^13.1.1",
     "chai": "^3.5.0",
     "gulp": "^3.9.1",
+    "gulp-add": "0.0.2",
+    "gulp-concat": "^2.6.1",
     "gulp-sourcemaps": "^1.9.1",
     "gulp-uglify": "^2.0.0",
     "mocha": "^3.2.0",

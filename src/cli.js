@@ -4,20 +4,25 @@
  * Copyright (c) 2016 Yopta.Space project and Contributors
  * Licensed under the MIT license
  */
-var yopt = require('./core');
-var fs = require('fs');
-var writeLine = function (line) {
-    return process.stdout.write(line + '\n');
-};
-if (process.argv.length < 3) {
-    writeLine('Missing filename argument.');
-    return writeLine('Usage: YoptaScript filename');
+
+const
+  yopt = require('./core'),
+  fs = require('fs');
+
+let
+  filepath = process.argv[2];
+
+if (!filepath) {
+    console.log('Missing filename argument.');
+    console.log('Usage: YoptaScript filename');
+    return process.exit();
 }
-var filepath = process.argv[2];
+
 fs.readFile(filepath, 'utf8', function (err, content) {
     if (err) {
-        return writeLine(err);
+        console.error(err);
+        return process.exit(1);
     }
-    var yoptaText = yopt.compile(content, "ys");
-    writeLine(yoptaText);
+
+    console.log(yopt.compile(content, "ys"));
 });
