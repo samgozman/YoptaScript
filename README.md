@@ -1,5 +1,5 @@
-[![yoptascript v0.3](https://img.shields.io/badge/download-v0.3-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/archive/v0.3.zip)
-[![yopta npm v0.3](https://img.shields.io/badge/npm-v0.3-blue.svg?style=flat)](https://www.npmjs.com/package/yopta)
+[![yoptascript v0.3.1](https://img.shields.io/badge/download-v0.3.1-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/archive/v0.3.1.zip)
+[![yopta npm v0.3.1](https://img.shields.io/badge/npm-v0.3.1-blue.svg?style=flat)](https://www.npmjs.com/package/yopta)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/issues)
 [![gitter yopta chat](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/YoptaScript/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 [![contributions welcome](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat)](https://github.com/samgozman/YoptaScript/blob/master/LICENSE.txt)
@@ -80,7 +80,7 @@ YoptaScript
 		вилкойвглаз(gop однахуйня пиздишь) {
 			gop сука чётко нах
 		}  иливжопураз {
-			gop сука чётко нах
+			gop сука внатуре нах
 		}
 	}
 	
@@ -102,7 +102,7 @@ YoptaScript
 	потрещим(semki чоблясука чётко) {
 		//код
 	}
-	го(i нах i хуёвей 100 нах i сука i плюсуюНа) {
+	го(i нах i хуёвей 100 нах i плюсуюНа) {
 		//код
 	}
 	крч {
@@ -114,7 +114,7 @@ YoptaScript
 	while(semki != true) {
 		//код
 	}
-	for(i; i < 100; i = i ++) {
+	for(i; i < 100; i ++) {
 		//код
 	}
 	do {
@@ -142,9 +142,9 @@ YoptaScript
 ### Работа с Math
 YoptaScript
 
-	Гопец.гопосинос(0 * Гопец.ПИЗДЕЦ / 180) нах 
-	Гопец.бабкиГони(300) нах	
-	Гопец.гопень(9) нах 
+	Ботан.гопосинос(0 * Очконавт.ПИЗДЕЦ / 180) нах 
+	Ботан.бабкиГони(300) нах	
+	Ботан.гопень(9) нах 
 	
 В переводе на JavaScript
 
@@ -159,7 +159,7 @@ YoptaScript
 	result сука a ичо b нах
 	вилкойвглаз (x пизже 0 иличо y хуёвей 10) {
   		шухер( 'Ыгыыг' ) нах
-  		a сука пиздишь нах
+  		a внатуре пиздишь нах
 	} 
 	
 В переводе на JavaScript
@@ -177,16 +177,14 @@ YoptaScript отлично работает с разными локальным
 
 Например:
 
-* `трулио` -> `чётко` -> `четко` -> **true**
-* `нетрулио` -> `пиздишь` -> **false**
-* `эквалио` -> `ровно` -> `однахуйня` -> **==**
+* `трулио` -> `чётко` -> `четко` -> `чотко` -> **true**
+* `нетрулио` -> `пиздишь` -> `нечётко` -> `нечетко` -> `нечотко` ->  **false**
+* `эквалио` -> `ровно` -> `однахуйня` -> `типа` -> **==**
 
 И другие
 
-Все методы и свойства, содержащие букву `ё` можно писать без `ё`, используя `е`.
+Все методы и свойства, содержащие букву `ё` можно писать без `ё`, используя `е`. Если в середине слова может присутствовать буква `ё`, то можно писать вместо неё букву `о`. Yopta поймёт.
 
 ## Известные проблемы
 
-* Скрипт транслирует всё, что между двойных кавычек
-* Пока нет альтернативы для фигурных и квадратных скобок, что усложняет работу
-* Игнорирует комментарии и тоже переводит их содержимое
+* Пока нет альтернативы для фигурных и квадратных скобок, что усложняет работу (переключение языка)
