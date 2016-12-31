@@ -1,5 +1,5 @@
 /*!
- * YoptaScript v0.3 (https://yopta.space)
+ * YoptaScript v0.3.2 (https://yopta.space)
  * Copyright (c) 2016 Yopta.Space project and Contributors
  * Licensed under the MIT license
  */
