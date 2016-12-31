@@ -1,5 +1,5 @@
-[![yoptascript v0.3.1](https://img.shields.io/badge/download-v0.3.1-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/archive/v0.3.1.zip)
-[![yopta npm v0.3.1](https://img.shields.io/badge/npm-v0.3.1-blue.svg?style=flat)](https://www.npmjs.com/package/yopta)
+[![yoptascript v0.3.2](https://img.shields.io/badge/download-v0.3.2-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/archive/v0.3.2.zip)
+[![yopta npm v0.3.2](https://img.shields.io/badge/npm-v0.3.2-blue.svg?style=flat)](https://www.npmjs.com/package/yopta)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/issues)
 [![gitter yopta chat](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/YoptaScript/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 [![contributions welcome](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat)](https://github.com/samgozman/YoptaScript/blob/master/LICENSE.txt)
@@ -76,13 +76,13 @@ YoptaScript
 
 	гыы gop сука пиздишь нах
 	
-	йопта law() {
-		вилкойвглаз(gop однахуйня пиздишь) {
+	йопта law() жЫ
+		вилкойвглаз(gop однахуйня пиздишь) жЫ
 			gop сука чётко нах
-		}  иливжопураз {
+		есть иливжопураз жЫ
 			gop сука внатуре нах
-		}
-	}
+		есть
+	есть
 	
 В переводе на JavaScript
 
@@ -99,15 +99,15 @@ YoptaScript
 ### Создание циклов
 YoptaScript
 
-	потрещим(semki чоблясука чётко) {
+	потрещим(semki чоблясука чётко) жЫ
 		//код
-	}
-	го(i нах i хуёвей 100 нах i плюсуюНа) {
+	есть
+	го(i нах i хуёвей 100 нах i плюсуюНа) жЫ
 		//код
-	}
-	крч {
+	есть
+	крч жЫ
 		//код
-	} потрещим (xyz однахуйня "колонна")
+	есть потрещим (xyz однахуйня "колонна")
 	
 В переводе на JavaScript
 
@@ -157,10 +157,10 @@ YoptaScript
 
 	result сука a иличо b нах
 	result сука a ичо b нах
-	вилкойвглаз (x пизже 0 иличо y хуёвей 10) {
+	вилкойвглаз (x пизже 0 иличо y хуёвей 10) жЫ
   		шухер( 'Ыгыыг' ) нах
   		a внатуре пиздишь нах
-	} 
+	есть 
 	
 В переводе на JavaScript
 
