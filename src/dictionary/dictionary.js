@@ -28,7 +28,7 @@ var dictionary = [
     , ["default", "пахану"]
     , ["default", "апохуй"]
     , ["default", "наотыбись"]
-    , ["instanceof", "внатуре"]
+    , ["instanceof", "шкура"]
     , ["new", "гыйбать"]
     , ["new", "захуярить"]
     , ["return", "отвечаю"]
