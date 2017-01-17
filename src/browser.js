@@ -2,7 +2,8 @@ const
   core = require('./core');
 
 //Получаем йопту из скрипта
-document.querySelectorAll('[type="text/x-yoptascript"]').forEach(yoptaToJs);
+document.querySelectorAll('[language="YoptaScript"]').forEach(yoptaToJs);
+document.querySelectorAll('[type="text/yoptascript"]').forEach(yoptaToJs);
 
 window.yopt = core;
 
