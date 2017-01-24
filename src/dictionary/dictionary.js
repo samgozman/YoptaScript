@@ -1,6 +1,6 @@
 /*!
- * YoptaScript v0.3.2 (https://yopta.space)
- * Copyright (c) 2016 Yopta.Space project and Contributors
+ * YoptaScript v0.3.3 (https://yopta.space)
+ * Copyright (c) 2016-2017 Yopta.Space project and Contributors
  * Licensed under the MIT license
  */
 
@@ -14,6 +14,9 @@ var dictionary = [
     , ["case", "лещ"]
     , ["case", "аеслинайду"]
     , ["catch", "гоп"]
+    , ["catch", "аченетак"]
+    , ["catch", "аченитак"]
+    , ["catch", "ачёнетак"]
     , ["continue", "двигай"]
     , ["debugger", "логопед"]
     , ["delete", "ёбнуть"]
@@ -36,6 +39,9 @@ var dictionary = [
     , ["this", "тырыпыры"]
     , ["throw", "пнх"]
     , ["try", "хапнуть"]
+    , ["try", "побратски"]
+    , ["try", "пабрацки"]
+    , ["try", "пабратски"]
     , ["typeof", "чезажижан"]
     , ["var", "гыы"]
     , ["let", "участковый"]
