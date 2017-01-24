@@ -4,7 +4,7 @@ const
   package = require('./package.json');
 
 gulp.task('build', browserify('./src/browser', './dist/yopta.min.js', {
-  license: `/*! YoptaScript v${package.version} (https://yopta.space) | Copyright (c) 2016 Yopta.Space project and Contributors | Licensed under the MIT license*/`
+  license: `/*! YoptaScript v${package.version} (https://yopta.space) | Copyright (c) 2016-2017 Yopta.Space project and Contributors | Licensed under the MIT license*/`
 }));
 gulp.task('watch', () => gulp.watch('./src', ['build']));
 
