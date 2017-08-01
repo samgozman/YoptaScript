@@ -1,5 +1,5 @@
-[![yoptascript v0.3.3](https://img.shields.io/badge/download-v0.3.3-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/archive/v0.3.3.zip)
-[![yopta npm v0.3.3](https://img.shields.io/badge/npm-v0.3.3-blue.svg?style=flat)](https://www.npmjs.com/package/yopta)
+[![yoptascript v0.3.4](https://img.shields.io/badge/download-v0.3.4-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/archive/v0.3.4.zip)
+[![yopta npm v0.3.4](https://img.shields.io/badge/npm-v0.3.4-blue.svg?style=flat)](https://www.npmjs.com/package/yopta)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/issues)
 [![gitter yopta chat](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/YoptaScript/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 [![contributions welcome](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat)](https://github.com/samgozman/YoptaScript/blob/master/LICENSE.txt)
@@ -41,12 +41,12 @@ YoptaScript содержит **множество нецензурной лек�
 		</body>
 
 ### Приступим к работе
-1. Создайте внутри `body` элемент `script` с атрибутом  `type="text/x-yoptascript"` на странице до подключения основного скрипта
+1. Создайте внутри `body` элемент `script` с атрибутом  `language="YoptaScript"` на странице до подключения основного скрипта
 
 		<body>
 			...
 			...
-			<script type="text/x-yoptascript">
+			<script language="YoptaScript">
 				 //ваш йоптакод
 			</script>
 			<script src="yopta.min.js"></script>
@@ -54,7 +54,7 @@ YoptaScript содержит **множество нецензурной лек�
 	Можно так же вынести йоптакод в отдельный файл и подключить через атрибут `src`.
 2.  Начните писать код!
 
-		<script type="text/x-yoptascript">
+		<script language="YoptaScript">
 			  ксива.малява(" Оно работает ") нах
 		</script>
 

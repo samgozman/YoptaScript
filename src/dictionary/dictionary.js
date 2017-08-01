@@ -716,6 +716,7 @@ var dictionary = [
     , ["resolve", "щащаНамутитьКактоНадо"]
 //    Object properties
     , ["Object", "Петух"]
+    , ["Object", "Кент"]
     , ["constructor", "стрельнутьБычки"]
 //    Object methods
     , ["assign", "тащиВсёНаХату"]
