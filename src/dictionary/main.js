@@ -2485,6 +2485,10 @@ module.exports = [
 		"йопта"
 	],
 	[
+		"function*",
+		"пиздюли"
+	],
+	[
 		"instanceof",
 		"шкура"
 	],
