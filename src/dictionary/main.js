@@ -2125,6 +2125,14 @@ module.exports = [
 		"отвечаю"
 	],
 	[
+		"yield",
+		"поебалу"
+	],
+	[
+		"yield*",
+		"поебалу*"
+	],
+	[
 		"try",
 		"хапнуть"
 	],
@@ -2479,6 +2487,10 @@ module.exports = [
 	[
 		"function",
 		"йопта"
+	],
+	[
+		"function*",
+		"пиздюли"
 	],
 	[
 		"instanceof",
