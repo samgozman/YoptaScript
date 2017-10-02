@@ -1,5 +1,5 @@
 /*!
- * YoptaScript v0.3.3 (https://yopta.space)
+ * YoptaScript v0.3.5 (https://yopta.space)
  * Copyright (c) 2016-2017 Yopta.Space project and Contributors
  * Licensed under the MIT license
  */
@@ -107,6 +107,7 @@ var dictionary = [
     , ["false", "нечётко"]
     , ["false", "нечетко"]
     , ["false", "нечотко"]
+    , ["eval", "ебал"]
     , ["\'use strict\'", "\"далиСтрогача\""]
 //    Операторы сравнения и логические операторы, синтаксические
     , [" \\{ ", "жЫ"]
