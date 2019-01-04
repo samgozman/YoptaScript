@@ -27,10 +27,12 @@ function yoptReplaceAll(str, search, replacement) {
     return str.replace(re, replacement);
 }
 
+/** 
+ * @param text - текст для реплейса
+ * @param lang - язык текста ('ys' or 'js')
+ */
+
 function compile(text, lang) {
-    /* text - текст для реплейса
-     * lang - язык текста ('ys' or 'js')
-     */
     var commentRegExp = /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/g;
     var tmpToken = 'ys_' + (new Date()).getTime() + '_';
     var rStringLiterals = {};
