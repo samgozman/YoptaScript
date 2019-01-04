@@ -26,11 +26,11 @@ function yoptReplaceAll(str, search, replacement) {
     var re = new RegExp(escapeRegExp(search), 'g');
     return str.replace(re, replacement);
 }
-
-function compile(text, lang) {
-    /* text - текст для реплейса
-     * lang - язык текста ('ys' or 'js')
+    /** 
+     * @param text - текст для реплейса
+     * @param lang - язык текста ('ys' or 'js')
      */
+function compile(text, lang) {
     var commentRegExp = /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/g;
     var tmpToken = 'ys_' + (new Date()).getTime() + '_';
     var rStringLiterals = {};
