@@ -68,7 +68,7 @@ YoptaScript содержит **множество нецензурной лек�
 ### Игра Ping-Pong
 Один из разработчиков языка YoptaScript написал игру Ping-Pong на чистом YoptaScript с использованием canvas!
 
-**[Pong-YoptaScript](https://github.com/grushan/Pong-YoptaScript)**
+**[Pong-YoptaScript](https://github.com/grushan/Pong-YoptaScript) ([Demo](https://yopta-pong.herokuapp.com))** 
 
 ## Примеры
 ### Создание переменных, функций и условий
