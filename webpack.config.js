@@ -6,33 +6,35 @@ const { version, license } = require('./package.json');
 const banner = `YoptaScript v${version} (https://yopta.space) | Copyright (c) 2016-${new Date().getFullYear()} Yopta.Space project and Contributors | Licensed under the ${license} license`;
 
 module.exports = {
-	entry: './src/browser.ts',
-	devtool: 'inline-source-map',
-	module: {
-		rules: [{
-			test: /\.tsx?$/,
-			use: 'ts-loader',
-			exclude: /node_modules/,
-		}, ],
-	},
-	resolve: {
-		extensions: ['.tsx', '.ts', '.js'],
-	},
-	output: {
-		filename: 'yopta.js',
-		path: path.resolve(__dirname, 'dist'),
-	},
-	optimization: {
-		minimize: true,
-		minimizer: [
-			new TerserPlugin({
-				extractComments: false,
-			}),
-		],
-	},
-	plugins: [
-		new webpack.BannerPlugin({
-			banner
-		})
-	]
+    entry: './src/browser.ts',
+    devtool: 'inline-source-map',
+    module: {
+        rules: [
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
+        ],
+    },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
+    },
+    output: {
+        filename: 'yopta.js',
+        path: path.resolve(__dirname, 'dist'),
+    },
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new TerserPlugin({
+                extractComments: false,
+            }),
+        ],
+    },
+    plugins: [
+        new webpack.BannerPlugin({
+            banner,
+        }),
+    ],
 };
