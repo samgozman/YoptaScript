@@ -2,12 +2,12 @@
   "name": "yopta",
   "version": "0.3.5",
   "description": "YoptaScript - язык программирования для гопников и реальных пацанов.",
-  "main": "./src/core.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "build": "gulp build",
-    "dist": "gulp build",
-    "postinstall": "gulp build",
-    "start": "gulp watch",
+    "dev": "node",
+    "build": "tsc --build",
+    "start": "watch",
     "test": "mocha"
   },
   "bin": {
@@ -30,17 +30,21 @@
   },
   "homepage": "https://yopta.space/",
   "dependencies": {
-    "babel-preset-es2015": "^6.18.0",
-    "babelify": "^7.3.0",
-    "browserify": "^13.1.1",
-    "chai": "^3.5.0",
-    "gulp": "^3.9.1",
-    "gulp-add": "0.0.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-sourcemaps": "^1.9.1",
-    "gulp-uglify": "^2.0.0",
-    "mocha": "^3.2.0",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
-  }
+    "@typescript-eslint/parser": "^4.27.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.1",
+    "@typescript-eslint/eslint-plugin": "^4.27.0",
+    "chai": "^4.3.4",
+    "eslint": "^7.28.0",
+    "mocha": "^9.0.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  },
+  "files": [
+    "lib/**/*"
+  ]
 }
