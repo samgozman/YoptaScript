@@ -1,11 +1,14 @@
 {
     "compilerOptions": {
+        "lib": ["es5", "es6", "dom"],
         "target": "es5",
-        "module": "commonjs",
-        "declaration": true,
+        "module": "CommonJS",
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
-        "outDir": "./lib",
-        "strict": true
+        "outDir": "./dist",
+        "strict": true,
     },
     "include": ["src"],
     "exclude": ["node_modules", "**/__tests__/*"]

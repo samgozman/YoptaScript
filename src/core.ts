@@ -1,4 +1,4 @@
-import dictionary from './dictionary/main';
+import {dictionary} from './dictionary/main';
 
 const LANGS = {
     js: 0,
@@ -69,5 +69,3 @@ function iterateText(text: string, to: 'js'|'ys' = 'js') {
 
     return text;
 }
-
-export default compile;

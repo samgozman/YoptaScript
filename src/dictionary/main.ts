@@ -4,7 +4,7 @@
  * Этот массив используется сборщиком.
  */
 
-const kek = [
+export const dictionary = [
 	[
 		'includes',
 		'лучшеНетВлагалищаЧемОчкоТоварища'
@@ -2826,5 +2826,3 @@ const kek = [
 		'жЫ'
 	]
 ];
-
-export default kek;

@@ -1,4 +1,4 @@
-import compile from './core';
+import {compile} from './core';
 
 //Получаем йопту из скрипта
 document.querySelectorAll('[language="YoptaScript"]').forEach(yoptaToJs);
