@@ -1,2 +1,5 @@
 # Ignore all Markdown files:
 *.md
+
+# Ignore all html files:
+*.html

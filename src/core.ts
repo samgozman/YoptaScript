@@ -5,11 +5,6 @@ const LANGS = {
     ys: 1,
 };
 
-// module.exports = {
-//     compile,
-//     dictionary,
-// };
-
 function escapeRegExp(str: string) {
     str = str.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
 
@@ -23,6 +18,26 @@ function escapeRegExp(str: string) {
 function yoptReplaceAll(str: string, search: string, replacement: string) {
     const re = new RegExp(escapeRegExp(search), 'g');
     return str.replace(re, replacement);
+}
+
+/**
+ * @param text текст, по которому следует пройтись
+ * @param to язык текста ('ys' or 'js')
+ */
+function iterateText(text: string, to: 'js' | 'ys' = 'js') {
+    const lang = LANGS[to];
+
+    dictionary
+        .sort((a, b) => {
+            const al = a[lang].length;
+            const bl = b[lang].length;
+            return bl - al;
+        })
+        .forEach(
+            (pair) => (text = yoptReplaceAll(text, pair[lang], pair[+!lang]))
+        );
+
+    return text;
 }
 
 export function compile(text: string, lang: 'js' | 'ys'): string {
@@ -54,22 +69,7 @@ export function compile(text: string, lang: 'js' | 'ys'): string {
     return text;
 }
 
-/**
- * @param text текст, по которому следует пройтись
- * @param to язык текста ('ys' or 'js')
- */
-function iterateText(text: string, to: 'js' | 'ys' = 'js') {
-    const lang = LANGS[to];
-
-    dictionary
-        .sort((a, b) => {
-            const al = a[lang].length;
-            const bl = b[lang].length;
-            return bl - al;
-        })
-        .forEach(
-            (pair) => (text = yoptReplaceAll(text, pair[lang], pair[+!lang]))
-        );
-
-    return text;
-}
+// YoptaScript to globals
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const _global = (window || global) as any;
+_global.yopta = compile;

@@ -4,13 +4,11 @@ import { compile } from './core';
 document.querySelectorAll('[language="YoptaScript"]').forEach(yoptaToJs);
 document.querySelectorAll('[type="text/x-yoptascript"]').forEach(yoptaToJs);
 
-// window.yopt = core;
-
-function yoptaToJs(scriptNode: Element) {
+async function yoptaToJs(scriptNode: Element) {
     if (scriptNode.parentNode !== null) {
         //Получаем йопту из скрипта
         const yoptaText: string =
-            scriptNode.textContent || getTxtFromSrc(scriptNode);
+            scriptNode.textContent || (await getTxtFromSrc(scriptNode));
         //удаляем старый скрипт
         scriptNode.parentNode.removeChild(scriptNode);
         //создаём обработанный скрипт с блекджеком и шлюхами
@@ -18,21 +16,21 @@ function yoptaToJs(scriptNode: Element) {
     }
 }
 
-function getTxtFromSrc(node: Element) {
+async function getTxtFromSrc(node: Element) {
     //Пошли искать сорцы
     const src = node.getAttribute('src');
-    let response = '';
+    let resp = '';
     if (src !== null && src.length) {
-        const xml = new XMLHttpRequest();
-        xml.open('GET', src, false);
-        xml.send(null);
-        if (xml.status == 200 || xml.status == 0) response = xml.responseText;
+        const fe = await fetch(src, {
+            method: 'GET',
+        });
+        resp = await fe.text();
     }
-    return response;
+    return resp;
 }
 
 function addScriptNode(compiled: string) {
-    const js_script = document.createElement('script');
-    js_script.innerHTML = compiled;
-    document.body.appendChild(js_script);
+    const script = document.createElement('script');
+    script.innerHTML = compiled;
+    document.body.appendChild(script);
 }

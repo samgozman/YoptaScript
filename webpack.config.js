@@ -8,6 +8,7 @@ const banner = `YoptaScript v${version} (https://yopta.space) | Copyright (c) 20
 module.exports = {
     entry: './src/browser.ts',
     devtool: 'inline-source-map',
+    mode: 'production',
     module: {
         rules: [
             {
