@@ -1,6 +1,6 @@
 {
     "name": "yopta",
-    "version": "0.3.5",
+    "version": "2.0.0",
     "description": "YoptaScript - язык программирования для гопников и реальных пацанов.",
     "main": "dist/index.js",
     "scripts": {
@@ -25,23 +25,19 @@
         "language",
         "yoptascript"
     ],
-    "author": "samgozman",
+    "author": "Sam Gozman <sam@gozman.space>",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/samgozman/YoptaScript/issues"
     },
     "homepage": "https://yopta.space/",
-    "dependencies": {
-        "@typescript-eslint/parser": "^4.27.0",
-        "babelify": "^10.0.0",
-        "browserify": "^17.0.0"
-    },
     "devDependencies": {
+        "@types/jest": "^26.0.23",
         "@types/node": "^15.12.1",
         "@typescript-eslint/eslint-plugin": "^4.27.0",
-        "chai": "^4.3.4",
+        "@typescript-eslint/parser": "^4.27.0",
         "eslint": "^7.28.0",
-        "mocha": "^9.0.0",
+        "jest": "^27.0.4",
         "serve": "^12.0.0",
         "terser-webpack-plugin": "^5.1.3",
         "ts-loader": "^9.2.3",
