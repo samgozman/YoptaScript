@@ -1,4 +1,4 @@
-import { dictionary } from './dictionary/main';
+import { dictionary } from './dictionary/sortedYopta';
 
 function escapeRegExp(str: string) {
     str = str.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
@@ -21,17 +21,14 @@ function yoptReplaceAll(str: string, search: string, replacement: string) {
  */
 function iterateText(text: string, to: 'js' | 'ys' = 'ys') {
     const langCol = to === 'ys' ? 1 : 0;
-
-    dictionary
-        .sort((a, b) => {
-            const al = a[langCol].length;
-            const bl = b[langCol].length;
-            return bl - al;
-        })
-        .forEach(
-            (pair) =>
-                (text = yoptReplaceAll(text, pair[langCol], pair[+!langCol]))
-        );
+    const dick = dictionary;
+    dick.sort((a, b) => {
+        const al = a[langCol].length;
+        const bl = b[langCol].length;
+        return bl - al;
+    }).forEach(
+        (pair) => (text = yoptReplaceAll(text, pair[langCol], pair[+!langCol]))
+    );
 
     return text;
 }

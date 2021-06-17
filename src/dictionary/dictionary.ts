@@ -1,14 +1,7 @@
-/*!
- * YoptaScript v0.3.5 (https://yopta.space)
- * Copyright (c) 2016-2017 Yopta.Space project and Contributors
- * Licensed under the MIT license
- */
-
 /* Изначально массив элементов у нас не отсортирован.
- * Сортируем массив для корректной работы алгоритма перевода.
- * Любые правки по словарю языка сначала пишем сюда!
+ * Любые правки по словарю языка  пишем сюда!
  */
-const dictionary = [
+export const dictionary = [
     ['break', 'харэ'],
     ['case', 'лещ'],
     ['case', 'аеслинайду'],
@@ -107,9 +100,9 @@ const dictionary = [
     ['false', 'нечетко'],
     ['false', 'нечотко'],
     ['eval', 'ебал'],
-    ["'use strict'", '"далиСтрогача"'],
+    ['\'use strict\'', '\'далиСтрогача\''],
     //    Операторы сравнения и логические операторы, синтаксические
-    [' \\{ ', 'жЫ'],
+    ['\\{', 'жЫ'],
     ['\\}', 'есть'],
     ['\\=\\=', 'эквалио'],
     ['\\=\\=', 'однахуйня'],
@@ -750,12 +743,3 @@ const dictionary = [
     ['export', 'предъявa'],
     ['global', 'общак'],
 ];
-
-//Для сортировки по количеству символов
-dictionary.sort(function (a, b) {
-    if (a[1].length < b[1].length) return 1;
-    else if (a[1].length > b[1].length) return -1;
-    else return 0;
-});
-console.log(JSON.stringify(dictionary, null, '\t'));
-//END

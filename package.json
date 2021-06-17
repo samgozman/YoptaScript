@@ -4,11 +4,13 @@
     "description": "YoptaScript - язык программирования для гопников и реальных пацанов.",
     "main": "dist/index.js",
     "scripts": {
-        "dev": "node",
-        "build": "webpack",
+        "prebuild": "ts-node src/dictionary/prepareArrayBeforeBuild.ts",
+        "afterbuild": "rm src/dictionary/sortedYopta.ts",
+        "build": "npm run prebuild && webpack",
+        "demo": "serve ./ -p 1488",
+        "dev": "npm run build && npm run demo",
         "start": "watch",
-        "test": "mocha",
-        "demo": "serve ./ -p 1488"
+        "test": "mocha"
     },
     "bin": {
         "yopta": "./src/cli.js"
