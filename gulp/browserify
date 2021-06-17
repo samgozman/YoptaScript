@@ -18,7 +18,7 @@ module.exports = function (src, dest, opt = {}) {
       debug: true
     })
       .transform(babel, {
-        presets: ["es2015"],
+        presets: ["@babel/preset-env"],
         sourceMaps: true
       })
       .bundle()
@@ -39,7 +39,8 @@ module.exports = function (src, dest, opt = {}) {
         loadMaps: true
       }))
       .pipe(concat(dest.base))
-      .pipe(uglify({preserveComments: 'license'}))
+      //FIXME: preserveComments was removed in uglify 3+
+      //.pipe(uglify({preserveComments: 'license'}))
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest(dest.dir));
   }
