@@ -10,7 +10,7 @@
         "demo": "serve ./ -p 1488",
         "dev": "npm run build && npm run demo",
         "test": "npm run prebuild && jest",
-        "test-local": "npm run prebuild && jest --watch"
+        "test-local": "npm run build && jest --watch"
     },
     "bin": {
         "yopta": "./src/cli.js"
