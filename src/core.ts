@@ -1,4 +1,4 @@
-import { dictionary } from './dictionary/sortedYopta';
+import dictionary from './dictionary/sortedYopta.json';
 
 function escapeRegExp(str: string) {
     str = str.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');

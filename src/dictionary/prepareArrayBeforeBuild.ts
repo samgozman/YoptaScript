@@ -8,13 +8,9 @@ dictionary.sort(function (a, b) {
     else return 0;
 });
 
-const file = `export const dictionary = ${JSON.stringify(
-    dictionary,
-    null,
-    '\t'
-).replace(/\\/g, '')}`;
+const file = JSON.stringify(dictionary, null, '\t').replace(/\\/g, '');
 
-fs.writeFile('src/dictionary/sortedYopta.ts', file, function (err) {
+fs.writeFile('src/dictionary/sortedYopta.json', file, function (err) {
     if (err) return console.log(err);
     console.log('Yopta array sorted!');
 });

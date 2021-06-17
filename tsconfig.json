@@ -6,6 +6,7 @@
         "sourceMap": true,
         "moduleResolution": "node",
         "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true,
         "esModuleInterop": true,
         "outDir": "./dist",
         "strict": true

@@ -6,4 +6,4 @@
 
 # Fix: backlash \' problem
 src/dictionary/dictionary.ts
-src/dictionary/sortedYopta.ts
+src/dictionary/sortedYopta.json
