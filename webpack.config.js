@@ -6,7 +6,7 @@ const { version, license } = require('./package.json');
 const banner = `YoptaScript v${version} (https://yopta.space) | Copyright (c) 2016-${new Date().getFullYear()} Yopta.Space project and Contributors | Licensed under the ${license} license`;
 
 module.exports = {
-    entry: './src/browser.ts',
+    entry: './src/index.ts',
     devtool: 'inline-source-map',
     mode: 'production',
     module: {

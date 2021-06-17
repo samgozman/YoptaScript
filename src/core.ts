@@ -1,10 +1,5 @@
 import { dictionary } from './dictionary/main';
 
-const LANGS = {
-    js: 0,
-    ys: 1,
-};
-
 function escapeRegExp(str: string) {
     str = str.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
 
@@ -24,23 +19,24 @@ function yoptReplaceAll(str: string, search: string, replacement: string) {
  * @param text текст, по которому следует пройтись
  * @param to язык текста ('ys' or 'js')
  */
-function iterateText(text: string, to: 'js' | 'ys' = 'js') {
-    const lang = LANGS[to];
+function iterateText(text: string, to: 'js' | 'ys' = 'ys') {
+    const langCol = to === 'ys' ? 1 : 0;
 
     dictionary
         .sort((a, b) => {
-            const al = a[lang].length;
-            const bl = b[lang].length;
+            const al = a[langCol].length;
+            const bl = b[langCol].length;
             return bl - al;
         })
         .forEach(
-            (pair) => (text = yoptReplaceAll(text, pair[lang], pair[+!lang]))
+            (pair) =>
+                (text = yoptReplaceAll(text, pair[langCol], pair[+!langCol]))
         );
 
     return text;
 }
 
-export function compile(text: string, lang: 'js' | 'ys'): string {
+export function compile(text: string, lang: 'js' | 'ys' = 'ys'): string {
     /* text - текст для реплейса
      * lang - язык текста ('ys' or 'js')
      */
