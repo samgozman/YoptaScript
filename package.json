@@ -2,7 +2,8 @@
     "name": "yopta",
     "version": "2.0.0",
     "description": "YoptaScript - язык программирования для гопников и реальных пацанов.",
-    "main": "dist/index.js",
+    "main": "dist/yopta.js",
+    "types": "dist/index.d.ts",
     "scripts": {
         "prebuild": "ts-node src/dictionary/prepareArrayBeforeBuild.ts",
         "build": "npm run prebuild && webpack",

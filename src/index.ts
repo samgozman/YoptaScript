@@ -1,4 +1,5 @@
 import { compile } from './core';
+export { compile as yopta };
 
 //Получаем йопту из скрипта
 document.querySelectorAll('[language="YoptaScript"]').forEach(yoptaToJs);

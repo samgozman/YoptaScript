@@ -33,6 +33,12 @@ function iterateText(text: string, to: 'js' | 'ys' = 'ys') {
     return text;
 }
 
+/**
+ * Переводит YoptaScript в JavaScript и обратно
+ * @param text Строка для перевода
+ * @param lang Язык строки (ys/js)
+ * @returns {string} Переведённый текст
+ */
 export function compile(text: string, lang: 'js' | 'ys' = 'ys'): string {
     /* text - текст для реплейса
      * lang - язык текста ('ys' or 'js')

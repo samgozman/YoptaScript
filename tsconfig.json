@@ -4,6 +4,7 @@
         "target": "es5",
         "module": "CommonJS",
         "sourceMap": true,
+        "declaration": true,
         "moduleResolution": "node",
         "allowSyntheticDefaultImports": true,
         "resolveJsonModule": true,
