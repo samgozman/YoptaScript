@@ -6,11 +6,12 @@
     "scripts": {
         "prebuild": "ts-node src/dictionary/prepareArrayBeforeBuild.ts",
         "afterbuild": "rm src/dictionary/sortedYopta.json",
-        "build": "npm run prebuild && webpack",
+        "build": "npm run prebuild && webpack && npm run afterbuild",
         "demo": "serve ./ -p 1488",
-        "dev": "npm run build && npm run demo",
+        "devbuild": "npm run prebuild && webpack",
+        "dev": "npm run devbuild && npm run demo",
         "test": "npm run prebuild && jest",
-        "test-local": "npm run build && jest --watch"
+        "test-local": "npm run devbuild && jest --watch"
     },
     "bin": {
         "yopta": "./src/cli.js"
