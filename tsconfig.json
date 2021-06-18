@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "lib": ["es5", "es6", "dom"],
+        "target": "es5",
+        "module": "CommonJS",
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "outDir": "./dist",
+        "strict": true
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "**/__tests__/*"]
+}

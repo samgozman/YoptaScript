@@ -1,0 +1,9 @@
+# Ignore all Markdown files:
+*.md
+
+# Ignore all html files:
+*.html
+
+# Fix: backlash \' problem
+src/dictionary/dictionary.ts
+src/dictionary/sortedYopta.json

@@ -1,54 +1,52 @@
 {
-  "name": "yopta",
-  "version": "0.3.5",
-  "description": "YoptaScript - язык программирования для гопников и реальных пацанов.",
-  "main": "./src/core.js",
-  "scripts": {
-    "build": "gulp build",
-    "dist": "gulp build",
-    "postinstall": "gulp build",
-    "start": "gulp watch",
-    "test": "mocha"
-  },
-  "bin": {
-    "yopta": "./src/cli.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/samgozman/YoptaScript"
-  },
-  "keywords": [
-    "transpiler",
-    "yopta",
-    "language",
-    "yoptascript"
-  ],
-  "author": "samgozman",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/samgozman/YoptaScript/issues"
-  },
-  "homepage": "https://yopta.space/",
-  "dependencies": {
-    "babelify": "latest",
-    "browserify": "latest",
-    "chai": "latest",
-    "gulp": "latest",
-    "gulp-add": "latest",
-    "gulp-concat": "latest",
-    "gulp-sourcemaps": "latest",
-    "gulp-uglify": "latest",
-    "mocha": "latest",
-    "vinyl-buffer": "latest",
-    "vinyl-source-stream": "latest"
-  },
-  "babel": {
-    "presets": [
-      "@babel/env"
+    "name": "yopta",
+    "version": "2.0.0",
+    "description": "YoptaScript - язык программирования для гопников и реальных пацанов.",
+    "main": "dist/index.js",
+    "scripts": {
+        "prebuild": "ts-node src/dictionary/prepareArrayBeforeBuild.ts",
+        "afterbuild": "rm src/dictionary/sortedYopta.json",
+        "build": "npm run prebuild && webpack && npm run afterbuild",
+        "demo": "serve ./ -p 1488",
+        "devbuild": "npm run prebuild && webpack",
+        "dev": "npm run devbuild && npm run demo",
+        "test": "jest",
+        "test-local": "npm run devbuild && jest --watch"
+    },
+    "bin": {
+        "yopta": "./src/cli.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/samgozman/YoptaScript"
+    },
+    "keywords": [
+        "transpiler",
+        "yopta",
+        "language",
+        "yoptascript"
+    ],
+    "author": "Sam Gozman <sam@gozman.space>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/samgozman/YoptaScript/issues"
+    },
+    "homepage": "https://yopta.space/",
+    "devDependencies": {
+        "@types/jest": "^26.0.23",
+        "@types/node": "^15.12.1",
+        "@typescript-eslint/eslint-plugin": "^4.27.0",
+        "@typescript-eslint/parser": "^4.27.0",
+        "eslint": "^7.28.0",
+        "jest": "^27.0.4",
+        "serve": "^12.0.0",
+        "terser-webpack-plugin": "^5.1.3",
+        "ts-loader": "^9.2.3",
+        "ts-node": "^10.0.0",
+        "typescript": "^4.3.2",
+        "webpack-cli": "^4.7.2"
+    },
+    "files": [
+        "dist/**/*"
     ]
-  },
-  "devDependencies": {
-    "@babel/core": "^7.14.6",
-    "@babel/preset-env": "latest"
-  }
 }
