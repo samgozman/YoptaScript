@@ -10,7 +10,7 @@
         "demo": "serve ./ -p 1488",
         "devbuild": "npm run prebuild && webpack",
         "dev": "npm run devbuild && npm run demo",
-        "test": "npm run prebuild && jest",
+        "test": "jest",
         "test-local": "npm run devbuild && jest --watch"
     },
     "bin": {
