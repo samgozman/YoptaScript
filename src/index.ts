@@ -1,9 +1,14 @@
 import { compile } from './core';
+
+// Экспорт для модуля
 export { compile as yopta };
 
-//Получаем йопту из скрипта
-document.querySelectorAll('[language="YoptaScript"]').forEach(yoptaToJs);
-document.querySelectorAll('[type="text/x-yoptascript"]').forEach(yoptaToJs);
+// Поиск скриптов при работе из браузера
+if (typeof window !== 'undefined') {
+    //Получаем йопту из скрипта
+    document.querySelectorAll('[language="YoptaScript"]').forEach(yoptaToJs);
+    document.querySelectorAll('[type="text/x-yoptascript"]').forEach(yoptaToJs);
+}
 
 async function yoptaToJs(scriptNode: Element) {
     if (scriptNode.parentNode !== null) {

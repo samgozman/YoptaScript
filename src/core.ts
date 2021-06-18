@@ -70,5 +70,5 @@ export function compile(text: string, lang: 'js' | 'ys' = 'ys'): string {
 
 // YoptaScript to globals
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const _global = (window || global) as any;
+const _global = (typeof window !== 'undefined' ? window : global) as any;
 _global.yopta = compile;
