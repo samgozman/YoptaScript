@@ -1,3 +1,4 @@
+import polyfill from 'globalthis';
 import dictionary from './dictionary/sortedYopta.json';
 
 function escapeRegExp(str: string) {
@@ -70,5 +71,5 @@ export function compile(text: string, lang: 'js' | 'ys' = 'ys'): string {
 
 // YoptaScript to globals
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const _global = (typeof window !== 'undefined' ? window : global) as any;
-_global.yopta = compile;
+const globalThis = polyfill() as any;
+globalThis.yopta = compile;
