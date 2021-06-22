@@ -1,6 +1,6 @@
 {
     "name": "yopta",
-    "version": "2.0.1",
+    "version": "2.0.0",
     "description": "YoptaScript - язык программирования для гопников и реальных пацанов.",
     "main": "dist/yopta.js",
     "types": "dist/index.d.ts",
@@ -29,7 +29,6 @@
     },
     "homepage": "https://yopta.space/",
     "devDependencies": {
-        "@types/globalthis": "^1.0.1",
         "@types/jest": "^26.0.23",
         "@types/node": "^15.12.1",
         "@typescript-eslint/eslint-plugin": "^4.27.0",
@@ -45,8 +44,5 @@
     },
     "files": [
         "dist/**/*"
-    ],
-    "dependencies": {
-        "globalthis": "^1.0.2"
-    }
+    ]
 }
