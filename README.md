@@ -3,7 +3,7 @@
 [![yoptascript logo](./doc/YoptaScript.png)](https://yopta.space/)
 
 [![yoptascript](https://img.shields.io/badge/%D0%A1%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-YoptaScript-green)](https://github.com/samgozman/YoptaScript/tree/master/dist/yopta.js)
-![npm](https://img.shields.io/npm/v/yopta)
+[![npm](https://img.shields.io/npm/v/yopta)](https://www.npmjs.com/package/yopta)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/issues)
 [![contributions welcome](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat)](https://github.com/samgozman/YoptaScript/blob/master/LICENSE.txt)
 
@@ -40,8 +40,8 @@ YoptaScript содержит **множество нецензурной лек�
 
 ### Браузер
 
-1. Положите файл `yopta.js` из папки `dist` в папку c вашим проектом
-2. Подключите файл к вашей `html`  странице в самый конец перед закрытием тега `body`:
+1. Положите файл `yopta.js` из папки `dist` в папку c вашим проектом. Или используйте CDN
+2. Подключите файл к вашей `html` странице в самый конец перед закрытием тега `body`:
 
 ```html
 <body>
@@ -53,12 +53,12 @@ YoptaScript содержит **множество нецензурной лек�
 
 ```html
 <body>
-    ...
-    ...
+    ... ...
     <script language="YoptaScript">
         //ваш йоптакод
     </script>
-    <script src="yopta.js"></script>
+    <!-- Пример с CDN -->
+    <script src="https://cdn.jsdelivr.net/gh/samgozman/YoptaScript/dist/yopta.js"></script>
 </body>
 ```
 
@@ -109,7 +109,7 @@ YoptaScript отлично работает с разными локальным
 Например:
 
 * `трулио` -> `чётко` -> `четко` -> `чотко` -> **true**
-* `нетрулио` -> `пиздишь` -> `нечётко` -> `нечетко` -> `нечотко` ->  **false**
+* `нетрулио` -> `пиздишь` -> `нечётко` -> `нечетко` -> `нечотко` -> **false**
 * `эквалио` -> `ровно` -> `однахуйня` -> `типа` -> **==**
 
 И другие
