@@ -11,6 +11,8 @@
 
 Очень **приветствуются** добавления новых определений в [словарь](./src/dictionary/dictionary.ts) языка, а также поиск багов и расширение функционала!
 
+Смотрите интервью о создании языка на канале Хекслет: [https://www.youtube.com/watch?v=Rk5wNGBIilM](https://www.youtube.com/watch?v=Rk5wNGBIilM)
+
 [![yoptascript logo](./doc/Yopta2.png)](https://github.com/samgozman/YoptaScript/blob/master/CONTRIBUTE.md)
 
 ## Разработка
