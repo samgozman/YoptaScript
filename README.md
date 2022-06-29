@@ -2,6 +2,7 @@
 
 [![yoptascript logo](./doc/YoptaScript.png)](https://yopta.space/)
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/C0C1DI4VL)
 [![yoptascript](https://img.shields.io/badge/%D0%A1%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-YoptaScript-green)](https://github.com/samgozman/YoptaScript/tree/master/dist/yopta.js)
 [![npm](https://img.shields.io/npm/v/yopta)](https://www.npmjs.com/package/yopta)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/issues)
