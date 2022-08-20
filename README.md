@@ -1,6 +1,6 @@
 # YoptaScript
 
-[![yoptascript logo](./doc/YoptaScript.png)](https://yopta.space/)
+[![yoptascript logo](./docs/assets/img/YoptaScript.png)](https://yopta.space/)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/C0C1DI4VL)
 
@@ -15,7 +15,7 @@
 
 Смотрите интервью о создании языка на канале Хекслет: [https://www.youtube.com/watch?v=Rk5wNGBIilM](https://www.youtube.com/watch?v=Rk5wNGBIilM)
 
-[![yoptascript logo](./doc/Yopta2.png)](https://github.com/samgozman/YoptaScript/blob/master/CONTRIBUTE.md)
+[![yoptascript logo](./docs/assets/img/Yopta2.png)](https://github.com/samgozman/YoptaScript/blob/master/CONTRIBUTE.md)
 
 ## Разработка
 
@@ -29,8 +29,6 @@
 Толчком к разработке **YoptaScript** послужили события, произошедшие в середине 2016 года, в ходе которых журналистами Piter.TV была открыта такая категория программистов как [**гопники-программисты**](http://piter.tv/event/V_Peterburge_pyatero_studentov_kolledzha_grabili_shkol_nikov/).
 
 Вся разработка и поиск ошибок ведётся в ветке **develop**!
-
-Все крупные изменения и нововведения вы можете отследить в файле **[CHANGELOG.md](https://github.com/samgozman/YoptaScript/blob/master/doc/CHANGELOG.md)**.
 
 ## Предупреждения
 
