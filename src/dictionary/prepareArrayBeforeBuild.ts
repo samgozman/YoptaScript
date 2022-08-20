@@ -7,11 +7,7 @@ import { dictionary } from './dictionary';
  * @param dick массив 2D массивов ключей
  */
 export const sortDictionaryToFile = (dick: string[][]): void => {
-    dick.sort(function (a, b) {
-        if (a[1].length < b[1].length) return 1;
-        else if (a[1].length > b[1].length) return -1;
-        else return 0;
-    });
+    dick.sort((a, b) => b[1].length - a[1].length);
 
     const file = JSON.stringify(dick, null, '\t').replace(/\\/g, '');
 
