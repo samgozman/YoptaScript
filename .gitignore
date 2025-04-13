@@ -106,3 +106,6 @@ typings/
 src/dictionary/sortedYopta.json
 *dist/
 !dist/yopta.js
+
+# Mac system files
+*.DS_Store
