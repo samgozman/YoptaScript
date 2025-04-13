@@ -94,6 +94,20 @@ npm install yopta
 
 **[Pong-YoptaScript](https://github.com/grushan/Pong-YoptaScript) ([Demo](https://yopta-pong.herokuapp.com))**
 
+### md-prettify - расширение VS Code превращающее ваш нечеткий код в YoptaScript
+
+Просто установите расширение и в настройках VS Code поставьте
+
+```json
+"mdPrettify.predefinedConfig": "typescript-to-yoptascript" 
+```
+
+И ваш код будет превращаться в YoptaScript на лету, при этом в самом файле будет храниться оригинальный код!
+
+**Код: [DrBoria/md-prettify/blob/main/examples/typescript-to-yoptascript.json](https://github.com/DrBoria/md-prettify/blob/main/examples/typescript-to-yoptascript.json)**
+
+**Расширение: [DrBoria/md-prettify](https://marketplace.visualstudio.com/items?itemName=drboria.md-prettify)**
+
 ## Примеры
 
 См. папку examples.
