@@ -14,8 +14,8 @@ function yoptReplaceAll(str: string, search: string, replacement: string) {
     return str.replace(re, replacement);
 }
 
-/**Add commentMore actions
- * @param text текст, по которому следует пройтисьAdd commentMore actions
+/**
+ * @param text текст, по которому следует пройтись
  * @param to язык текста ('ys' or 'js')
  */
 function iterateText(text: string, to: 'js' | 'ys' = 'ys') {
@@ -29,15 +29,15 @@ function iterateText(text: string, to: 'js' | 'ys' = 'ys') {
     return text;
 }
 
-/**Add commentMore actions
+/**
  * Переводит YoptaScript в JavaScript и обратно
  * @param text Строка для перевода
  * @param lang Язык строки (ys/js)
- * @returns {string} Переведённый текстAdd commentMore actions
+ * @returns {string} Переведённый текст
  */
 export function compile(text: string, lang: 'js' | 'ys' = 'ys'): string {
-    /* text - текст для реплейсаAdd commentMore actions
-     * lang - язык текста ('ys' or 'js')Add commentMore actions
+    /* text - текст для реплейса
+     * lang - язык текста ('ys' or 'js')
      */
     interface Literals {
         [key: string]: string;
