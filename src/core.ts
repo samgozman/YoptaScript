@@ -45,13 +45,13 @@ export function compile(text: string, lang: 'js' | 'ys' = 'ys'): string {
     const rJsxTextLiterals: Literals = {};
     text = text.replace(
         /(<[A-Za-z][^>]*>)([\s\S]+?)(?=<\/[A-Za-z])/g,
-        (match, openTag, content, offset) => {
+        (_, openTag, content, offset) => {
             const key = tmpToken + 'jsx_' + offset;
             rJsxTextLiterals[key] = content;
             return openTag + key;
         }
     );
-    
+
     const commentRegExp = /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/g;
     const tmpToken = 'ys_' + new Date().getTime() + '_';
 
