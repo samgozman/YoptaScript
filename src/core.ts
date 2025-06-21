@@ -42,7 +42,16 @@ export function compile(text: string, lang: 'js' | 'ys' = 'ys'): string {
     interface Literals {
         [key: string]: string;
     }
-
+    const rJsxTextLiterals: Literals = {};
+    text = text.replace(
+        /(<[A-Za-z][^>]*>)([\s\S]+?)(?=<\/[A-Za-z])/g,
+        (match, openTag, content, offset) => {
+            const key = tmpToken + 'jsx_' + offset;
+            rJsxTextLiterals[key] = content;
+            return openTag + key;
+        }
+    );
+    
     const commentRegExp = /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/g;
     const tmpToken = 'ys_' + new Date().getTime() + '_';
 
@@ -53,16 +62,6 @@ export function compile(text: string, lang: 'js' | 'ys' = 'ys'): string {
             const key = tmpToken + pos;
             rStringLiterals[key] = val;
             return key;
-        }
-    );
-
-    const rJsxTextLiterals: Literals = {};
-    text = text.replace(
-        /(<[A-Za-z][^>]*>)([\s\S]+?)(?=<\/[A-Za-z])/g,
-        (match, openTag, content, offset) => {
-            const key = tmpToken + 'jsx_' + offset;
-            rJsxTextLiterals[key] = content;
-            return openTag + key;
         }
     );
 
