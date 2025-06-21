@@ -59,9 +59,9 @@ export function compile(text: string, lang: 'js' | 'ys' = 'ys'): string {
     text = text.replace(
         /\"(?:\\.|[^\"\\])*\"|\'(?:\\.|[^\'\\])*\'/g,
         (val, pos) => {
-            const key = tmpToken + pos;
-            rStringLiterals[key] = val;
-            return key;
+            const needKey = tmpToken + pos;
+            rStringLiterals[needKey] = val;
+            return needKey;
         }
     );
 
