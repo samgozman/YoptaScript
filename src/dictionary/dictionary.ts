@@ -740,6 +740,6 @@ export const dictionary = [
     //    NodeJS/modules support
     ['module', 'братва'],
     ['exports', 'предъявляет'],
-    ['export', 'предъявa'],
+    ['export', 'предъява'],
     ['global', 'общак'],
 ];
