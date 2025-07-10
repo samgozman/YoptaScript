@@ -41,7 +41,8 @@
         "ts-loader": "^9.2.3",
         "ts-node": "^10.0.0",
         "typescript": "^4.3.2",
-        "webpack-cli": "^4.7.2"
+        "webpack-cli": "^4.7.2",
+        "webpack": "^5.62.1"
     },
     "files": [
         "dist/**/*"
