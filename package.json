@@ -1,6 +1,6 @@
 {
     "name": "yopta",
-    "version": "2.0.5",
+    "version": "2.0.6",
     "description": "YoptaScript - язык программирования для гопников и реальных пацанов.",
     "main": "dist/yopta.js",
     "types": "dist/index.d.ts",
