@@ -90,6 +90,7 @@ export const dictionary = [
     ['null', 'порожняк'],
     ['NaN', 'нихуя'],
     ['undefined', 'неибу'],
+    ['undefined', 'хз'],
     ['true', 'трулио'],
     ['true', 'чётко'],
     ['true', 'четко'],
