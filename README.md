@@ -60,7 +60,7 @@ YoptaScript содержит **множество нецензурной лек�
         //ваш йоптакод
     </script>
     <!-- Пример с CDN -->
-    <script src="https://cdn.jsdelivr.net/gh/samgozman/YoptaScript/dist/yopta.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/yopta/dist/yopta.min.js"></script>
 </body>
 ```
 
