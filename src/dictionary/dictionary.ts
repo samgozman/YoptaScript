@@ -746,4 +746,5 @@ export const dictionary = [
     ['exports', 'предъявляет'],
     ['export', 'предъява'],
     ['global', 'общак'],
+    ['fetch', 'дайНахуй'],
 ];
